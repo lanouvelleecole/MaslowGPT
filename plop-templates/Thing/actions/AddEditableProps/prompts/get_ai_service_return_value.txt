@@ -1,0 +1,1 @@
+Pour chaque fichier txt existant dans le dossier txtFilesPath, ajoute dans l'objet obj une property ayant comme nom le nom du fichier txt, sans extension, et ayant comme valeur le contenu du fichier txt. enfin, retourne obj, ou null si erreur.

@@ -1,0 +1,19 @@
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter";
+import { TextOverlayState } from "../State/TextOverlayState";
+
+/**
+ * permet de retourner à l'écran de prise de thumb
+ */
+export const GoToPicker = () => {
+  const currentTextOverlayState =
+    SqliteReduxTextOverlayState.GetTextOverlayStateFirstRow();
+
+  SqliteReduxTextOverlayState.UpdateSpecificRowsFromDB({
+    row: {
+      ...currentTextOverlayState,
+      currentState: TextOverlayState.PickThumb,
+    },
+    rowName: "uniqueId",
+    rowValue: "TextOverlayState",
+  });
+};

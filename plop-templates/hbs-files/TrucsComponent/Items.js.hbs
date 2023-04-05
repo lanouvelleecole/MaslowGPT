@@ -1,0 +1,66 @@
+/* PLOP_INJECT_IMPORT */
+
+// permet du state local
+import { React } from "react";
+
+// des blocs de base
+import { View } from "react-native";
+import { Constants } from "src/constants/Constants.js";
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter.js";
+import { Spinner } from "src/components/Spinner/Spinner.js";
+
+// styles de base
+import { styles } from "./pieces/Styles/TextOverlay.style.js";
+import { OnComponentLifeAndDeath } from "./pieces/lifecycle/OnComponentLifeAndDeath";
+import { TextOverlayBody } from "./pieces/Body/TextOverlayBody";
+import { TextOverlayBottomBar } from "./pieces/BottomBar/TextOverlayBottomBar";
+
+/**
+ *
+ * un component de prise de thumbnail.
+ *
+ */
+const TextOverlay = ({
+  initialThumb,
+  onThumbTaken,
+  onOptionsClicked,
+  clickSound,
+}) => {
+  /* PLOP_INJECT_CODE */
+
+  // le state SqliteRedux du component
+  const currentTextOverlayState =
+    SqliteReduxTextOverlayState.GetFreshestTextOverlayStateFirstRow();
+
+  // gère le cycle de vie du component
+  OnComponentLifeAndDeath(initialThumb);
+
+  //console.log(`picker state: ${currentTextOverlayState.currentState}`);
+
+  /* si le component n'est pas prêt à etre affiché, affiche spinner */
+  if (currentTextOverlayState.isMounted == Constants.false) {
+    return (
+      <Spinner
+        color={Constants.defaultContentColor}
+        backgroundColor={Constants.defaultBackgroundColor}
+      />
+    );
+  } else {
+    /** Si le biz est preêt, let's go */
+    return (
+      <View style={styles.dataListContainer}>
+        {/* le steak */}
+        <TextOverlayBody
+          onThumbTaken={onThumbTaken}
+          onOptionsClicked={onOptionsClicked}
+          clickSound={clickSound}
+        />
+
+        {/* le bottom bar (icones du bas) */}
+        <TextOverlayBottomBar clickSound={clickSound} />
+      </View>
+    );
+  }
+};
+
+export { TextOverlay };

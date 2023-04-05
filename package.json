@@ -1,0 +1,29 @@
+{
+  "name": "maslowgpt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.1.5",
+    "nanoid": "^4.0.2",
+    "node-plop": "^0.31.1",
+    "openai": "^3.2.1",
+    "ora": "^6.3.0"
+  },
+  "description": "A command line utility for generating code with Plop",
+  "bin": {
+    "maslow": "./index.js"
+  },
+  "type": "module",
+  "files": [
+    "getNPMFolderRoot.js",
+    "index.js",
+    "plopfile.js",
+    "plop-templates/**/*"
+  ]
+}

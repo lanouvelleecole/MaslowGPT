@@ -1,0 +1,21 @@
+import { useEffect } from "react";
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter.js";
+import { InitTextOverlayState } from "../GettersSetters/InitTextOverlayState";
+
+/**
+ * lifecycle
+ */
+export const OnComponentLifeAndDeath = (initialThumb) => {
+  /* PLOP_INJECT_CODE */
+  useEffect(() => {
+    // Anything in here is fired on component mount.
+    // initialise le state du component
+    InitTextOverlayState(initialThumb);
+
+    return () => {
+      // Anything in here is fired on component unmount.
+      // remet le state du component à zéro
+      SqliteReduxTextOverlayState.ResetState();
+    };
+  }, []);
+};

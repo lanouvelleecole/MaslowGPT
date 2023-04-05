@@ -1,0 +1,47 @@
+
+
+/* PLOP_INJECT_IMPORT */ 
+import * as Localization from "expo-localization";
+import i18n from "i18n-js"; 
+
+/** 
+ * {{pascalCase name}}
+ * est une bibliothèque de strings multilingues 
+ * 
+ * il faut initialiser cette bibliothèque dans App.js, 
+ * avec la fonction d'init 
+ * 
+ */ 
+ 
+// les strings selon pays 
+i18n.translations = { 
+  en: { 
+    /* PLOP_INJECT_ENG_STRING */ 
+    welcome: 'Hello',
+    country: "en",
+  }, 
+  fr: { 
+    /* PLOP_INJECT_FR_STRING */ 
+    welcome: 'Bonjour', 
+    country: "fr",
+  }, 
+}; 
+
+/** 
+ * la fonction d'init de répertoire de strings 
+ */ 
+const {{pascalCase name}} = () => {
+  console.log("Cette function d'init de répertoire doit run 1 seule fois"); 
+  
+  // Set the locale once 
+  // at the beginning of your app. 
+  i18n.locale = Localization.locale;
+
+  // When a value is missing from a language,
+  // it'll fallback to another language with the key present. 
+  i18n.fallbacks = true; 
+}; 
+
+export { 
+  {{pascalCase name}}
+};

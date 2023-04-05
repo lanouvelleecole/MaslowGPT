@@ -1,0 +1,27 @@
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter.js";
+import { TextOverlayState } from "../State/TextOverlayState";
+
+/** set le state du component, après prise de thumb */
+
+export const SetTextOverlayState = (thumbPath) => {
+  const currentTextOverlayState =
+    SqliteReduxTextOverlayState.GetTextOverlayStateFirstRow();
+
+  SqliteReduxTextOverlayState.UpdateSpecificRowsFromDB({
+    row: {
+      ...currentTextOverlayState,
+
+      // si il existe déja un path de thumb,
+      // alors on visionne ce thumb par défaut,
+      // sinon on filme
+      currentState: TextOverlayState.WatchThumb,
+
+      // le path du thumb
+      thumbPath: thumbPath,
+    },
+    rowName: "uniqueId",
+    rowValue: "TextOverlayState",
+    onSuccess: (d) => {},
+    onError: (e) => {},
+  });
+};

@@ -1,0 +1,13 @@
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter";
+
+export function SetPickerState({ newState, onSuccess, onError }) {
+  SqliteReduxTextOverlayState.UpdateSpecificRowsFromDB({
+    row: {
+      ...newState,
+    },
+    rowName: "uniqueId",
+    rowValue: "TextOverlayState",
+    onSuccess: onSuccess,
+    onError: onError,
+  });
+}

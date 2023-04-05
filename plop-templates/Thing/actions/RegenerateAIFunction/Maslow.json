@@ -1,0 +1,44 @@
+{
+  "gptOutput": "\n\n// PLOP_CODE_START\n\n// This function is written in Javascript (Node.js).\n// It takes a folderPath as an argument (string, the path of the AI function folder).\n// It executes RunAsyncCallbackInCMD.\n// It returns two constants arg1 and arg2 which are the first and second arguments passed via command line.\n\nconst RegenerateAIFunction = (folderPath) => {\n  // PLOP_INJECT_CODE\n  const arg1 = process.argv[2];\n  const arg2 = process.argv[3];\n  RunAsyncCallbackInCMD(folderPath);\n}\n\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START\n\nconst RegenerateAIFunctionValue = RegenerateAIFunction(\"/Users/username/AIFunction\");\n\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\n\nreturn RegenerateAIFunctionValue;\n\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\n\njs\n\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\n\nexport default RegenerateAIFunction;\n\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\n\nimport RegenerateAIFunction from \"plop-templates/Thing/actions/RegenerateAIFunction/RegenerateAIFunction.js\";\n\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\n\nimport RegenerateAIFunction from \"../../../plop-templates/Thing/actions/RegenerateAIFunction/RegenerateAIFunction.js\";\n\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\n\nyarn add axios lodash\n\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\n\"A goal without a plan is just a wish\" - Antoine de Saint-Exupéry\n\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "// This function is written in Javascript (Node.js).\n// It takes a folderPath as an argument (string, the path of the AI function folder).\n// It executes RunAsyncCallbackInCMD.\n// It returns two constants arg1 and arg2 which are the first and second arguments passed via command line.\n\nconst RegenerateAIFunction = (folderPath) => {\n  // PLOP_INJECT_CODE\n  const arg1 = process.argv[2];\n  const arg2 = process.argv[3];\n  RunAsyncCallbackInCMD(folderPath);\n}"
+  ],
+  "codeUsage": [
+    "const RegenerateAIFunctionValue = RegenerateAIFunction(\"/Users/username/AIFunction\");"
+  ],
+  "codeExtension": [
+    "js"
+  ],
+  "inspiringMessage": [
+    "\"A goal without a plan is just a wish\" - Antoine de Saint-Exupéry"
+  ],
+  "codeImport": [
+    "import RegenerateAIFunction from \"plop-templates/Thing/actions/RegenerateAIFunction/RegenerateAIFunction.js\";"
+  ],
+  "codeExport": [
+    "export default RegenerateAIFunction;"
+  ],
+  "codeImportRelative": [
+    "import RegenerateAIFunction from \"../../../plop-templates/Thing/actions/RegenerateAIFunction/RegenerateAIFunction.js\";"
+  ],
+  "codeUsageReturn": [
+    "return RegenerateAIFunctionValue;"
+  ],
+  "codeInstall": [
+    "yarn add axios lodash"
+  ],
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation spécifique (via Chat GPT, l'I.A. magique)",
+  "name": "RegenerateAIFunction",
+  "affine_subfolder": "plop-templates/Thing",
+  "ask_for_subfolder": "plop-templates/Thing/actions",
+  "affine_file_where_we_use": "src/services/YoutubeUploader",
+  "ask_for_js_file": "src/services/YoutubeUploader/YoutubeUploader.js",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Sans ligne return",
+  "delete_function_body_or_not": "Oui",
+  "get_ai_service_language": "Javascript (Node.js)",
+  "get_ai_service_args": "folderPath (string, le path du dossier de la fonction I.A.)",
+  "get_ai_service_description": "Exécute RunAsyncCallbackInCMD",
+  "get_ai_service_return_value": "crée deux constantes arg1 et arg2 = le 1er et 2ème argument passés via command line. puis exécute RunAsyncCallbackInCMD.",
+  "gold_caviar": null
+}

@@ -1,0 +1,31 @@
+import { Constants } from "src/constants/Constants.js";
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter.js";
+import { TextOverlayState } from "../State/TextOverlayState";
+
+/** Initialise le state du component */
+export const InitTextOverlayState = (initialThumb) => {
+  const currentTextOverlayState =
+    SqliteReduxTextOverlayState.GetTextOverlayStateFirstRow();
+
+  SqliteReduxTextOverlayState.UpdateSpecificRowsFromDB({
+    row: {
+      ...currentTextOverlayState,
+
+      // si il existe déja un path de thumb,
+      // alors on visionne ce thumb par défaut,
+      // sinon on filme
+      currentState:
+        initialThumb != null
+          ? TextOverlayState.WatchThumb
+          : TextOverlayState.PickThumb,
+
+      // le path du thumb
+      thumbPath: initialThumb,
+
+      // on affiche ze bezness
+      isMounted: Constants.true,
+    },
+    rowName: "uniqueId",
+    rowValue: "TextOverlayState",
+  });
+};

@@ -1,0 +1,53 @@
+import { React } from "react";
+import { Spinner } from "src/components/Spinner/Spinner";
+import { Constants } from "src/constants/Constants";
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter.js";
+import { TextOverlayState } from "../State/TextOverlayState";
+import { Picker } from "./Picker";
+import { Watcher } from "./Watcher";
+
+/**
+ * le body du component
+ */
+export const TextOverlayBody = ({
+  onThumbTaken,
+  onOptionsClicked,
+  clickSound,
+}) => {
+  // le state du component
+  const currentTextOverlayState =
+    SqliteReduxTextOverlayState.GetFreshestTextOverlayStateFirstRow();
+
+  // si on veut prendre un thumb
+  if (
+    currentTextOverlayState.currentState == TextOverlayState.PickThumb
+  ) {
+    return (
+      <Picker
+        clickSound={clickSound}
+        onThumbTaken={onThumbTaken}
+        onOptionsClicked={onOptionsClicked}
+      />
+    );
+  }
+
+  // si on veut visionner un thumb
+  else if (
+    currentTextOverlayState.currentState == TextOverlayState.WatchThumb
+  ) {
+    return <Watcher />;
+  }
+  // si on veut patienter
+  else if (
+    currentTextOverlayState.currentState == TextOverlayState.Wait
+  ) {
+    return (
+      <Spinner
+        color={Constants.defaultContentColor}
+        backgroundColor={Constants.defaultBackgroundColor}
+      />
+    );
+  } else {
+    return;
+  }
+};

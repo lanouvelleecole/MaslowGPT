@@ -1,0 +1,15 @@
+{
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation spécifique (via Chat GPT, l'I.A. magique)",
+  "name": "TestIA",
+  "affine_subfolder": "src/services",
+  "ask_for_subfolder": "src/services",
+  "affine_file_where_we_use": "src/services/YoutubeUploader",
+  "ask_for_js_file": "src/services/YoutubeUploader/YoutubeUploader.js",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Avec ligne return",
+  "delete_function_body_or_not": "Oui",
+  "get_ai_service_language": "Javascript (ESM)",
+  "get_ai_service_args": "x (un nombre, à additioner à y), y (un nombre, à additionner à x)",
+  "get_ai_service_description": "Additionne x et y",
+  "get_ai_service_return_value": "Retourne un nombre, x et y additionnés ensemble"
+}

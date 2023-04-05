@@ -1,0 +1,1 @@
+obj (un objet dans lequel on veut ajouter des données), txtFilesPath (string, le path du dossier contenant les fichiers txt)

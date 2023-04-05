@@ -1,0 +1,38 @@
+import { Image } from "@rneui/base";
+import { React } from "react";
+import { View } from "react-native";
+import { Spinner } from "src/components/Spinner/Spinner.js";
+import { Constants } from "src/constants/Constants.js";
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter.js";
+import { styles } from "../Styles/TextOverlay.style.js";
+
+/**
+ *
+ * @returns l'écran de zieutage
+ */
+export function Watcher() {
+  // le state du component
+  const currentTextOverlayState =
+    SqliteReduxTextOverlayState.GetFreshestTextOverlayStateFirstRow();
+
+  // FileExists({ debugPrint: true, path: currentTextOverlayState.thumbPath });
+
+  return (
+    <View
+      style=\{{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Spinner
+        color={Constants.defaultContentColor}
+        backgroundColor={Constants.defaultBackgroundColor}
+      />
+      <Image
+        source=\{{ uri: currentTextOverlayState.thumbPath }}
+        containerStyle={styles.thumb}
+      />
+    </View>
+  );
+}

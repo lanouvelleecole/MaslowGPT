@@ -1,0 +1,14 @@
+/* PLOP_INJECT_IMPORT */
+
+import { TestWork2SingletonInstance } from "./TestWork2Singleton";
+
+/**
+ * Ceci permet de cancel ce Work (nommé TestWork2)
+ */
+export const CancelTestWork2 = () => {
+  const controller = TestWork2SingletonInstance.GetCanceller("TestWork2");
+
+  controller?.abort();
+
+  //console.log(`Annulation de TestWork2 effectuée avec succès !`);
+};

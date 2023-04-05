@@ -1,0 +1,135 @@
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter";
+import { AddTextToImage } from "src/services/AddTextToImage/AddTextToImage";
+import { GetUniqueID } from "src/services/GetUniqueID/GetUniqueID";
+import { TextOverlayState } from "../State/TextOverlayState";
+import { SetPickerState } from "./GoToSpecificState";
+
+/**
+ * permet d'ajouter un style par défaut pour le thumbnail.
+ *
+ * Style =
+ *
+ * - Une icone, en haut à gauche du thumb
+ *
+ * - Du texte, en bas à gauche du thumb'
+ */
+export const AddStyleToThumbnail = () => {
+  const currentTextOverlayState =
+    SqliteReduxTextOverlayState.GetTextOverlayStateFirstRow();
+
+  const onSuccess = (data) => {
+    // Ajoute une icone, puis le nom du tuto
+    AddTextToImage({
+      imagePath: currentTextOverlayState.thumbPath,
+      fileExtension: "png",
+      fileName: GetUniqueID(),
+      subfolder: "Pics",
+      texts: [
+        {
+          // position, The position of the text in background image
+          position: { x: 150, y: 150 },
+
+          // text, The value of the text
+          text: "Le beau texte",
+
+          // textSize, The size of the text
+          textSize: 150,
+
+          // color, The color of the text
+          color: "#000000",
+
+          // *** A AJOUTER ***
+
+          // corner, dans quel coin de la photo on affiche le texte ?
+          //
+          // top_left,
+          // top_center,
+          // top_right,
+          // center,
+          // bottom_left,
+          // bottom_center,
+          // bottom_right
+          corner: "bottom_right",
+
+          // addBoxToText, on emboite le texte, ou pas ?
+          addBoxToText: true,
+
+          // boxBackgroundColor, la couleur d'arriere plan de la boite
+          boxBackgroundColor: "#ffffff",
+
+          // boxWidth, taille de boite
+          boxWidth: 50,
+
+          // addTextBorder, ajoute ou pas de la peau sur le texte ?
+          addTextBorder: false,
+
+          // textBorderWidth, l'épaisseur de la peau de texte
+          textBorderWidth: "5",
+
+          // textBorderColor, la couleur de peau du texte
+          textBorderColor: "#cc20cc",
+
+          // stackText, on affiche le texte sur 1 ligne, ou chaque mot empilé l'un sur l'autre, verticalement ?
+          stackText: true,
+
+          // fontFamily, The font name that can resolve by React Native
+          fontFamily: "ComingSoon",
+        },
+      ],
+      onError: (e) => {
+        console.log(`error during photo tagging: ${e}`);
+      },
+      onSuccess: (path) => {
+        const currentTextOverlayState =
+          SqliteReduxTextOverlayState.GetTextOverlayStateFirstRow();
+
+        SetPickerState({
+          newState: {
+            ...currentTextOverlayState,
+            currentState: TextOverlayState.WatchThumb,
+            thumbPath: path,
+          },
+          onSuccess: (data) => {
+            console.log(`Thumbnail prettifié avec succès. path: ${path}`);
+          },
+        });
+
+        /*
+        
+        AddIconToImage({
+          imagePath: currentTextOverlayState.thumbPath,
+          icon: require("assets/images/icon.png"),
+          position: { x: 0, y: 0 },
+          onSuccess: (path) => {
+            const currentTextOverlayState =
+              SqliteReduxTextOverlayState.GetTextOverlayStateFirstRow();
+
+            SetPickerState({
+              newState: {
+                ...currentTextOverlayState,
+                currentState: TextOverlayState.WatchThumb,
+                thumbPath: path,
+              },
+              onSuccess: (data) => {
+                console.log(`Thumbnail prettifié avec succès. path: ${path}`);
+              },
+            });
+          },
+        });
+
+        */
+      },
+    });
+  };
+
+  const onError = (e) => {};
+
+  SetPickerState({
+    newState: {
+      ...currentTextOverlayState,
+      currentState: TextOverlayState.Wait,
+    },
+    onSuccess,
+    onError,
+  });
+};

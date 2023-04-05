@@ -1,0 +1,31 @@
+import { BottomBar } from "src/components/BottomBar/Bottom";
+import { SqliteReduxTextOverlayState } from "src/reduxState/TextOverlayState/TextOverlayStateGetterSetter.js";
+import React from "react";
+import { WatcherIcons } from "./bottomBarStyle";
+import { TextOverlayState } from "../State/TextOverlayState";
+
+/**
+ * les icones du bas d'écran
+ */
+export const TextOverlayBottomBar = ({ clickSound }) => {
+  const currentTextOverlayState =
+    SqliteReduxTextOverlayState.GetFreshestTextOverlayStateFirstRow();
+
+  const watcherIcons = WatcherIcons({ clickSound });
+
+  if (
+    currentTextOverlayState.currentState == TextOverlayState.PickThumb
+  ) {
+    return;
+  } else if (
+    currentTextOverlayState.currentState == TextOverlayState.WatchThumb
+  ) {
+    return <BottomBar bottomBarStyle={watcherIcons} />;
+  } else if (
+    currentTextOverlayState.currentState == TextOverlayState.Wait
+  ) {
+    return;
+  } else {
+    return;
+  }
+};

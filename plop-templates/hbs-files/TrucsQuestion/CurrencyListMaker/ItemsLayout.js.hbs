@@ -1,0 +1,45 @@
+import {
+  GetNameChoices,
+  GetNameChoicesActions,
+  GetNameChoicesUI,
+} from "../GetNameChoices/GetNameChoices";
+
+/**
+ * Le design d'1 choix
+ */
+export function GetNameLayout({
+  choice,
+  answers,
+  answer,
+  answerIndex,
+  currentItem,
+}) {
+  const thisGetName = GetNameChoices()[choice];
+
+  return {
+    // un descriptif de la unité de mesure
+    choiceDescription: GetNameChoicesUI()[choice],
+
+    // la valeur de la unité de mesure
+    choiceValue: thisGetName,
+
+    choiceImgUrl: "",
+    choiceImgPath: "",
+
+    // si la réponse en cours
+    // correspond à ce choix en cours de création,
+    // affiche le seal of approval
+    greenCheckmark: answer?.value == thisGetName,
+
+    // si on clique sur ce choix...
+    onChoiceClicked: () => {
+      GetNameChoicesActions[choice]({
+        choice: thisGetName,
+        answers,
+        answer,
+        answerIndex,
+        currentItem,
+      });
+    },
+  };
+}

@@ -1,0 +1,23 @@
+import { SqliteReduxWorkLists } from "src/reduxState/WorkLists/WorkListsGetterSetter";
+
+/**
+ *
+ * @param {*} workList
+ * le boulot dans son intégralité,
+ * avec stocké dedans les données
+ * d'exécution des Work individuels
+ *
+ * Callback de boulot réussi
+ */
+export function OnWorkDone({ workList }) {
+  //console.log(`Work done successfully, workList: ${JSON.stringify(workList)}`);
+  console.log(`Work done successfully !`);
+
+  SqliteReduxWorkLists.DeleteSpecificRowsFromDB({
+    rowName: "uniqueId",
+    rowValue: workList.uniqueId,
+    onSuccess: (data) => {
+      console.log(`WorkList deleted successfully !`);
+    },
+  });
+}

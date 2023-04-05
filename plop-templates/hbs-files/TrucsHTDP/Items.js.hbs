@@ -1,0 +1,124 @@
+/**
+ * les différents états possibles que Currency peut avoir.
+ */
+const Currency1 = 0;
+const Currency2 = 1;
+const Currency3 = 2;
+const Currency4 = 3;
+const Currency5 = 4;
+const Currency6 = 5;
+
+/**
+ *
+ * @param {*} Currency
+
+ * @returns ........................
+ */
+const fnForCurrency = (Currency) => {
+  // si .........................
+  if (Currency === Currency1) {
+    return fnForCurrency1();
+  }
+
+  // si .........................
+  else if (Currency === Currency2) {
+    return fnForCurrency2();
+  }
+
+  // si .........................
+  else if (Currency === Currency3) {
+    return fnForCurrency3();
+  }
+
+  // si .........................
+  else if (Currency === Currency4) {
+    return fnForCurrency4();
+  }
+
+  // si .........................
+  else if (Currency === Currency5) {
+    return fnForCurrency5();
+  }
+
+  // si .........................
+  else if (Currency === Currency6) {
+    return fnForCurrency6();
+  }
+
+  // si .........................
+  else if ([Currency1, Currency2, Currency3, Currency4, Currency5, Currency6].includes(Currency)) {
+    return fnForMultipleCurrency(Currency);
+  }
+
+  // si c'est un state extraterrestre,
+  // ............................
+  else {
+    return fnForUnknownCurrency();
+  }
+};
+
+/**
+ * si ............................
+ */
+const fnForCurrency1 = () => {
+  return;
+};
+
+/**
+ * si ............................
+ */
+const fnForCurrency2 = () => {
+  return;
+};
+
+/**
+ * si .............................
+ */
+const fnForCurrency3 = () => {
+  return;
+};
+
+/**
+ * si ............................
+ */
+const fnForCurrency4 = () => {
+  return;
+};
+
+/**
+ * si ............................
+ */
+const fnForCurrency5 = () => {
+  return;
+};
+
+/**
+ * si .............................
+ */
+const fnForCurrency6 = () => {
+  return;
+};
+
+/**
+ * si ..............................
+ */
+const fnForMultipleCurrency = (Currency) => {
+  return;
+};
+
+/**
+ * si state extraterrestre
+ */
+const fnForUnknownCurrency = () => {
+  return;
+};
+
+export const Currency = {
+  Currency1,
+  Currency2,
+  Currency3,
+  Currency4,
+  Currency5,
+  Currency6,
+  fnForCurrency,
+};
