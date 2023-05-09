@@ -1,0 +1,50 @@
+{
+  "gptOutput": "\n\n// PLOP_CODE_START \n// Import inquirer.js\nconst inquirer = require('inquirer');\n\n// Create a function called PromptUserWithoutPrompting\nconst PromptUserWithoutPrompting = (prompts) => {\n\t// Creating answers, our answer basket\n\tlet answers = {};\n\t// For each prompt in prompts\n\tfor (let prompt of prompts) {\n\t\t// Define the answer in answers\n\t\tanswers[prompt.name] = prompt.default({});\n\t}\n\t// Return the answers, or null if an error happen\n\treturn answers;\n};\n// PLOP_CODE_END\n// PLOP_CODE_USE_START\nconst PromptUserWithoutPromptingValue = PromptUserWithoutPrompting([\n\t{ name: 'name', message: 'What is your name?', default: 'NoName' },\n\t{\n\t\tname: 'letter',\n\t\tmessage: 'Choose one letter : (a, b or c)?',\n\t\tdefault: 'c'\n\t}\n]);\n// PLOP_CODE_USE_END\n// PLOP_CODE_USE_RETURN_START\nreturn PromptUserWithoutPromptingValue;\n// PLOP_CODE_USE_RETURN_END\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n// PLOP_CODE_EXPORT_START\nexport default PromptUserWithoutPrompting;\n// PLOP_CODE_EXPORT_END\n// PLOP_CODE_IMPORT_START\nimport PromptUserWithoutPrompting from \"src/services/PromptUserWithoutPrompting/PromptUserWithoutPrompting.js\";\n// PLOP_CODE_IMPORT_END\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport PromptUserWithoutPrompting from \"../src/services/PromptUserWithoutPrompting/PromptUserWithoutPrompting.js\";\n// PLOP_CODE_IMPORT_RELATIVE_END\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add inquirer\n// PLOP_COMMAND_LINE_INSTALL_END\n// PLOP_INSPIRING_MESSAGE_START\n\"If you're going through hell, keep going.\" - Winston Churchill\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "// Import inquirer.js\nconst inquirer = require('inquirer');\n\n// Create a function called PromptUserWithoutPrompting\nconst PromptUserWithoutPrompting = (prompts) => {\n\t// Creating answers, our answer basket\n\tlet answers = {};\n\t// For each prompt in prompts\n\tfor (let prompt of prompts) {\n\t\t// Define the answer in answers\n\t\tanswers[prompt.name] = prompt.default({});\n\t}\n\t// Return the answers, or null if an error happen\n\treturn answers;\n};"
+  ],
+  "codeUsage": [
+    "const PromptUserWithoutPromptingValue = PromptUserWithoutPrompting([\n\t{ name: 'name', message: 'What is your name?', default: 'NoName' },\n\t{\n\t\tname: 'letter',\n\t\tmessage: 'Choose one letter : (a, b or c)?',\n\t\tdefault: 'c'\n\t}\n]);"
+  ],
+  "codeExtension": [
+    "js"
+  ],
+  "inspiringMessage": [
+    "\"If you're going through hell, keep going.\" - Winston Churchill"
+  ],
+  "codeImport": [
+    "import PromptUserWithoutPrompting from \"src/services/PromptUserWithoutPrompting/PromptUserWithoutPrompting.js\";"
+  ],
+  "codeExport": [
+    "export default PromptUserWithoutPrompting;"
+  ],
+  "codeImportRelative": [
+    "import PromptUserWithoutPrompting from \"../src/services/PromptUserWithoutPrompting/PromptUserWithoutPrompting.js\";"
+  ],
+  "codeUsageReturn": [
+    "return PromptUserWithoutPromptingValue;"
+  ],
+  "codeInstall": [
+    "yarn add inquirer"
+  ],
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation spécifique (via Chat GPT, l'I.A. magique)",
+  "name": "PromptUserWithoutPrompting",
+  "affine_subfolder": "src",
+  "ask_for_subfolder": "src/services",
+  "affine_file_where_we_use": "pieces",
+  "ask_for_js_file": "pieces/AddStringQuick.js",
+  "affine_string_repo": "pieces",
+  "string_repo_folder_path": "pieces/AppStrings",
+  "string_repo_file_path": "AppStrings.js",
+  "string_name": "xgjfI5tN",
+  "string_fr": "text",
+  "string_eng": "This is a text.",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Sans ligne return",
+  "delete_function_body_or_not": "Non",
+  "get_ai_service_language": "Javascript",
+  "get_ai_service_args": "prompts (la liste de prompts inquirer.js)",
+  "get_ai_service_description": "retourne answers, a partir de prompts (une liste de prompts de inquirer.js), sans prompt visuel à l'écran (via property default, de chaque prompt individuel)",
+  "get_ai_service_return_value": "Crée une variable answers, un objet vide, notre panier à réponses. pour chaque prompt de prompts, answers[prompt.name] = prompt.default({}).  Une fois toutes les réponses ajoutées dans answers, retourne answers, ou null si erreur survient durant le processus.",
+  "gold_caviar": null
+}

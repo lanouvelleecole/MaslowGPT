@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* PLOP_INJECT_IMPORT */
-// eslint-disable-next-line unused-imports/no-unused-imports, no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import I18n from "i18n-js";
 
 /* PLOP_INJECT_GLOBAL_CODE */

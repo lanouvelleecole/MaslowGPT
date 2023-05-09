@@ -2,7 +2,7 @@ import { SqliteReduxTutoriels } from "src/reduxState/Tutoriels/TutorielsGetterSe
 
 // getter/setter
 import { SqliteReduxTutorielsState } from "src/reduxState/TutorielsState/TutorielsStateGetterSetter";
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line no-unused-vars
 import { GoToTutorielsList } from "../NavHelpers/GoToTutorielsList";
 
 /**

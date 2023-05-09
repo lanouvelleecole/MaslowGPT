@@ -1,0 +1,41 @@
+{
+  "gptOutput": "\n\n/*\n// SetCopiedText\n// \n// Inputs: \n//   text (le texte à mettre dans le clipboard)\n// \n// Outputs: \n//   Stocke text dans le clipboard, avec la librairie clipboardy. retourne 42 si succès, ou -1 si erreur.\n// \n// Purpose: \n//   Stocke text dans le clipboard.\n*/\n\nimport clipboardy from 'clipboardy';\n\n// PLOP_CODE_START\nexport const SetCopiedText = (text) => {\n  /* PLOP_INJECT_CODE */\n\n  try {\n    clipboardy.writeSync(text);\n    return 42;\n  } catch (err) {\n    console.log(err);\n    return -1;\n  }\n};\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START\nconst SetCopiedTextValue = SetCopiedText('This text is stored in the clipboard');\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\nreturn SetCopiedTextValue;\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\nexport { SetCopiedText };\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\nimport { SetCopiedText } from 'src/services/SetCopiedText/SetCopiedText.js';\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport { SetCopiedText } from '../../src/services/SetCopiedText/SetCopiedText.js';\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add clipboardy\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\"The secret of getting ahead is getting started.\" - Mark Twain\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "export const SetCopiedText = (text) => {\n  /* PLOP_INJECT_CODE */\n\n  try {\n    clipboardy.writeSync(text);\n    return 42;\n  } catch (err) {\n    console.log(err);\n    return -1;\n  }\n};"
+  ],
+  "codeUsage": [
+    "const SetCopiedTextValue = SetCopiedText('This text is stored in the clipboard');"
+  ],
+  "codeExtension": [
+    "js"
+  ],
+  "inspiringMessage": [
+    "\"The secret of getting ahead is getting started.\" - Mark Twain"
+  ],
+  "codeImport": [
+    "import { SetCopiedText } from 'src/services/SetCopiedText/SetCopiedText.js';"
+  ],
+  "codeExport": [
+    "export { SetCopiedText };"
+  ],
+  "codeImportRelative": [
+    "import { SetCopiedText } from '../../src/services/SetCopiedText/SetCopiedText.js';"
+  ],
+  "codeUsageReturn": [
+    "return SetCopiedTextValue;"
+  ],
+  "codeInstall": [
+    "yarn add clipboardy"
+  ],
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation spécifique (via Chat GPT, l'I.A. magique)",
+  "name": "SetCopiedText",
+  "affine_subfolder": "src",
+  "ask_for_subfolder": "src/services",
+  "affine_file_where_we_use": "src",
+  "ask_for_js_file": "Je veux rien, capiche amigo ?",
+  "get_ai_service_language": "Javascript (ESM)",
+  "get_ai_service_args": "text (le texte à mettre dans le clipboard)",
+  "get_ai_service_description": "Stocke text dans le clipboard",
+  "get_ai_service_return_value": "Stocke text dans le clipboard, avec la librairie clipboardy. retourne 42 si succès, ou -1 si erreur",
+  "gold_caviar": null
+}

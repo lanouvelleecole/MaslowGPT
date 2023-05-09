@@ -1,0 +1,1 @@
+Crée une variable answers, un objet vide, notre panier à réponses. pour chaque prompt de prompts, answers[prompt.name] = prompt.default({}).  Une fois toutes les réponses ajoutées dans answers, retourne answers, ou null si erreur survient durant le processus.

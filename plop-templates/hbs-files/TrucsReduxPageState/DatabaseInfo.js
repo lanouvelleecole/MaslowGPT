@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
+// eslint-disable-next-line no-unused-vars
 import { Constants } from "src/constants/Constants";
 
 // le nom de la base de données SQLITE

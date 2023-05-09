@@ -1,0 +1,1 @@
+Traduit text dans la langue spécifée par language, avec la libraire 'openai'. retourne le texte traduit, ou null si erreur.

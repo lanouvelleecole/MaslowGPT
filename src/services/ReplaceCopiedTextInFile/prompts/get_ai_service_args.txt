@@ -1,0 +1,1 @@
+filePath (le path du fichier dans lequel faire du boulot), patternStr (une sequence de charactères à remplacer), replacement (une sequence de charactères remplaçant patternStr)

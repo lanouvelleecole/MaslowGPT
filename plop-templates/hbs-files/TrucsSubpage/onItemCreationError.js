@@ -2,7 +2,7 @@
 import { Constants } from "src/constants/Constants";
 import { SqliteReduxTutorielsState } from "src/reduxState/TutorielsState/TutorielsStateGetterSetter";
 
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line no-unused-vars
 import { SetPageState } from "../NavHelpers/SetPageState";
 
 /**

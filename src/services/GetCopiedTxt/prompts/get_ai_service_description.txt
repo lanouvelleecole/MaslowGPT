@@ -1,0 +1,1 @@
+this function returns the currently copied text (from clipboard) as a string, or null otherwise

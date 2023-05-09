@@ -1,0 +1,1 @@
+Dans le code source du fichier situé dans filePath, remplace patternStr par replacement (avec .replace), puis sauvegarde les changements dans le fichier concerné. retourne le code source modifié, si succès, ou -1, si erreur

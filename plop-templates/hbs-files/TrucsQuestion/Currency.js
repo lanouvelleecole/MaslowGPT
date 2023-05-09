@@ -3,12 +3,15 @@ import { GetUniqueID } from "src/services/GetUniqueID/GetUniqueID";
 import i18n from "i18n-js";
 import { AllCurrency } from "./CurrencyListMaker/AllCurrency";
 
-// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
+// eslint-disable-next-line no-unused-vars
 import { CurrencyChoices } from "./CurrencyChoices/CurrencyChoices";
 
-// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
+// eslint-disable-next-line no-unused-vars
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { CustomComponent } from "./Custom/custom";
+
+// eslint-disable-next-line no-unused-vars
+import { SaveCurrentItem } from "./GettersSetters/SaveCurrentItem";
 
 /* PLOP_INJECT_GLOBAL_CODE */
 

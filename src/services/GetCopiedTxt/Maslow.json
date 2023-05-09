@@ -1,0 +1,34 @@
+{
+  "gptOutput": "\n\n// PLOP_CODE_START\n\nimport clipboardy from 'clipboardy';\n\n/**\n* GetCopiedTxt\n* @description Gets the currently copied text (from clipboard) as a string, or null if error or not existing.\n*/\nconst GetCopiedTxt = () => {\n\t/* PLOP_INJECT_CODE */\n}\n\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START\nconst GetCopiedTxtValue = GetCopiedTxt();\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\nreturn GetCopiedTxtValue;\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\nexport default GetCopiedTxt\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\nimport GetCopiedTxt from \"src/services/GetCopiedTxt/GetCopiedTxt.js\";\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport GetCopiedTxt from \"../../../src/services/GetCopiedTxt/GetCopiedTxt.js\";\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add clipboardy\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\"The secret of getting ahead is getting started.\" - Mark Twain\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "import clipboardy from 'clipboardy';\n\n/**\n* GetCopiedTxt\n* @description Gets the currently copied text (from clipboard) as a string, or null if error or not existing.\n*/\nconst GetCopiedTxt = () => {\n\t/* PLOP_INJECT_CODE */\n}"
+  ],
+  "codeUsage": ["const GetCopiedTxtValue = GetCopiedTxt();"],
+  "codeExtension": ["js"],
+  "inspiringMessage": [
+    "\"The secret of getting ahead is getting started.\" - Mark Twain"
+  ],
+  "codeImport": [
+    "import GetCopiedTxt from \"src/services/GetCopiedTxt/GetCopiedTxt.js\";"
+  ],
+  "codeExport": ["export default GetCopiedTxt"],
+  "codeImportRelative": [
+    "import GetCopiedTxt from \"../../../src/services/GetCopiedTxt/GetCopiedTxt.js\";"
+  ],
+  "codeUsageReturn": ["return GetCopiedTxtValue;"],
+  "codeInstall": ["yarn add clipboardy"],
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation spécifique (via Chat GPT, l'I.A. magique)",
+  "name": "GetCopiedTxt",
+  "affine_subfolder": "src/services",
+  "ask_for_subfolder": "src/services",
+  "affine_file_where_we_use": "plop-templates/Commands/prompts",
+  "ask_for_js_file": "plop-templates/Commands/prompts/askForStringName.js",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Sans ligne return",
+  "delete_function_body_or_not": "Oui",
+  "get_ai_service_language": "Javascript (ESM)",
+  "get_ai_service_args": "no args",
+  "get_ai_service_description": "this function returns the currently copied text (from clipboard) as a string, or null otherwise",
+  "get_ai_service_return_value": "returns the currently copied text (from clipboard) as a string, or null otherwise. use clipboardy",
+  "gold_caviar": null
+}

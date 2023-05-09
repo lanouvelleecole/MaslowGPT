@@ -6,7 +6,7 @@
 //
 // @param {*} plop l'instance plop
 
-import { initAllGenerators } from "./plop-templates/initAllGenerators.js";
+import { initAllGenerators } from "./src/AllGenerators/InitAllGenerators/initAllGenerators.js";
 
 // nous permettant de faire notre magie
 export default function (plop) {

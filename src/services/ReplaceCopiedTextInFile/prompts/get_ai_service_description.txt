@@ -1,0 +1,1 @@
+Dans le contenu du fichier situé dans filePath, remplace la séquence de charactères patternStr, par replacement (avec .replace) puis save les changements

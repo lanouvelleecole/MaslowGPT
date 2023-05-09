@@ -1,9 +1,0 @@
-{
-  "js_file": "ff",
-  "thing_folder": "pages\\InventaireScreen\\pieces\\InventaireScreenCreationList",
-  "questionnaire_folder_path": "pages/ArduinoPrograms/pieces/AddItemToArduinoPrograms/ArduinoProgramsCreationList",
-  "questionnaire_file_name": "ArduinoProgramsCreationList.js",
-  "repo_name": "AppStrings",
-  "question_DB_save_paths": "[\"src/pages/ArduinoPrograms/pieces/AddItemToArduinoPrograms/AddItemToDB.js\", \"src/pages/ArduinoPrograms/pieces/EditItemInArduinoPrograms/EditItemInArduinoProgramsDB.js\"]",
-  "databaseinfo_path": "src/reduxState/ArduinoPrograms/DatabaseInfo.js"
-}

@@ -1,6 +1,6 @@
 /* PLOP_INJECT_IMPORT */
 
-// eslint-disable-next-line unused-imports/no-unused-imports, no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { Work } from "src/services/Work/Work";
 import { WorkList } from "src/services/WorkList/WorkList";
 

@@ -1,5 +1,5 @@
 {
-  "name": "maslowgpt",
+  "name": "maslow-gpt",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,11 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clipboardy": "^3.0.0",
+    "i18n-js": "3.9.2",
     "inquirer": "^9.1.5",
     "nanoid": "^4.0.2",
     "node-plop": "^0.31.1",
     "openai": "^3.2.1",
-    "ora": "^6.3.0"
+    "ora": "^6.3.0",
+    "vscode": "^1.1.37"
   },
   "description": "A command line utility for generating code with Plop",
   "bin": {
@@ -25,5 +28,9 @@
     "index.js",
     "plopfile.js",
     "plop-templates/**/*"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2"
+  }
 }

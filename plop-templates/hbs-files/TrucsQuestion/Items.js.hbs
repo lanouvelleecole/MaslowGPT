@@ -1,101 +1,32 @@
-/* PLOP_INJECT_IMPORT */
-import { GetUniqueID } from "src/services/GetUniqueID/GetUniqueID";
-import i18n from "i18n-js";
-import { AllGetName } from "./GetNameListMaker/AllGetName";
-
-// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
-import { GetNameChoices } from "./GetNameChoices/GetNameChoices";
-
-// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-imports
-import { useNavigation, useRoute } from "@react-navigation/native";
-import { CustomComponent } from "./Custom/custom";
-
-/* PLOP_INJECT_GLOBAL_CODE */
-
-/**
- *
- * La question nommée GetName, qui ....
- */
-const GetName = () => {
-  /* PLOP_INJECT_CODE */
-
-  const route = useRoute();
-  const navigation = useNavigation();
-
-  return {
-    // un identifiant unique
-    id: GetUniqueID(),
-
-    // un nom, nous permettant de gérer les récup de réponses choisies/écrites
-    name: "GetName",
-
-    // le type de question souhaité
-    // "text" ou "number" ou "choices" ou "custom"
-    type: "text",
-
-    // la description de la question
-    // en mode "text" ou "number" ou "choices"
-    description: ({ answers, answer, answerIndex }) => {
-      return i18n.t("fvzUYw");
-    },
-    // les choix dispos pour l'utilisateur, si "type" === "choices"
-    choices: ({ answers, answer, answerIndex }) => {
-      return AllGetName({
-        answers,
-        answer,
-        answerIndex,
-
-        // PLOP_INJECT_CURRENT_ITEM
-      });
-    },
-
-    // la valeur choisie/écrite par l'user
-    // null (par défaut)
-    value: currentItem?.name ?? "Foune",
-
-    // callback de text changé (en mode "text")
-    onTextChanged: (newText) => {
-      !currentItem ?? SaveCurrentItem({...currentItem, name: newText});
-    },
-
-    // la valeur par défaut a mettre dans le text input
-    // (optionnel)
-    defaultValue: ({ answers, answer, answerIndex }) =>
-      currentItem?.name ?? "Foune",
-
-    // les flex du message ou de la zone d'input
-    messageFlex: 1,
-    componentFlex: 1,
-
-    // la taille du texte du message
-    messageFontSize: 25,
-
-    // on montre le component d'input en premier, ou pas ?
-    componentFirst: true,
-
-    // un callback qui vérifie que l'input est valide
-    // (optionnel)
-    // true si valide false autrement
-    checkInput: ({ input, answers, answer, answerIndex }) => {
-      return input?.length > 0;
-    },
-    // un message d'erreur à afficher si les données ne sont pas valides
-    errMsg: ({ answers, answer, answerIndex }) => {
-      return i18n.t("nlpRIzI");
-    },
-
-    // la callback de customization
-    customQuestionPanel: ({ answers, answer, answerIndex, onInput }) => {
-      return CustomComponent({
-        answers,
-        answer,
-        answerIndex,
-        onInput,
-        route,
-        navigation,
-      });
-    },
-  };
-};
-
-export { GetName };
+/* PLOP_INJECT_IMPORT */ import { GetUniqueID } from
+"src/services/GetUniqueID/GetUniqueID"; import i18n from "i18n-js"; import {
+AllGetName } from "./GetNameListMaker/AllGetName"; // eslint-disable-next-line
+no-unused-varsimport { GetNameChoices } from "./GetNameChoices/GetNameChoices";
+// eslint-disable-next-line no-unused-varsimport { useNavigation, useRoute }
+from "@react-navigation/native"; import { CustomComponent } from
+"./Custom/custom"; /* PLOP_INJECT_GLOBAL_CODE */ /** * * La question nommée
+GetName, qui .... */ const GetName = () => { /* PLOP_INJECT_CODE */ const route
+= useRoute(); const navigation = useNavigation(); return { // un identifiant
+unique id: GetUniqueID(), // un nom, nous permettant de gérer les récup de
+réponses choisies/écrites name: "GetName", // le type de question souhaité //
+"text" ou "number" ou "choices" ou "custom" type: "text", // la description de
+la question // en mode "text" ou "number" ou "choices" description: ({ answers,
+answer, answerIndex }) => { return i18n.t("fvzUYw"); }, // les choix dispos pour
+l'utilisateur, si "type" === "choices" choices: ({ answers, answer, answerIndex
+}) => { return AllGetName({ answers, answer, answerIndex, //
+PLOP_INJECT_CURRENT_ITEM }); }, // la valeur choisie/écrite par l'user // null
+(par défaut) value: currentItem?.name ?? "Foune", // callback de text changé (en
+mode "text") onTextChanged: (newText) => { !currentItem ??
+SaveCurrentItem({...currentItem, name: newText}); }, // la valeur par défaut a
+mettre dans le text input // (optionnel) defaultValue: ({ answers, answer,
+answerIndex }) => currentItem?.name ?? "Foune", // les flex du message ou de la
+zone d'input messageFlex: 1, componentFlex: 1, // la taille du texte du message
+messageFontSize: 25, // on montre le component d'input en premier, ou pas ?
+componentFirst: true, // un callback qui vérifie que l'input est valide //
+(optionnel) // true si valide false autrement checkInput: ({ input, answers,
+answer, answerIndex }) => { return input?.length > 0; }, // un message d'erreur
+à afficher si les données ne sont pas valides errMsg: ({ answers, answer,
+answerIndex }) => { return i18n.t("nlpRIzI"); }, // la callback de customization
+customQuestionPanel: ({ answers, answer, answerIndex, onInput }) => { return
+CustomComponent({ answers, answer, answerIndex, onInput, route, navigation, });
+}, }; }; export { GetName };

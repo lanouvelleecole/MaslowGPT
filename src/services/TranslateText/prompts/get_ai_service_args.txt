@@ -1,0 +1,1 @@
+text (le texte a traduire), language (la langue dans laquelle traduire ce texte)

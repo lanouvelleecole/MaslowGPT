@@ -1,0 +1,38 @@
+{
+  "gptOutput": "\n\n// PLOP_CODE_START\n\n// MakeLoadingSpinner: Affiche msg, suivi d'un loading spinner sur la ligne suivante, dans le command line. Retourne une callback permettant d'arrêter le spinner.\n// Inputs:\n// - msg (string, un message)\n// Outputs:\n// - Retourne une callback permettant d'arrêter le spinner.\nimport ora from 'ora');\n\nconst MakeLoadingSpinner = (msg) => {\n  /* PLOP_INJECT_CODE */\n\n  const spinner = ora({\n    text: msg,\n    color: 'yellow',\n  }).start();\n\n  return () => {\n    spinner.stop();\n  };\n};\n\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START\n// Exemple d'utilisation de MakeLoadingSpinner\nconst MakeLoadingSpinnerValue = MakeLoadingSpinner('Loading...');\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\nreturn MakeLoadingSpinnerValue;\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\nmodule.exports = MakeLoadingSpinner;\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\nconst MakeLoadingSpinner = require('plop-templates/Commands/actions/MakeLoadingSpinner/MakeLoadingSpinner.js');\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\nconst MakeLoadingSpinner = require('../../../plop-templates/Commands/actions/MakeLoadingSpinner/MakeLoadingSpinner.js';\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\n// Installation des bibliothèques utilisées\n// yarn add ora\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\"The secret of getting ahead is getting started.\" - Mark Twain \n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "// MakeLoadingSpinner: Affiche msg, suivi d'un loading spinner sur la ligne suivante, dans le command line. Retourne une callback permettant d'arrêter le spinner.\n// Inputs:\n// - msg (string, un message)\n// Outputs:\n// - Retourne une callback permettant d'arrêter le spinner.\nimport ora from 'ora');\n\nconst MakeLoadingSpinner = (msg) => {\n  /* PLOP_INJECT_CODE */\n\n  const spinner = ora({\n    text: msg,\n    color: 'yellow',\n  }).start();\n\n  return () => {\n    spinner.stop(;\n  };\n};"
+  ],
+  "codeUsage": [
+    "// Exemple d'utilisation de MakeLoadingSpinner\nconst MakeLoadingSpinnerValue = MakeLoadingSpinner('Loading...');"
+  ],
+  "codeExtension": ["js"],
+  "inspiringMessage": [
+    "\"The secret of getting ahead is getting started.\" - Mark Twain"
+  ],
+  "codeImport": [
+    "import MakeLoadingSpinner from 'plop-templates/Commands/actions/MakeLoadingSpinner/MakeLoadingSpinner.js';"
+  ],
+  "codeExport": ["module.exports = MakeLoadingSpinner;"],
+  "codeImportRelative": [
+    "import MakeLoadingSpinner from '../../../plop-templates/Commands/actions/MakeLoadingSpinner/MakeLoadingSpinner.js';"
+  ],
+  "codeUsageReturn": ["return MakeLoadingSpinnerValue;"],
+  "codeInstall": [
+    "// Installation des bibliothèques utilisées\n// yarn add ora"
+  ],
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation spécifique (via Chat GPT, l'I.A. magique)",
+  "name": "MakeLoadingSpinner",
+  "affine_subfolder": "plop-templates/Thing",
+  "ask_for_subfolder": "plop-templates/Commands/actions",
+  "affine_file_where_we_use": "src/services/YoutubeUploader",
+  "ask_for_js_file": "src/services/YoutubeUploader/YoutubeUploader.js",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Sans ligne return",
+  "delete_function_body_or_not": "Non",
+  "get_ai_service_language": "javascript (node.js)",
+  "get_ai_service_args": "msg (string, un message)",
+  "get_ai_service_description": "Affiche msg, suivi d'un loading spinner sur la ligne suivante, dans le command line.",
+  "get_ai_service_return_value": "Affiche msg, suivi d'un loading spinner sur la ligne suivante, dans le command line. Retourne une callback permettant d'arrêter le spinner.",
+  "gold_caviar": null
+}

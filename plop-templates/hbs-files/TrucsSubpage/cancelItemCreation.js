@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line no-unused-vars
 import { GoToTutorielsList } from "../NavHelpers/GoToTutorielsList";
 
 /**

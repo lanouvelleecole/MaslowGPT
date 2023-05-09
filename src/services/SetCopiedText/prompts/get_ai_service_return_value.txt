@@ -1,0 +1,1 @@
+Stocke text dans le clipboard, avec la librairie clipboardy. retourne 42 si succès, ou -1 si erreur

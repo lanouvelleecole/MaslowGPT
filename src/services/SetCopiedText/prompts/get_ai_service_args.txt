@@ -1,0 +1,1 @@
+text (le texte à mettre dans le clipboard)

@@ -1,0 +1,41 @@
+{
+  "gptOutput": "\n\n// PLOP_CODE_START\nimport openai from \"openai\";\n\n/**\n * Traduit text dans la langue spécifée par language.\n * Utilise la librairie openai pour efaire cette traduction.\n * @param {string} text - Le texte à traduire.\n * @param {string} language - La langue dans laquelle traduire ce texte.\n * @returns {string} Le texte traduit, ou null si erreur.\n */\nconst TranslateText = (text, language) => {\n   // Code here\n};\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START\nconst TranslateTextValue = TranslateText('Mon texte en français', 'anglais');\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\nreturn TranslateTextValue;\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\nexport default TranslateText;\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\nimport TranslateText from \"src/services/TranslateText/TranslateText.js\";\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport TranslateText from \"../../src/services/TranslateText/TranslateText.js\";\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add openai\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\"No matter what you do, always give it your best.\" - Anonymous\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "import openai from \"openai\";\n\n/**\n * Traduit text dans la langue spécifée par language.\n * Utilise la librairie openai pour efaire cette traduction.\n * @param {string} text - Le texte à traduire.\n * @param {string} language - La langue dans laquelle traduire ce texte.\n * @returns {string} Le texte traduit, ou null si erreur.\n */\nconst TranslateText = (text, language) => {\n   // Code here\n};"
+  ],
+  "codeUsage": [
+    "const TranslateTextValue = TranslateText('Mon texte en français', 'anglais');"
+  ],
+  "codeExtension": ["js"],
+  "inspiringMessage": [
+    "\"No matter what you do, always give it your best.\" - Anonymous"
+  ],
+  "codeImport": [
+    "import TranslateText from \"src/services/TranslateText/TranslateText.js\";"
+  ],
+  "codeExport": ["export default TranslateText;"],
+  "codeImportRelative": [
+    "import TranslateText from \"../../src/services/TranslateText/TranslateText.js\";"
+  ],
+  "codeUsageReturn": ["return TranslateTextValue;"],
+  "codeInstall": ["yarn add openai"],
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation spécifique (via Chat GPT, l'I.A. magique)",
+  "name": "TranslateText",
+  "affine_subfolder": "src",
+  "ask_for_subfolder": "src/services",
+  "affine_file_where_we_use": "plop-templates/Thing",
+  "ask_for_js_file": "Je veux rien, capiche amigo ?",
+  "get_ai_service_language": "Javascript (with import)",
+  "get_ai_service_args": "text (le texte a traduire), language (la langue dans laquelle traduire ce texte)",
+  "get_ai_service_description": "Traduire text dans la langue spécifée par language",
+  "get_ai_service_return_value": "Traduit text dans la langue spécifée par language, avec la libraire 'openai'. retourne le texte traduit, ou null si erreur.",
+  "affine_string_repo": "pieces",
+  "string_repo_folder_path": "pieces/AppStrings",
+  "string_repo_file_path": "AppStrings.js",
+  "affine_file_where_we_use_string": "plop-templates/Thing",
+  "ask_for_js_file_string": "plop-templates/Commands/ask_for_js_file_string.js",
+  "string_name": "xkRatDXn",
+  "string_fr": "Dans quel fichier veux tu utiliser ce string multilingue ? Partant de ce dossier:",
+  "string_eng": "Choose the folder where the multilingual string repository is ? Starting from this folder:",
+  "gold_caviar": null
+}

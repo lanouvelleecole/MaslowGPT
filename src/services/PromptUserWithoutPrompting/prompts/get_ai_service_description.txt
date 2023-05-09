@@ -1,0 +1,1 @@
+retourne answers, a partir de prompts (une liste de prompts de inquirer.js), sans prompt visuel à l'écran (via property default, de chaque prompt individuel)

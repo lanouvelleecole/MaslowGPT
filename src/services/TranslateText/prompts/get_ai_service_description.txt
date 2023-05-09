@@ -1,0 +1,1 @@
+Traduire text dans la langue spécifée par language

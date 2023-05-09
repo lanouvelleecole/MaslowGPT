@@ -1,0 +1,36 @@
+{
+  "gptOutput": "\n\n// PLOP_CODE_START\n\nimport fs from 'fs';\n\nfunction ReplaceCopiedTextInFile(filePath, patternStr, replacement) {\n\tlet code = fs.readFileSync(filePath);\n\tcode = code.toString().replace(patternStr, replacement);\n\tfs.writeFileSync(filePath, code);\n\treturn (code == -1) ? -1 : code;\n}\n\n// PLOP_CODE_END\n// PLOP_CODE_USE_START\nconst ReplaceCopiedTextInFileValue = ReplaceCopiedTextInFile('src\\services\\ReplaceCopiedTextInFile\\ReplaceCopiedTextInFile', 'patternStr', 'replacement');\n// PLOP_CODE_USE_END\n// PLOP_CODE_USE_RETURN_START\nreturn ReplaceCopiedTextInFileValue;\n// PLOP_CODE_USE_RETURN_END\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n// PLOP_CODE_EXPORT_START\nexport default ReplaceCopiedTextInFile;\n// PLOP_CODE_EXPORT_END\n// PLOP_CODE_IMPORT_START\nimport ReplaceCopiedTextInFile from \"src/services/ReplaceCopiedTextInFile/ReplaceCopiedTextInFile.js\";\n// PLOP_CODE_IMPORT_END\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport ReplaceCopiedTextInFile from \"../../src/services/ReplaceCopiedTextInFile/ReplaceCopiedTextInFile.js\";\n// PLOP_CODE_IMPORT_RELATIVE_END\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add fs\n// PLOP_COMMAND_LINE_INSTALL_END\n// PLOP_INSPIRING_MESSAGE_START\n\"Success is walking from failure to failure with no loss of enthusiasm.\" - Winston Churchill\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "import fs from 'fs';\n\nfunction ReplaceCopiedTextInFile(filePath, patternStr, replacement) {\n\tlet code = fs.readFileSync(filePath);\n\tcode = code.toString().replace(patternStr, replacement);\n\tfs.writeFileSync(filePath, code);\n\treturn (code == -1) ? -1 : code;\n}"
+  ],
+  "codeUsage": [
+    "const ReplaceCopiedTextInFileValue = ReplaceCopiedTextInFile('src\\services\\ReplaceCopiedTextInFile\\ReplaceCopiedTextInFile', 'patternStr', 'replacement');"
+  ],
+  "codeExtension": ["js"],
+  "inspiringMessage": [
+    "\"Success is walking from failure to failure with no loss of enthusiasm.\" - Winston Churchill"
+  ],
+  "codeImport": [
+    "import ReplaceCopiedTextInFile from \"src/services/ReplaceCopiedTextInFile/ReplaceCopiedTextInFile.js\";"
+  ],
+  "codeExport": ["export default ReplaceCopiedTextInFile;"],
+  "codeImportRelative": [
+    "import ReplaceCopiedTextInFile from \"../../src/services/ReplaceCopiedTextInFile/ReplaceCopiedTextInFile.js\";"
+  ],
+  "codeUsageReturn": ["return ReplaceCopiedTextInFileValue;"],
+  "codeInstall": ["yarn add fs"],
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation spécifique (via Chat GPT, l'I.A. magique)",
+  "name": "ReplaceCopiedTextInFile",
+  "affine_subfolder": "src",
+  "ask_for_subfolder": "src/services",
+  "affine_file_where_we_use": "plop-templates/Thing",
+  "ask_for_js_file": "plop-templates/Commands/initAddIntlString.js",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Sans ligne return",
+  "delete_function_body_or_not": "Non",
+  "get_ai_service_language": "Javascript (import style)",
+  "get_ai_service_args": "filePath (le path du fichier dans lequel faire du boulot), patternStr (une sequence de charactères à remplacer), replacement (une sequence de charactères remplaçant patternStr)",
+  "get_ai_service_description": "Dans le contenu du fichier situé dans filePath, remplace la séquence de charactères patternStr, par replacement (avec .replace) puis save les changements",
+  "get_ai_service_return_value": "Dans le code source du fichier situé dans filePath, remplace patternStr par replacement (avec .replace), puis sauvegarde les changements dans le fichier concerné. retourne le code source modifié, si succès, ou -1, si erreur",
+  "gold_caviar": null
+}
