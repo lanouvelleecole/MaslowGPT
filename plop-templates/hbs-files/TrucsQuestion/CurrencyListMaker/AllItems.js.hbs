@@ -1,5 +1,5 @@
-import { GetNameChoices } from "../GetNameChoices/GetNameChoices";
-import { GetNameLayout } from "./GetNameLayout";
+import { GetTestAgeChoices } from "../GetTestAgeChoices/GetTestAgeChoices";
+import { GetTestAgeLayout } from "./GetTestAgeLayout";
 
 /**
  *
@@ -7,16 +7,16 @@ import { GetNameLayout } from "./GetNameLayout";
  *
  * @returns une liste de choix
  */
-export function AllGetName({ answers, answer, answerIndex, currentItem }) {
+export function AllGetTestAge({ answers, answer, answerIndex, currentItem }) {
   return (
-    Object.keys(GetNameChoices())
+    Object.keys(GetTestAgeChoices())
       // on récup. les keys (nom de unité de mesure)
       // dans une liste...
       .filter((v) => isNaN(Number(v)))
       // pour chaque item de cette liste...
       .map((choice) => {
         // crée un choix.
-        return GetNameLayout({
+        return GetTestAgeLayout({
           choice,
           answers,
           answer,

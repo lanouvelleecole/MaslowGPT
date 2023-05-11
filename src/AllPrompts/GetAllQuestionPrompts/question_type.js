@@ -9,6 +9,19 @@ const userChoices = {
   customQuestion: I18n.t("x7WH7DI9"),
 };
 
+const getQuestionType = (type) => {
+  if (type == userChoices.textQuestion) {
+    return "text";
+  } else if (type == userChoices.numQuestion) {
+    return "number";
+  } else if (type == userChoices.choiceQuestion) {
+    return "choices";
+  } else if (type == userChoices.customQuestion) {
+    return "custom";
+  } else {
+    throw Error(`Unknown question type: ${type}`);
+  }
+};
 /**
  *
  * *) Quel genre de question veux tu créer ?
@@ -39,3 +52,4 @@ const question_type = {
 
 export { question_type };
 export { userChoices };
+export { getQuestionType };

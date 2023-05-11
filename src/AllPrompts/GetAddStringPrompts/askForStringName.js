@@ -80,14 +80,15 @@ const string_fr = {
 const string_eng = {
   type: "editor",
 
-  default: (data) =>
-    Promise.resolve(
+  default: (data) => {
+    return Promise.resolve(
       TranslateText({
         text: answers.string_fr,
         language: "english",
         apiKey: OPENAI_API_KEY,
       })
-    ),
+    );
+  },
 
   filter: function (answer) {
     // Use the trim() method to remove whitespace from both sides of the answer

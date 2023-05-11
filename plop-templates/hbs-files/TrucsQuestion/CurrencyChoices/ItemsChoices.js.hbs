@@ -6,14 +6,14 @@ import I18n from "i18n-js";
 /* PLOP_INJECT_GLOBAL_CODE */
 
 /* Les différents choix dispo */
-export const GetNameChoices = () => {
+export const GetTestAgeChoices = () => {
   return {
     /* PLOP_INJECT_CHOICE */
   };
 };
 
 /* Les différents strings à afficher pour UI, selon choix */
-export const GetNameChoicesUI = () => {
+export const GetTestAgeChoicesUI = () => {
   return {
     /* PLOP_INJECT_CHOICE_UI */
   };
@@ -25,12 +25,12 @@ export const GetNameChoicesUI = () => {
  *
  * retourne le string d'UI à afficher selon valeur de choix
  */
-export const GetNameChoiceUI = (choice) => {
-  var object = GetNameChoices();
+export const GetTestAgeChoiceUI = (choice) => {
+  var object = GetTestAgeChoices();
 
   const keyName = Object.keys(object).find((key) => object[key] === choice);
 
-  return GetNameChoicesUI()[keyName];
+  return GetTestAgeChoicesUI()[keyName];
 };
 
 /**
@@ -38,6 +38,6 @@ export const GetNameChoiceUI = (choice) => {
  *
  *
  **/
-export const GetNameChoicesActions = {
+export const GetTestAgeChoicesActions = {
   /* PLOP_INJECT_CHOICE_ACTION */
 };

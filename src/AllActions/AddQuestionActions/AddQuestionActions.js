@@ -1,8 +1,10 @@
+import I18n from "i18n-js";
 import path from "path";
 import { initQuestionAndCie } from "./initQuestionAndCie.js";
 import { getNPMFolderRoot } from "../../../getNPMFolderRoot.js";
 import { createTemplateFromFolder } from "../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
 import { toPascalCase } from "../../services/ToPascalCase/ToPascalCase.js";
+import { getQuestionType } from "../../AllPrompts/GetAllQuestionPrompts/question_type.js";
 
 /**
  *
@@ -20,6 +22,7 @@ function AddQuestionActions(appRootPath, promptData) {
   );
   const questionFolderPath = `${promptData["questionnaire_folder_path"]}/Questions/${namePascal}`;
   const defaultTextInput = promptData["question_default_textinput"];
+  const onTxtInputChanged = promptData["question_on_textinput_changed"];
 
   const templateCreationParams = {
     templateFolderPath: templateFolderPath,
@@ -33,7 +36,7 @@ function AddQuestionActions(appRootPath, promptData) {
 
       {
         word: `"question_type"`,
-        replaceWordWith: `"${promptData["question_type"]}"`,
+        replaceWordWith: `"${getQuestionType(promptData["question_type"])}"`,
       },
 
       {
@@ -55,7 +58,7 @@ function AddQuestionActions(appRootPath, promptData) {
 
       {
         word: `"question_on_textinput_changed"`,
-        replaceWordWith: promptData["question_on_textinput_changed"] ?? 42,
+        replaceWordWith: onTxtInputChanged?.length > 0 ? onTxtInputChanged : 42,
       },
 
       {
