@@ -1,9 +1,9 @@
 import { AddCodeUseExample } from "./AddCodeUseExample.js";
 import { createFullMaslowJSONFile } from "./createFullMaslowJSONFile.js";
 import { CreateNewFunctionShit } from "./CreateNewFunctionShit.js";
-import { DeleteOldFunctionShit } from "../../../AllGenerators/SetAsynchronousActions/DeleteOldFunctionShit.js";
-import { makeCHATGPTFuncRequest } from "../../../AllGenerators/SetAsynchronousActions/makeCHATGPTFuncRequest.js";
-import { OpenFilesInVSCodeAndPrintMsg } from "../../../AllGenerators/SetAsynchronousActions/OpenFilesInVSCodeAndPrintMsg.js";
+import { DeleteOldFunctionShit } from "../../../AllGenerators/SetAIFunctionActions/DeleteOldFunctionShit.js";
+import { makeCHATGPTFuncRequest } from "../../../AllGenerators/SetAIFunctionActions/makeCHATGPTFuncRequest.js";
+import { OpenFilesInVSCodeAndPrintMsg } from "../../../AllGenerators/SetAIFunctionActions/OpenFilesInVSCodeAndPrintMsg.js";
 
 async function RegenerateAIFunctionWork(answers, appRootPath) {
   await makeCHATGPTFuncRequest(answers, false);

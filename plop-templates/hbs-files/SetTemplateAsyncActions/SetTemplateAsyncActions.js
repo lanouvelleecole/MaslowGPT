@@ -1,18 +1,15 @@
-import { deleteCaca } from "./deleteCaca.js";
-import { openFilesInVSCode } from "./openVSCodeFiles.js";
-import { setChatGPTFunctionGetter } from "./setChatGPTFunctionGetter.js";
-import { setCodeUsageIfNeeded } from "./setCodeUsageIfNeeded.js";
-import { setCreateFunctionAction } from "./setCreateFunctionAction.js";
-import { setCreateMaslowJSON } from "./setCreateMaslowJSON.js";
+import { deleteCaca } from "./DeleteCaca/deleteCaca.js";
+import { openFilesInVSCode } from "./OpenVSCodeFiles/openVSCodeFiles.js";
+import { setChatGPTFunctionGetter } from "./SetChatGPTGetter/setChatGPTFunctionGetter.js";
+import { setCodeUsageIfNeeded } from "./SetCodeUsageIfNeeded/setCodeUsageIfNeeded.js";
+import { setCreateFunctionAction } from "./SetCreateFunctionAction/setCreateFunctionAction.js";
+import { setCreateMaslowJSON } from "./SetCreateMaslowJSON/setCreateMaslowJSON.js";
 
-function setAsynchronousActions(plop, appRootPath) {
+function SetTemplateAsyncActions(plop, appRootPath) {
   // set l'action asynchrone
   // qui fait une requete de demande de
   // création de fonction via chat gpt
   setChatGPTFunctionGetter(plop);
-
-  // set l'action de traduction de texte via IA
-  //TranslateTextRequest(plop);
 
   // set l'action de suppression de caca
   deleteCaca(plop, appRootPath);
@@ -43,4 +40,4 @@ function setAsynchronousActions(plop, appRootPath) {
   openFilesInVSCode(plop, appRootPath);
 }
 
-export { setAsynchronousActions };
+export { SetTemplateAsyncActions };

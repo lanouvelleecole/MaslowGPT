@@ -32,7 +32,10 @@ export async function PromptUser(prompts) {
     //const prompt = CopyObjectWithCallbacks(prompt_og);
     //AddBackMsg(prompt, currentIndex);
 
+    console.log(`\n`);
+
     const currentAnswers = await inquirer.prompt(prompt);
+
     const currentAnswerValue = currentAnswers[prompt.name];
     let currentValidator = prompt.validate;
     let currentValidatorValue = true;

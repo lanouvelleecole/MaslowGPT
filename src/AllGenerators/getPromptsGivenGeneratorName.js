@@ -5,6 +5,9 @@ import { getAddStringPrompts } from "../AllPrompts/GetAddStringPrompts/getAddStr
 import { getAddDefaultAppTemplatePrompts } from "../AllPrompts/GetAddDefaultAppTemplatePrompts/getAddDefaultAppTemplatePrompts.js";
 import { getAllQuestionPrompts } from "../AllPrompts/GetAllQuestionPrompts/getAllQuestionPrompts.js";
 import { CommandNames } from "../AppConstants/CommandNames.js";
+import { AddCommandPrompts } from "../AllPrompts/AddCommandPrompts/AddCommandPrompts.js";
+
+// PLOP_ADD_PPTS_IMPORT_GIVN_GEN_NAME
 
 /**
  *
@@ -38,7 +41,7 @@ function getPromptsGivenGeneratorName() {
   // renomme templatePrompts en le nom
   // de la commande, en pascalCase.
   //
-  // 3) Dans <Root Appli>/src/AllPrompts/<Command Name>/<Command Name>.ext ,
+  // 3) Dans <Root Appli>/src/AllPrompts/<Command Name>/<Command Name>Prompts.js ,
   // ajoute les prompts dans l'array, ajoute les fichiers de prmpts,
   // préférablement crées dans un subfolder
   // <Root Appli>/src/AllPrompts/<Command Name>/prompts/
@@ -49,8 +52,12 @@ function getPromptsGivenGeneratorName() {
   //   return <Command Name>Prompts(appRootPath);
   // }
   //
-  // au dessus de ce commentaire, après les else if existants.
+  // au dessous de ce commentaire.
   // Bien sur, ajoute l'import correspondant.
+  // PLOP_ADD_PPTS_GIVN_GEN_NAME
+  else if (generatorName == CommandNames.add_command) {
+    return AddCommandPrompts(appRootPath);
+  }
 
   // ADD_MASLOW_COMMAND_1 (commande sans prompt(s))
   //
@@ -62,6 +69,8 @@ function getPromptsGivenGeneratorName() {
       CommandNames.regen_ai_func,
       CommandNames.add_string_quick,
       CommandNames.install_everything,
+
+      // PLOP_ADD_NO_PPTS_CMD_NAME
     ].includes(generatorName)
   ) {
     return [];

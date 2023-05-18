@@ -1,0 +1,1 @@
+str (a string containing words to be 'quoted')

@@ -17,6 +17,12 @@ function createWorkHTTP({ appRootPathFromC, actualJsFile, subfolder, name }) {
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: `${subfolder}/AllWorks/${namePascal}`,
+    wordsInFilePath: [
+      {
+        word: "Trucs",
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "Trucs",

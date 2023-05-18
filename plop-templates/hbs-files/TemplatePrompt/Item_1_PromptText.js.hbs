@@ -1,0 +1,39 @@
+import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
+
+const TestPpt2PromptText = (appRootPath) => {
+  return {
+    type: "input",
+
+    filter: function (answer) {
+      // Use the trim() method to remove whitespace from both sides of the answer
+      return answer.trim();
+    },
+
+    name: "TestPpt2",
+    default: (data) => {
+      return getDataFromNPMMaslowJSON("TestPpt2");
+    },
+
+    message: ``,
+  };
+};
+
+const TestPpt2PromptEditor = (appRootPath) => {
+  return {
+    type: "editor",
+
+    filter: function (answer) {
+      // Use the trim() method to remove whitespace from both sides of the answer
+      return answer.trim();
+    },
+
+    name: "TestPpt2",
+    default: (data) => {
+      return getDataFromNPMMaslowJSON("TestPpt2");
+    },
+
+    message: ``,
+  };
+};
+
+export { TestPpt2PromptText, TestPpt2PromptEditor };

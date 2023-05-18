@@ -4,6 +4,7 @@
  * Ici ajoute le nom de la commande.
  */
 export const CommandNames = {
+  // ADD_CMD_NAME
   generate: "generate",
   add_string: "add-string",
   add_default_app_template: "add-default-app-template",
@@ -11,4 +12,5 @@ export const CommandNames = {
   regen_ai_func: "regen-ai-func",
   add_string_quick: "add-string-quick",
   install_everything: "install-everything",
+  add_command: "add-command",
 };

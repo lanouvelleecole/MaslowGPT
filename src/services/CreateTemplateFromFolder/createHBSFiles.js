@@ -6,7 +6,12 @@ import fs from "fs";
 // pour chaque fichier existant.
 // avec noms appropriés (wordsInHBSFileName)
 // supprime si déja existant.
-const createHBSFiles = ({ filePaths, wordsInHBSFileName, wordsInFile }) => {
+const createHBSFiles = ({
+  filePaths,
+  wordsInHBSFileName,
+  wordsInFile,
+  wordsInFilePath,
+}) => {
   const filePathsFiltered = filePaths.filter((filePathInfo) => {
     // path du fichier a partir de C://
     const fullFilePath = filePathInfo.fullFilePath;
@@ -18,11 +23,7 @@ const createHBSFiles = ({ filePaths, wordsInHBSFileName, wordsInFile }) => {
       return true;
     }
     // si c'est un fichier .hbs. on l'enlève de la liste,
-    // et on supprime l'item .hbs
     else {
-      // supprime fichier hbs si déja existant
-      deleteFileIfExisting(fullFilePath);
-
       return false;
     }
   });
@@ -58,10 +59,14 @@ const createHBSFiles = ({ filePaths, wordsInHBSFileName, wordsInFile }) => {
     );
 
     // le path du fichier js à créer via PLOP
-    const filePathFromAppRoot = filePathInfo.filePathFromRoot.replace(
-      new RegExp(wordsInFile[0].word, "g"),
-      wordsInFile[0].replaceWordWith
-    );
+    let filePathFromAppRoot = filePathInfo.filePathFromRoot;
+
+    wordsInFilePath.forEach((wordInFilePath) => {
+      filePathFromAppRoot = filePathFromAppRoot.replace(
+        new RegExp(wordInFilePath.word, "g"),
+        wordInFilePath.replaceWordWith
+      );
+    });
 
     // le path du fichier hbs à créer via PLOP.
     // partant du root du dossier template.
@@ -84,7 +89,9 @@ const createHBSFiles = ({ filePaths, wordsInHBSFileName, wordsInFile }) => {
     // dans ce nouveau fichier template hbs,
     // remplace les mots souhaités
     wordsInFile.forEach((wordInFile) => {
-      replaceWordInFile({
+      //
+
+      return replaceWordInFile({
         fileName: hbsFilePath,
         word: wordInFile.word,
         replaceWordWith: wordInFile.replaceWordWith,
@@ -117,7 +124,7 @@ const createHBSFiles = ({ filePaths, wordsInHBSFileName, wordsInFile }) => {
   });
 };
 
-function deleteFileIfExisting(filePath) {
+export function deleteFileIfExisting(filePath) {
   if (fs.existsSync(filePath)) {
     fs.unlinkSync(filePath);
 

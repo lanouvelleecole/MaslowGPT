@@ -1,8 +1,8 @@
-import { createTemplateFromFolder } from '../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js';
+import { createTemplateFromFolder } from "../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
 import path from "path";
-import { toPascalCase } from '../../../../services/ToPascalCase/ToPascalCase.js';
-import { reduxInitAndCie } from '../CreateReduxState/reduxInitAndCie.js';
-import { getNPMFolderRoot } from '../../../../../getNPMFolderRoot.js';
+import { toPascalCase } from "../../../../services/ToPascalCase/ToPascalCase.js";
+import { reduxInitAndCie } from "../CreateReduxState/reduxInitAndCie.js";
+import { getNPMFolderRoot } from "../../../../../getNPMFolderRoot.js";
 
 function createPageItemsReduxState({
   subfolder,
@@ -21,6 +21,12 @@ function createPageItemsReduxState({
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: `${subfolder}/${namePascal}`,
+    wordsInFilePath: [
+      {
+        word: "TutorielsState",
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "TutorielsState",

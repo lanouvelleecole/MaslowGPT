@@ -1,0 +1,1 @@
+Returns str, with all it's words 'quoted'

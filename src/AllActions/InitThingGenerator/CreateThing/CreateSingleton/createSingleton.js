@@ -1,9 +1,9 @@
-import { initSingletonAndCie } from './initSingletonAndCie.js';
+import { initSingletonAndCie } from "./initSingletonAndCie.js";
 import path from "path";
 
-import { toPascalCase } from '../../../../services/ToPascalCase/ToPascalCase.js';
-import { createTemplateFromFolder } from '../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js';
-import { getNPMFolderRoot } from '../../../../../getNPMFolderRoot.js';
+import { toPascalCase } from "../../../../services/ToPascalCase/ToPascalCase.js";
+import { createTemplateFromFolder } from "../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
+import { getNPMFolderRoot } from "../../../../../getNPMFolderRoot.js";
 
 function createSingleton({ appRootPathFromC, actualJsFile, subfolder, name }) {
   const namePascal = toPascalCase(name);
@@ -17,6 +17,12 @@ function createSingleton({ appRootPathFromC, actualJsFile, subfolder, name }) {
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: `${subfolder}`,
+    wordsInFilePath: [
+      {
+        word: "Trucs",
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "Trucs",

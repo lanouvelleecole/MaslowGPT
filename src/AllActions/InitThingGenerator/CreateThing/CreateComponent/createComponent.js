@@ -16,6 +16,12 @@ function createComponent({ subfolder, appRootPathFromC, actualJsFile, name }) {
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: `${subfolder}/${namePascal}`,
+    wordsInFilePath: [
+      {
+        word: `ThumbnailPicker`,
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "ThumbnailPicker",

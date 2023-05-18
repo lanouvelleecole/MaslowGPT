@@ -2,6 +2,7 @@ function createQuestionnaire(subfolder, actualJsFile) {
   return [
     {
       type: "add",
+      force: true,
       path: `${process.cwd()}/${subfolder}/{{pascalCase name}}/QuestionList.js`,
       templateFile: `plop-templates/hbs-files/QuestionList.js.hbs`,
     },

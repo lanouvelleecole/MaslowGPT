@@ -1,14 +1,11 @@
-
-
-  /**
-   * 
-   * args: 
-   * 
-   * return .....
-   * 
-   * This function .......
-   */ 
+/**
+ *
+ * args:
+ *
+ * return .....
+ *
+ * This function .......
+ */
 export function clearAndUpper(text) {
-  return text.replace(/-/, "").toUpperCase();
+  return text.replace(/-|_/, "").toUpperCase();
 }
-  

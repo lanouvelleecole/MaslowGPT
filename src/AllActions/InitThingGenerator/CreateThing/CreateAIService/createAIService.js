@@ -1,4 +1,4 @@
-import { initAIServiceAndCie } from './initAIServiceAndCie.js';
+import { initAIServiceAndCie } from "./initAIServiceAndCie.js";
 
 function createAIService({
   subfolder,

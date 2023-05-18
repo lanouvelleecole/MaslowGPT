@@ -1,6 +1,6 @@
-import { createHBSFiles } from './createHBSFiles.js';
-import { createPLOPAdds } from './createPLOPAdds.js';
-import { getAllFilesFromFolder } from './getAllFilesFromFolder.js';
+import { createHBSFiles } from "./createHBSFiles.js";
+import { createPLOPAdds } from "./createPLOPAdds.js";
+import { getAllFilesFromFolder } from "./getAllFilesFromFolder.js";
 
 /**
  *
@@ -29,6 +29,7 @@ const createTemplateFromFolder = ({
   templateFolderPathFromAppRoot,
   creationFolderFromAppRoot,
   wordsInFile,
+  wordsInFilePath,
   wordsInHBSFileName,
 }) => {
   // 1) Il nous faut la liste de
@@ -49,6 +50,7 @@ const createTemplateFromFolder = ({
     filePaths: allFiles,
     wordsInHBSFileName: wordsInHBSFileName,
     wordsInFile: wordsInFile,
+    wordsInFilePath: wordsInFilePath,
   });
 
   // avec nos paths hbs (fullFilePath)

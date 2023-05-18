@@ -6,8 +6,9 @@ const createPLOPAdds = ({
   creationFolderFromAppRoot,
 }) => {
   return hbsFiles.map((hbsFile) => {
-    return {
+    const plopFileAdd = {
       type: "add",
+      force: true,
       path: path.join(
         process.cwd(),
         creationFolderFromAppRoot,
@@ -18,6 +19,8 @@ const createPLOPAdds = ({
         hbsFile.hbsFilePathFromAppRoot
       ),
     };
+
+    return plopFileAdd;
   });
 };
 

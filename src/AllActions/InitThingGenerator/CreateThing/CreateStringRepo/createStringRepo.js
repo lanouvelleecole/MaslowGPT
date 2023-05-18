@@ -8,6 +8,7 @@ function createStringRepo(
     // crée le fichier AppStrings.js
     {
       type: "add",
+      force: true,
 
       // Path for the new file
       path: `${process.cwd()}/${subfolder}/{{pascalCase name}}/{{pascalCase name}}.${properExtension}`,

@@ -1,0 +1,55 @@
+import path from "path";
+import { initTestCommandAndCie } from "./initTestCommandAndCie.js";
+import { getNPMFolderRoot } from "../../../../../getNPMFolderRoot.js";
+import { createTemplateFromFolder } from "../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
+
+/**
+ *
+ * args: promptData
+ *
+ * return .....
+ *
+ * This function .......
+ */
+function createTestCommandFolder3(promptData) {
+  // eslint-disable-next-line no-unused-vars
+  const prompt_value = promptData["<prompt_value>"];
+  const TestCommandFolderPathFromAppRoot = `plop-TestCommands/hbs-files/<TestCommandFolderName>`;
+  const TestCommandFolderPath = path.join(
+    getNPMFolderRoot(),
+    TestCommandFolderPathFromAppRoot
+  );
+  const creationFolderFromAppRoot = `<some/path/to/a/folder/starting/from/approot>`;
+
+  const TestCommandCreationParams = {
+    TestCommandFolderPath: TestCommandFolderPath,
+    TestCommandFolderPathFromAppRoot: TestCommandFolderPathFromAppRoot,
+    creationFolderFromAppRoot: creationFolderFromAppRoot,
+    wordsInFilePath: [
+      {
+        word: "<some keyword in the input js files>",
+        replaceWordWith: `<replacement value>`,
+      },
+    ],
+    wordsInFile: [
+      {
+        word: `<some keyword_in_the_TestCommand_folder>`,
+        replaceWordWith: `<some replacement value>`,
+      },
+    ],
+
+    wordsInHBSFileName: {
+      word: "<some keyword to replace in the filenames of files in the TestCommand folder>",
+      replaceWordWith: `<the replacement value>`,
+    },
+  };
+
+  return createTemplateFromFolder(TestCommandCreationParams).concat(
+    initTestCommandAndCie({
+      creationFolderFromAppRoot: creationFolderFromAppRoot,
+      promptData,
+    })
+  );
+}
+
+export { createTestCommandFolder3 };

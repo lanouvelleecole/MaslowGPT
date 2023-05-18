@@ -22,6 +22,12 @@ export const createDefaultApp = ({ appRootPathFromC }) => {
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: ``,
+    wordsInFilePath: [
+      {
+        word: `App`,
+        replaceWordWith: `App`,
+      },
+    ],
     wordsInFile: [
       {
         word: "App",

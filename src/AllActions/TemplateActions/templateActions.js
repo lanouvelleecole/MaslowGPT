@@ -17,8 +17,7 @@ import { createTemplateFolder1 } from "./pieces/createTemplateFolder1/createTemp
  *
  * // ADD_MASLOW_COMMAND_4
  *
- * Ici, crée 0 ou plusieurs dossier a partir de templates, si besoin.
- * Uncomment/comment selon tes feelings
+ * Ici, crée 0 ou plusieurs actions
  */
 function templateActions(appRootPath, promptData) {
   const templateFolder1 = createTemplateFolder1(promptData);

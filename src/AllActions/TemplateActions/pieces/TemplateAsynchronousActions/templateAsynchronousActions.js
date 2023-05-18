@@ -5,7 +5,7 @@ import { setCodeUsageIfNeeded } from "./SetCodeUsageIfNeeded/setCodeUsageIfNeede
 import { setCreateFunctionAction } from "./SetCreateFunctionAction/setCreateFunctionAction.js";
 import { setCreateMaslowJSON } from "./SetCreateMaslowJSON/setCreateMaslowJSON.js";
 
-function templateAsynchronousActions(plop, appRootPath) {
+function SetTemplateAsyncActions(plop, appRootPath) {
   // set l'action asynchrone
   // qui fait une requete de demande de
   // création de fonction via chat gpt
@@ -40,4 +40,4 @@ function templateAsynchronousActions(plop, appRootPath) {
   openFilesInVSCode(plop, appRootPath);
 }
 
-export { templateAsynchronousActions };
+export { SetTemplateAsyncActions as templateAsynchronousActions };

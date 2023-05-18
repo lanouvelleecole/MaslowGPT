@@ -1,4 +1,3 @@
-import I18n from "i18n-js";
 import path from "path";
 import { initQuestionAndCie } from "./initQuestionAndCie.js";
 import { getNPMFolderRoot } from "../../../getNPMFolderRoot.js";
@@ -28,6 +27,12 @@ function AddQuestionActions(appRootPath, promptData) {
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: questionFolderPath,
+    wordsInFilePath: [
+      {
+        word: `Currency`,
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "Currency",

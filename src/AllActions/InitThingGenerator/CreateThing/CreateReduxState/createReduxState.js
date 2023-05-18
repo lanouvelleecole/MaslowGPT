@@ -16,6 +16,12 @@ function createReduxState({ subfolder, name, actualJsFile, appRootPathFromC }) {
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: `${subfolder}/${namePascal}`,
+    wordsInFilePath: [
+      {
+        word: "TutorielsState",
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "TutorielsState",

@@ -1,0 +1,15 @@
+import { AsyncWork } from "./asyncWork.js";
+
+export async function TemplateImpromptuCommand() {
+  const appRootPath = process.cwd();
+
+  // le yyy de la commande maslow xxx yyy
+  const funcPath = process.argv[3];
+
+  // RE MAGIE, si y'a path
+  if (funcPath?.length > 0) {
+    await AsyncWork(appRootPath, funcPath);
+  } else {
+    console.log(``);
+  }
+}

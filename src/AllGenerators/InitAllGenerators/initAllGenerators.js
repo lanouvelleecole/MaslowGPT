@@ -1,8 +1,12 @@
 import { initThingGenerator } from "../InitThingGenerator/initThingGenerator.js";
 import { initAddIntlString } from "../InitAddIntlString/initAddIntlString.js";
 import { initAddQuestion } from "../InitAddQuestion/AddQuestion.js";
-import { setAsynchronousActions } from "../SetAsynchronousActions/setAsynchronousActions.js";
+import { setAIFunctionActions } from "../SetAIFunctionActions/setAIFunctionActions.js";
 import { initAddDefaultTemplate } from "../InitAddDefaultTemplate/initAddDefaultTemplate.js";
+import { CommandNames } from "../../AppConstants/CommandNames.js";
+import { initAddCommandGenerator } from "../InitAddCommandGenerator/initAddCommandGenerator.js";
+import { AddCommandAsynchronousActions } from "../../AllActions/AddCommandActions/pieces/AddCommandAsynchronousActions/AddCommandAsynchronousActions.js";
+// PLOP_INJECT_GENERATOR_IMPORTS
 
 function initAllGenerators(plop) {
   // le path Command line ou la commande maslow xxx à été exécuté
@@ -23,17 +27,18 @@ function initAllGenerators(plop) {
    * à un ou plusieurs prompts,
    * alors ajoute un call de fonction 
    * initialisatrice de générateur PLOP,
-   * avec ce if ci dessous, copié/collé au dessus du if existant sous ce commentaire:
+   * avec ce if ci dessous, copié/collé sous ce commentaire:
    * 
 
-if (generatorName == "<command_name>") {
+else if (generatorName == "<command_name>") {
   init<command_name_camel_case>Generator(plop, appRootPath);
 
-  <command name pascal>AsynchronousActions(plop, appRootPath);
+  Set${command_name_camel}AsyncActions(plop, appRootPath);
 }
 
+ajoute les imports correspondants
+
    * 
-   * et turn le if précédent, en else if.
    * 
    * Dans src/AllGenerators, copie/colle, et renomme le dossier
    * InitTemplateGenerator en Init<camel_case_generatorName>Generator.
@@ -41,34 +46,36 @@ if (generatorName == "<command_name>") {
    * dans ce dossier, renomme le fichier initTemplateGenerator.js,
    * en init<camel_case_generatorName>Generator.js.
    * 
-   * Dans src/AllActions/TemplateActions/pieces, 
-   * copie/colle, et renomme le dossier
-   * TemplateAsynchronousActions en <camel_case_generatorName>AsynchronousActions.
-   * 
-   * dans ce dossier, renomme le fichier templateAsynchronousActions.js,
-   * en <pascal_case_generatorName>AsynchronousActions.js.
+   * Dans src/AllGenerators, copie/colle, et renomme le dossier
+   * SetAIFunctionActions, en Set${command_name_camel}AsyncActions.
    * 
    */
-  if (generatorName == "generate") {
+  if (generatorName == CommandNames.generate) {
     initThingGenerator(plop, appRootPath);
 
     /**
      * set the custom chat gpt getter action, among other (future ?) stuff :-)
      */
-    setAsynchronousActions(plop, appRootPath);
-  } else if (generatorName == "add-string") {
+    setAIFunctionActions(plop, appRootPath);
+  }
+  // PLOP_INJECT_GENERATOR_ELSE_IF
+  else if (generatorName == CommandNames.add_string) {
     /**
      * permet d'ajouter un string international
      * dans un repo
      */
     initAddIntlString(plop, appRootPath);
-  } else if (generatorName == "add-default-app-template") {
+  } else if (generatorName == CommandNames.add_command) {
+    initAddCommandGenerator(plop, appRootPath);
+
+    AddCommandAsynchronousActions(plop, appRootPath);
+  } else if (generatorName == CommandNames.add_default_app_template) {
     /**
      * permet de créer des templates pour App.tsx avec pattern
      * d'injection d'import et séparation entre component et stylesheet
      */
     initAddDefaultTemplate(plop, appRootPath);
-  } else if (generatorName == "question") {
+  } else if (generatorName == CommandNames.question) {
     /**
      * ce code ci dessous initialise le générateur
      * permettant de générer une question

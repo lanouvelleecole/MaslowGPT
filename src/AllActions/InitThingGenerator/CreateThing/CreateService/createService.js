@@ -1,7 +1,7 @@
-import { toPascalCase } from '../../../../services/ToPascalCase/ToPascalCase.js';
-import { createTemplateFromFolder } from '../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js';
+import { toPascalCase } from "../../../../services/ToPascalCase/ToPascalCase.js";
+import { createTemplateFromFolder } from "../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
 import path from "path";
-import { getNPMFolderRoot } from '../../../../../getNPMFolderRoot.js';
+import { getNPMFolderRoot } from "../../../../../getNPMFolderRoot.js";
 
 function createService({ subfolder, appRootPathFromC, actualJsFile, name }) {
   const namePascal = toPascalCase(name);
@@ -15,6 +15,12 @@ function createService({ subfolder, appRootPathFromC, actualJsFile, name }) {
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: `${subfolder}/${namePascal}`,
+    wordsInFilePath: [
+      {
+        word: "Service",
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "Service",

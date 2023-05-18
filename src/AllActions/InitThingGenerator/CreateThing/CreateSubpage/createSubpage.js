@@ -1,8 +1,8 @@
-import { createSubpageInitAndCie } from './createSubpageInitAndCie.js';
-import { toPascalCase } from '../../../../services/ToPascalCase/ToPascalCase.js';
-import { createTemplateFromFolder } from '../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js';
+import { createSubpageInitAndCie } from "./createSubpageInitAndCie.js";
+import { toPascalCase } from "../../../../services/ToPascalCase/ToPascalCase.js";
+import { createTemplateFromFolder } from "../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
 import path from "path";
-import { getNPMFolderRoot } from '../../../../../getNPMFolderRoot.js';
+import { getNPMFolderRoot } from "../../../../../getNPMFolderRoot.js";
 
 /**
  * Permet de créer un template de page avec données persistent (Sqlite et Redux)
@@ -27,6 +27,12 @@ function createSubpage({
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: `${subfolder}/${namePascal}`,
+    wordsInFilePath: [
+      {
+        word: "Tutoriels",
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "Tutoriels",

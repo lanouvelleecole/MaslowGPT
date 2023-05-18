@@ -15,6 +15,10 @@ import i18n from "i18n-js";
 i18n.translations = {
   en: {
     /* PLOP_INJECT_ENG_STRING */
+    xolCVXrV: `Write the PLOP action(s) you wish to add. Like this: action_name_1, ..., action_name_n`,
+    xy9q3K36: `Write the name or names of prompts to create for this command, like this: 
+name_1, name_2, name_n`,
+    x04nYSfC: `What is the name of this command?`,
     xtWQiwJ7: `Installing all the things necessary for Maslow to function... Please wait...`,
     xWtfTMu: `Translation of text in progress.... Please wait...`,
     xgCADDRB: `What is the name of the multilingual string repository where we store the various page/subpage messages that will be requested from you soon?`,
@@ -146,6 +150,11 @@ maslow regen-ai-func <path/vers/dossier/fonction>
   },
   fr: {
     /* PLOP_INJECT_FR_STRING */
+    xolCVXrV: `Ecris la ou les actions PLOP que tu souhaites ajouter. Comme ceci:
+action_name_1, ..., action_name_n`,
+    xy9q3K36: `Ecris le ou les noms de prompts à créer pour cette commande, comme ceci:
+name_1, name_2, name_n`,
+    x04nYSfC: `Quel est le nom de cette commande ?`,
     xtWQiwJ7: `Installation de toutes les choses nécessaires au fonctionnement de maslow... Veuillez patienter svp...`,
     xWtfTMu: `\nTraduction de texte en cours.... Veuillez patienter svp...\n`,
     xgCADDRB: `Quel est le nom du répositoire de strings multilingue dans lequel on stocke les divers messages de page/subpage qui te seront demandés sous peu ?`,

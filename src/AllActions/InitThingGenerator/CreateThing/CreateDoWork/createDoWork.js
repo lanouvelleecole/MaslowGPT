@@ -1,9 +1,9 @@
-import { initDoWorkAndCie } from './initDoWorkAndCie.js';
+import { initDoWorkAndCie } from "./initDoWorkAndCie.js";
 import path from "path";
 
-import { toPascalCase } from '../../../../services/ToPascalCase/ToPascalCase.js';
-import { createTemplateFromFolder } from '../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js';
-import { getNPMFolderRoot } from '../../../../../getNPMFolderRoot.js';
+import { toPascalCase } from "../../../../services/ToPascalCase/ToPascalCase.js";
+import { createTemplateFromFolder } from "../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
+import { getNPMFolderRoot } from "../../../../../getNPMFolderRoot.js";
 
 function createDoWork({ appRootPathFromC, actualJsFile, subfolder, name }) {
   const namePascal = toPascalCase(name);
@@ -17,6 +17,12 @@ function createDoWork({ appRootPathFromC, actualJsFile, subfolder, name }) {
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: `${subfolder}/${namePascal}`,
+    wordsInFilePath: [
+      {
+        word: `Trucs`,
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "Trucs",

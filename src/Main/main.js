@@ -18,6 +18,9 @@ import { AddStringQuick } from "../AllGenerators/AddStringQuick/AddStringQuick.j
 
 // le générateur qui installe des choses nécéssaires au fonctionnement de maslow, si besoin
 import { InstallEverythingNeeded } from "../AllGenerators/InstallEverythingNeeded/InstallEverythingNeeded.js";
+import { CommandNames } from "../AppConstants/CommandNames.js";
+
+// NO_PROMPT_IMPROMPTU_IMPORT
 
 /**
  * Ici commence maslow. This is the alpha and the oméga.
@@ -51,7 +54,7 @@ export async function main() {
     if (prompts?.length > 0) {
       await PromptUserAndRunActions(prompts, generatorName);
     }
-    // ADD_MASLOW_COMMAND_7
+    // ADD_MASLOW_COMMAND_5
     //
     // ... si ta commande n'utilise aucun, 0, nada wallou, de prompts,
     // Dans ce cas, dans src/AllGenerators, copie/colle et renomme
@@ -67,18 +70,19 @@ else if (generatorName == "<command name>") {
 }
 
     */
+    // NO_PROMPT_ELSE_IF
 
     // si on veut régénérer une fonction I.A. sans prompting
-    else if (generatorName == "regen-ai-func") {
+    else if (generatorName == CommandNames.regen_ai_func) {
       // Si on veut recréer une fonction IA
       await RegenerateAIFunctionCommand();
     }
     // si on veut ajouter string rapidement, sans prompting
-    else if (generatorName == "add-string-quick") {
+    else if (generatorName == CommandNames.add_string_quick) {
       await AddStringQuick();
     }
     // si on veut installer touskilfaut
-    else if (generatorName == "install-everything") {
+    else if (generatorName == CommandNames.install_everything) {
       await InstallEverythingNeeded();
     }
 

@@ -1,6 +1,6 @@
 {
   "what_we_wanna_do": "In a given programming language, create a function (with the help of Chat GPT, the magic A.I).",
-  "name": "GetGlobalJSFunctions",
+  "name": "AddQuotesAroundWord",
   "affine_subfolder": "src/services",
   "ask_for_subfolder": "src/services",
   "affine_string_repo": "src",
@@ -16,7 +16,7 @@
   "question_type": "A question whose answer is a number.",
   "question_name": "GetTestAge",
   "ask_for_js_file": "Je veux rien, capiche amigo ?",
-  "get_ai_service_language": "Typescript",
+  "get_ai_service_language": "Javascript (Node.js)",
   "affine_questionnaire": "src/pages/TestPage",
   "questionnaire_folder_path": "src/pages/TestPage/pieces/AddItemToTestPage/TestPageCreationList",
   "questionnaire_file_name": "TestPageCreationList.js",
@@ -37,7 +37,12 @@
   "databaseinfo_path": "src\\reduxState\\TestPage\\DatabaseInfo.js",
   "row_type": "INTEGER",
   "row_default_value": "",
-  "get_ai_service_args": "filePath (string, the path of the file where the functions are)",
-  "get_ai_service_description": "Returns a list of strings, the list of global functions found in the source code of filePath",
-  "get_ai_service_return_value": "Return an array of strings, each string is the full source code \r\nof the source code of a single global javascript function found \r\nin the source code of filePath.\r\n\r\nif no global function is found, or if error, return empty array.\r\n\r\nuse esprima."
+  "get_ai_service_args": "str (a string containing words to be 'quoted')",
+  "get_ai_service_description": "Returns str, with all it's words 'quoted'",
+  "get_ai_service_return_value": "Returns str, with all it's words 'quoted'. for ex., if str = \"word_1, word_2\", the return value should be `\"word_1\", \"word_2\"`",
+  "AddCommandName": "test-command",
+  "AddCommandPrompts": "test_ppt_1, test_ppt_2",
+  "AddCommandActions": "test_act_1, test_act_2",
+  "TestPpt1": "g",
+  "TestPpt2": "t"
 }

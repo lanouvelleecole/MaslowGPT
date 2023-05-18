@@ -1,0 +1,20 @@
+export const TestAct1AppendAction = (promptData, appRootPath) => {
+  return {
+    type: "append",
+    path: `${process.cwd()}/.../....js`,
+
+    pattern: ``,
+    TestAct1: ``,
+  };
+};
+
+export const TestAct1AddAction = (promptData, appRootPath) => {
+  return {
+    type: "add",
+    force: true,
+    path: `${process.cwd()}/....../.......js`,
+    //TestAct1File: "plop-TestAct1s/hbs-files/<filename>.js.hbs",
+    TestAct1: ``,
+    skipIfExists: true,
+  };
+};

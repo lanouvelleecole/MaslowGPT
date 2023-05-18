@@ -1,9 +1,9 @@
-import { initHTDPAndCie } from './initHTDPAndCie.js';
+import { initHTDPAndCie } from "./initHTDPAndCie.js";
 import path from "path";
 
-import { toPascalCase } from '../../../../services/ToPascalCase/ToPascalCase.js';
-import { createTemplateFromFolder } from '../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js';
-import { getNPMFolderRoot } from '../../../../../getNPMFolderRoot.js';
+import { toPascalCase } from "../../../../services/ToPascalCase/ToPascalCase.js";
+import { createTemplateFromFolder } from "../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
+import { getNPMFolderRoot } from "../../../../../getNPMFolderRoot.js";
 
 function createHTDPTemplate({
   appRootPathFromC,
@@ -22,6 +22,12 @@ function createHTDPTemplate({
     templateFolderPath: templateFolderPath,
     templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
     creationFolderFromAppRoot: `${subfolder}/${namePascal}`,
+    wordsInFilePath: [
+      {
+        word: "Trucs",
+        replaceWordWith: namePascal,
+      },
+    ],
     wordsInFile: [
       {
         word: "Trucs",
