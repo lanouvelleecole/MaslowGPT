@@ -1,0 +1,1 @@
+originPath (string, the path of a file/folder), destPath (string, the path of the duplicated file/folder)

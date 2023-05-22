@@ -1,0 +1,83 @@
+{
+  "gptOutput": "\n\n// PLOP_CODE_START\nconst removeDupes = (arr) => {\n  // Removes duplicate items in arr.\n  const seen = new Set();\n  const arrWithoutDupes = arr.filter(item => {\n    if (seen.has(item)) {\n      return false;\n    }\n    seen.add(item);\n    return true;\n  });\n  return arrWithoutDupes;\n};\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START\nconst data = [1, 2, 3, 3, 1, 4];\nconst RemoveDuplicatesFromArrayValue = removeDupes(data);\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\nreturn RemoveDuplicatesFromArrayValue;\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\nexport default removeDupes;\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\nimport removeDupes from 'src/services/RemoveDuplicatesFromArray/RemoveDuplicatesFromArray.js';\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport removeDupes from '../../../../services/RemoveDuplicatesFromArray/RemoveDuplicatesFromArray.js';\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add src/services/RemoveDuplicatesFromArray/RemoveDuplicatesFromArray.js\nyarn add ../../../../services/RemoveDuplicatesFromArray/RemoveDuplicatesFromArray.js\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\"If nothing changes, nothing changes.\" - Unknown\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "const removeDupes = (arr) => {\n  // Removes duplicate items in arr.\n  const seen = new Set();\n  const arrWithoutDupes = arr.filter(item => {\n    if (seen.has(item)) {\n      return false;\n    }\n    seen.add(item);\n    return true;\n  });\n  return arrWithoutDupes;\n};"
+  ],
+  "codeUsage": [
+    "const data = [1, 2, 3, 3, 1, 4];\nconst RemoveDuplicatesFromArrayValue = removeDupes(data);"
+  ],
+  "codeExtension": [
+    "js"
+  ],
+  "inspiringMessage": [
+    "\"If nothing changes, nothing changes.\" - Unknown"
+  ],
+  "codeImport": [
+    "import removeDupes from 'src/services/RemoveDuplicatesFromArray/RemoveDuplicatesFromArray.js';"
+  ],
+  "codeExport": [
+    "export default removeDupes;"
+  ],
+  "codeImportRelative": [
+    "import removeDupes from '../../../../services/RemoveDuplicatesFromArray/RemoveDuplicatesFromArray.js';"
+  ],
+  "codeUsageReturn": [
+    "return RemoveDuplicatesFromArrayValue;"
+  ],
+  "codeInstall": [
+    "yarn add src/services/RemoveDuplicatesFromArray/RemoveDuplicatesFromArray.js\nyarn add ../../../../services/RemoveDuplicatesFromArray/RemoveDuplicatesFromArray.js"
+  ],
+  "what_we_wanna_do": "In a given programming language, create a function (with the help of Chat GPT, the magic A.I).",
+  "name": "RemoveDuplicatesFromArray",
+  "affine_subfolder": "src/services",
+  "ask_for_subfolder": "src/services",
+  "affine_string_repo": "src",
+  "string_repo_folder_path": "src/AppStrings",
+  "string_repo_file_path": "AppStrings.js",
+  "string_name": "x2hwbuKC",
+  "string_fr": "leaveOnValid: true,",
+  "string_eng": "Hello friend",
+  "affine_file_where_we_use_string": "src",
+  "ask_for_js_file_string": "Je veux rien, capiche amigo ?",
+  "affine_file_where_we_use": "src/AllPrompts/DeleteThing/prompts",
+  "row_name": "age",
+  "question_type": "A question whose answer is a number.",
+  "question_name": "GetTestAge",
+  "ask_for_js_file": "src/AllPrompts/DeleteThing/prompts/DeletePath/DeletePathPromptChoice.js",
+  "get_ai_service_language": "Javascript (ES syntax)",
+  "affine_questionnaire": "src/pages/TestPage",
+  "questionnaire_folder_path": "src/pages/TestPage/pieces/AddItemToTestPage/TestPageCreationList",
+  "questionnaire_file_name": "TestPageCreationList.js",
+  "repo_name": "AppStrings",
+  "description_string_name": "xWu6Gy7t",
+  "description_string_fr": "T'as quel age ?",
+  "description_string_eng": "How old are you?",
+  "error_string_name": "x5ypM04O",
+  "error_string_fr": "Oups... Cette valeur n'est pas valide.",
+  "error_string_eng": "Oops... This value is not valid.",
+  "question_page_name": "TestPage",
+  "question_default_answer": "currentItem?.age",
+  "question_default_textinput": "currentItem?.age",
+  "question_on_textinput_changed": "",
+  "question_validity_condition": "input != null && input > 0",
+  "question_DB_save_path": "src\\pages\\TestPage\\pieces\\AddItemToTestPage\\AddItemToDB.js",
+  "question_DB_edit_path": "src\\pages\\TestPage\\pieces\\EditItemInTestPage\\EditItemInTestPageDB.js",
+  "databaseinfo_path": "src\\reduxState\\TestPage\\DatabaseInfo.js",
+  "row_type": "INTEGER",
+  "row_default_value": "",
+  "get_ai_service_args": "arr (an array of items)",
+  "get_ai_service_description": "Removes duplicate items in arr.",
+  "get_ai_service_return_value": "Removes duplicate items in arr.",
+  "AddCommandName": "delete-thing",
+  "AddCommandPrompts": "AffineDeletePath, DeletePath",
+  "AddCommandActions": "DeleteZeShyt",
+  "TestPpt1": "g",
+  "TestPpt2": "t",
+  "GptQuestionName": "QNAS",
+  "AskQuestion": "How to make a successful shopify store ?",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Sans ligne return",
+  "delete_function_body_or_not": "Non",
+  "AffineDeletePath": "src",
+  "gold_caviar": null
+}

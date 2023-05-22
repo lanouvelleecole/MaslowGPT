@@ -31,9 +31,15 @@ function templateActions(promptData, appRootPath, plop) {
   //const templateFolder7 = createTemplateFolder7(promptData);
   //const templateFolder8 = createTemplateFolder8(promptData);
   //const templateFolder9 = createTemplateFolder9(promptData);
+  //const REQUETE_CHAT_GPT_QUESTION = { type: "REQUETE_CHAT_GPT_QUESTION" };
+  //const CREATION_HISTORIQUE = { type: "CREATION_HISTORIQUE" };
+  //const OUVRE_FICHIERS_CREES = { type: "OUVRE_FICHIERS_CREES" };
 
   return [
     // PLOP_IMPORT_ACTION_USE
+    //REQUETE_CHAT_GPT_QUESTION,
+    //CREATION_HISTORIQUE,
+    //OUVRE_FICHIERS_CREES,
     //...templateFolder1,
     //...templateFolder2,
     //...templateFolder3,
@@ -43,7 +49,7 @@ function templateActions(promptData, appRootPath, plop) {
     //...templateFolder7,
     //...templateFolder8,
     //...templateFolder9,
-  ];
+  ].filter((elm) => elm);
 }
 
 export { templateActions };

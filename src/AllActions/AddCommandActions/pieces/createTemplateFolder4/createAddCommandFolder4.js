@@ -14,7 +14,7 @@ import { toCamelCase } from "../../../../services/ToPascalCase/ToPascalCase.js";
  */
 function createAddCommandFolder4(promptData) {
   // eslint-disable-next-line no-unused-vars
-  const templateFolderPathFromAppRoot = `plop-templates/hbs-files/SetTemplateAsyncActions`;
+  const templateFolderPathFromAppRoot = `plop-templates/hbs-files/SetAskQuestionAsyncActions`;
   const templateFolderPath = path.join(
     getNPMFolderRoot(),
     templateFolderPathFromAppRoot
@@ -31,21 +31,21 @@ function createAddCommandFolder4(promptData) {
     creationFolderFromAppRoot: creationFolderFromAppRoot,
     wordsInFilePath: [
       {
-        word: `Template`,
+        word: `AskQuestion`,
         replaceWordWith: command_name_camel,
       },
       {
-        word: `template`,
+        word: `AskQuestion`,
         replaceWordWith: command_name_camel,
       },
     ],
     wordsInFile: [
       {
-        word: `Template`,
+        word: `AskQuestion`,
         replaceWordWith: command_name_camel,
       },
       {
-        word: `template`,
+        word: `AskQuestion`,
         replaceWordWith: command_name_camel,
       },
       {
@@ -59,7 +59,7 @@ function createAddCommandFolder4(promptData) {
     ],
 
     wordsInHBSFileName: {
-      word: "template",
+      word: "AskQuestion",
       replaceWordWith: `Item`,
     },
   };

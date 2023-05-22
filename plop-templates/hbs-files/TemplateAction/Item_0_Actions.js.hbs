@@ -1,20 +1,20 @@
-export const TestAct2AppendAction = (promptData, appRootPath) => {
+export const DuplicateBitchAppendAction = (promptData, appRootPath) => {
   return {
     type: "append",
     path: `${process.cwd()}/.../....js`,
 
     pattern: ``,
-    TestAct2: ``,
+    DuplicateBitch: ``,
   };
 };
 
-export const TestAct2AddAction = (promptData, appRootPath) => {
+export const DuplicateBitchAddAction = (promptData, appRootPath) => {
   return {
     type: "add",
     force: true,
     path: `${process.cwd()}/....../.......js`,
-    //TestAct2File: "plop-TestAct2s/hbs-files/<filename>.js.hbs",
-    TestAct2: ``,
+    //DuplicateBitchFile: "plop-DuplicateBitchs/hbs-files/<filename>.js.hbs",
+    DuplicateBitch: ``,
     skipIfExists: true,
   };
 };

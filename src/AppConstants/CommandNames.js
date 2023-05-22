@@ -5,6 +5,12 @@
  */
 export const CommandNames = {
   // ADD_CMD_NAME
+	duplicate_thing: "duplicate-thing",
+	delete_thing: "delete-thing",
+
+  add_command_actions: "add-command-actions",
+  add_command_prompts: "add-command-prompts",
+  ask_question: "ask-question",
   generate: "generate",
   add_string: "add-string",
   add_default_app_template: "add-default-app-template",

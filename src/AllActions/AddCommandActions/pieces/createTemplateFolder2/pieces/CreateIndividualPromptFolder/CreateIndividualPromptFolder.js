@@ -30,21 +30,21 @@ function CreateIndividualPromptFolder(promptData, command_prompt_name, index) {
     creationFolderFromAppRoot: creationFolderFromAppRoot,
     wordsInFilePath: [
       {
-        word: `Template`,
+        word: `DeletePath`,
         replaceWordWith: `${command_prompt_name_camel}`,
       },
       {
-        word: `template`,
+        word: `DeletePath`,
         replaceWordWith: `${command_prompt_name_camel}`,
       },
     ],
     wordsInFile: [
       {
-        word: `Template`,
+        word: `DeletePath`,
         replaceWordWith: `${command_prompt_name_camel}`,
       },
       {
-        word: `template`,
+        word: `DeletePath`,
         replaceWordWith: `${command_prompt_name_camel}`,
       },
       {
@@ -62,7 +62,7 @@ function CreateIndividualPromptFolder(promptData, command_prompt_name, index) {
     ],
 
     wordsInHBSFileName: {
-      word: "template",
+      word: "DeletePath",
       replaceWordWith: `Item_${index}_`,
     },
   };

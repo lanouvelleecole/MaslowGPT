@@ -1,0 +1,1 @@
+Dans un try/catch, si filePath a une extension, execute DeleteFileIfExisting, autrement execute DeleteFolderIfExisting. return true si pas d'erreur, sinon return false si erreur. gère si filePath n'est pas un string, ou un string vide

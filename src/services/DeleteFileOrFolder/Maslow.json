@@ -1,0 +1,84 @@
+{
+  "gptOutput": "\n// PLOP_CODE_START\nimport fs from 'fs';\nimport path from 'path';\n\nconst DeleteFileIfExisting = (filePath) => {\n  try {\n    fs.unlinkSync(filePath);\n    return true;\n  } catch (error) {\n    return false;\n  }\n};\n\nconst DeleteFolderIfExisting = (folderPath) => {\n  try {\n    fs.rmdirSync(folderPath);\n    return true;\n  } catch (error) {\n    return false;\n  }  \n};\n\nconst DeleteFileOrFolder = (filePath) => {\n  try {\n    if (!filePath || typeof(filePath) !== 'string') {\n      throw new TypeError('filePath is not a valid string');\n    }\n    const extName = path.extname(filePath);\n    extName ? \n      DeleteFileIfExisting(filePath) :\n      DeleteFolderIfExisting(filePath);\n    return true;\n  } catch (error) {\n    return false;\n  }\n};\n\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START\n// Use example\nconst DeleteFileOrFolderValue = DeleteFileOrFolder('C:\\\\Users\\\\whatever\\\\file.txt);\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\nreturn DeleteFileOrFolderValue;\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\nexport default DeleteFileOrFolder;\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\nimport DeleteFileOrFolder from 'src/services/DeleteFileOrFolder/DeleteFileOrFolder.js';\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport DeleteFileOrFolder from '../../../../../services/DeleteFileOrFolder/DeleteFileOrFolder.js';\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add fs\nyarn add path\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\"The only way to do great work is to love what you do\" - Steve Jobs\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "import fs from 'fs';\nimport path from 'path';\n\nconst DeleteFileIfExisting = (filePath) => {\n  try {\n    fs.unlinkSync(filePath);\n    return true;\n  } catch (error) {\n    return false;\n  }\n};\n\nconst DeleteFolderIfExisting = (folderPath) => {\n  try {\n    fs.rmdirSync(folderPath);\n    return true;\n  } catch (error) {\n    return false;\n  }  \n};\n\nconst DeleteFileOrFolder = (filePath) => {\n  try {\n    if (!filePath || typeof(filePath) !== 'string') {\n      throw new TypeError('filePath is not a valid string');\n    }\n    const extName = path.extname(filePath);\n    extName ? \n      DeleteFileIfExisting(filePath) :\n      DeleteFolderIfExisting(filePath);\n    return true;\n  } catch (error) {\n    return false;\n  }\n};"
+  ],
+  "codeUsage": [
+    "// Use example\nconst DeleteFileOrFolderValue = DeleteFileOrFolder('C:\\\\Users\\\\whatever\\\\file.txt);"
+  ],
+  "codeExtension": [
+    "js"
+  ],
+  "inspiringMessage": [
+    "\"The only way to do great work is to love what you do\" - Steve Jobs"
+  ],
+  "codeImport": [
+    "import DeleteFileOrFolder from 'src/services/DeleteFileOrFolder/DeleteFileOrFolder.js';"
+  ],
+  "codeExport": [
+    "export default DeleteFileOrFolder;"
+  ],
+  "codeImportRelative": [
+    "import DeleteFileOrFolder from '../../../../../services/DeleteFileOrFolder/DeleteFileOrFolder.js';"
+  ],
+  "codeUsageReturn": [
+    "return DeleteFileOrFolderValue;"
+  ],
+  "codeInstall": [
+    "yarn add fs\nyarn add path"
+  ],
+  "what_we_wanna_do": "In a given programming language, create a function (with the help of Chat GPT, the magic A.I).",
+  "name": "DeleteFileOrFolder",
+  "affine_subfolder": "src/services",
+  "ask_for_subfolder": "src/services",
+  "affine_string_repo": "src",
+  "string_repo_folder_path": "src/AppStrings",
+  "string_repo_file_path": "AppStrings.js",
+  "string_name": "x2hwbuKC",
+  "string_fr": "leaveOnValid: true,",
+  "string_eng": "Hello friend",
+  "affine_file_where_we_use_string": "src",
+  "ask_for_js_file_string": "Je veux rien, capiche amigo ?",
+  "affine_file_where_we_use": "src/AllActions/DeleteThing/pieces/PLOPActions",
+  "row_name": "age",
+  "question_type": "A question whose answer is a number.",
+  "question_name": "GetTestAge",
+  "ask_for_js_file": "src/AllActions/DeleteThing/pieces/PLOPActions/DeleteZeShyt/DeleteZeShytActions.js",
+  "get_ai_service_language": "Javascript (ES syntax)",
+  "affine_questionnaire": "src/pages/TestPage",
+  "questionnaire_folder_path": "src/pages/TestPage/pieces/AddItemToTestPage/TestPageCreationList",
+  "questionnaire_file_name": "TestPageCreationList.js",
+  "repo_name": "AppStrings",
+  "description_string_name": "xWu6Gy7t",
+  "description_string_fr": "T'as quel age ?",
+  "description_string_eng": "How old are you?",
+  "error_string_name": "x5ypM04O",
+  "error_string_fr": "Oups... Cette valeur n'est pas valide.",
+  "error_string_eng": "Oops... This value is not valid.",
+  "question_page_name": "TestPage",
+  "question_default_answer": "currentItem?.age",
+  "question_default_textinput": "currentItem?.age",
+  "question_on_textinput_changed": "",
+  "question_validity_condition": "input != null && input > 0",
+  "question_DB_save_path": "src\\pages\\TestPage\\pieces\\AddItemToTestPage\\AddItemToDB.js",
+  "question_DB_edit_path": "src\\pages\\TestPage\\pieces\\EditItemInTestPage\\EditItemInTestPageDB.js",
+  "databaseinfo_path": "src\\reduxState\\TestPage\\DatabaseInfo.js",
+  "row_type": "INTEGER",
+  "row_default_value": "",
+  "get_ai_service_args": "filePath (string, le path du fichier/dossier à supprimer)",
+  "get_ai_service_description": "Supprime le dossier/fichier filePath, si existant",
+  "get_ai_service_return_value": "Dans un try/catch, si filePath a une extension, execute DeleteFileIfExisting, autrement execute DeleteFolderIfExisting. return true si pas d'erreur, sinon return false si erreur. gère si filePath n'est pas un string, ou un string vide",
+  "AddCommandName": "delete-thing",
+  "AddCommandPrompts": "AffineDeletePath, DeletePath",
+  "AddCommandActions": "DeleteZeShyt",
+  "TestPpt1": "g",
+  "TestPpt2": "t",
+  "GptQuestionName": "QNAS",
+  "AskQuestion": "How to make a successful shopify store ?",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Sans ligne return",
+  "delete_function_body_or_not": "Non",
+  "AffineDeletePath": "QNAS",
+  "DeletePath": "QNAS/Sub",
+  "gold_caviar": null
+}

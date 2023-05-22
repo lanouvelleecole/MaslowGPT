@@ -14,7 +14,7 @@ function readFilesRecursively(pathname, fileExtensions, ignoredPaths) {
       if (
         stats.isFile() &&
         !FileIsBanned(filePath, ignoredPaths) &&
-        FileEndsWith(filePath, fileExtensions)
+        (FileEndsWith(filePath, fileExtensions) || !fileExtensions)
       ) {
         result.push(path.relative(pathname, filePath));
       } else if (stats.isDirectory() && !FileIsBanned(filePath, ignoredPaths)) {
@@ -35,7 +35,7 @@ function readFilesRecursively(pathname, fileExtensions, ignoredPaths) {
 export function FileEndsWith(filePath, fileExtensions) {
   const filePathExt = path.extname(filePath);
 
-  return fileExtensions.includes(filePathExt);
+  return fileExtensions?.includes(filePathExt);
 }
 
 export function FileIsBanned(filePath, ignoredPaths) {

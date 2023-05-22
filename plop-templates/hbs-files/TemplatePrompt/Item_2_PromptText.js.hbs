@@ -1,6 +1,6 @@
-import { getDataFromNPMMaslowJSON } from "../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
+import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 
-const TestPt3PromptText = (appRootPath) => {
+const DuplicatePathPromptText = (appRootPath) => {
   return {
     type: "input",
 
@@ -9,16 +9,16 @@ const TestPt3PromptText = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "test_pt_3",
+    name: "DuplicatePath",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("test_pt_3");
+      return getDataFromNPMMaslowJSON("DuplicatePath");
     },
 
-    message: ``,
+    message: `Text me bby`,
   };
 };
 
-const TestPt3PromptEditor = (appRootPath) => {
+const DuplicatePathPromptEditor = (appRootPath) => {
   return {
     type: "editor",
 
@@ -27,13 +27,13 @@ const TestPt3PromptEditor = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "test_pt_3",
+    name: "DuplicatePath",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("test_pt_3");
+      return getDataFromNPMMaslowJSON("DuplicatePath");
     },
 
-    message: ``,
+    message: `Text me bby`,
   };
 };
 
-export { TestPt3PromptText, TestPt3PromptEditor };
+export { DuplicatePathPromptText, DuplicatePathPromptEditor };

@@ -1,0 +1,84 @@
+{
+  "gptOutput": "\n// PLOP_CODE_START\nimport fs from 'fs';\nimport path from 'path';\n\nconst DuplicateFileOrFolder = (originPath, destPath) => {\n\tif (!fs.existsSync(originPath)) {\n\t\tthrow new Error('Origin path does not exist!');\n\t}\n\n\tconst baseName = path.basename(originPath);\n\n\tif (fs.existsSync(destPath)) {\n\t\tthrow new Error(`Destination path '${destPath}' already exists`);\n\t}\n\n\tif (fs.lstatSync(originPath).isFile()) {\n\t\t// copy the file\n\t\tfs.copyFileSync(originPath, path.join(destPath, baseName));\n\t} else if (fs.lstatSync(originPath).isDirectory()) {\n\t\t// clone the content\n\t\tfs.mkdirSync(destPath);\n\t\tfs.readdirSync(originPath).forEach(file => {\n\t\t\t// copy the content of the folders\n\t\t\tDuplicateFileOrFolder(\n\t\t\t\tpath.join(originPath, file),\n\t\t\t\tpath.join(destPath, file)\n\t\t\t);\n\t\t});\n\t} else {\n\t\t// other cases\n\t\tthrow new Error(`Cannot process path '${originPath}'`);\n\t}\n};\n\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START\nconst DuplicateFileOrFolderValue =  DuplicateFileOrFolder('src/services/DuplicateFileOrFolder/originFolder', 'src/services/DuplicateFileOrFolder/destFolder');\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\nreturn DuplicateFileOrFolderValue;\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\nexport { DuplicateFileOrFolder };\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\nimport { DuplicateFileOrFolder } from 'src/services/DuplicateFileOrFolder/DuplicateFileOrFolder.js';\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport { DuplicateFileOrFolder } from '../../../../../services/DuplicateFileOrFolder/DuplicateFileOrFolder.js';\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add fs path\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\"It always seems impossible until it's done.\" - Nelson Mandela\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "import fs from 'fs';\nimport path from 'path';\n\nconst DuplicateFileOrFolder = (originPath, destPath) => {\n\tif (!fs.existsSync(originPath)) {\n\t\tthrow new Error('Origin path does not exist!');\n\t}\n\n\tconst baseName = path.basename(originPath);\n\n\tif (fs.existsSync(destPath)) {\n\t\tthrow new Error(`Destination path '${destPath}' already exists`);\n\t}\n\n\tif (fs.lstatSync(originPath).isFile()) {\n\t\t// copy the file\n\t\tfs.copyFileSync(originPath, path.join(destPath, baseName));\n\t} else if (fs.lstatSync(originPath).isDirectory()) {\n\t\t// clone the content\n\t\tfs.mkdirSync(destPath);\n\t\tfs.readdirSync(originPath).forEach(file => {\n\t\t\t// copy the content of the folders\n\t\t\tDuplicateFileOrFolder(\n\t\t\t\tpath.join(originPath, file),\n\t\t\t\tpath.join(destPath, file)\n\t\t\t);\n\t\t});\n\t} else {\n\t\t// other cases\n\t\tthrow new Error(`Cannot process path '${originPath}'`);\n\t}\n};"
+  ],
+  "codeUsage": [
+    "const DuplicateFileOrFolderValue =  DuplicateFileOrFolder('src/services/DuplicateFileOrFolder/originFolder', 'src/services/DuplicateFileOrFolder/destFolder');"
+  ],
+  "codeExtension": [
+    "js"
+  ],
+  "inspiringMessage": [
+    "\"It always seems impossible until it's done.\" - Nelson Mandela"
+  ],
+  "codeImport": [
+    "import { DuplicateFileOrFolder } from 'src/services/DuplicateFileOrFolder/DuplicateFileOrFolder.js';"
+  ],
+  "codeExport": [
+    "export { DuplicateFileOrFolder };"
+  ],
+  "codeImportRelative": [
+    "import { DuplicateFileOrFolder } from '../../../../../services/DuplicateFileOrFolder/DuplicateFileOrFolder.js';"
+  ],
+  "codeUsageReturn": [
+    "return DuplicateFileOrFolderValue;"
+  ],
+  "codeInstall": [
+    "yarn add fs path"
+  ],
+  "what_we_wanna_do": "In a given programming language, create a function (with the help of Chat GPT, the magic A.I).",
+  "name": "DuplicateFileOrFolder",
+  "affine_subfolder": "src/services",
+  "ask_for_subfolder": "src/services",
+  "affine_string_repo": "src",
+  "string_repo_folder_path": "src/AppStrings",
+  "string_repo_file_path": "AppStrings.js",
+  "string_name": "x2hwbuKC",
+  "string_fr": "leaveOnValid: true,",
+  "string_eng": "Hello friend",
+  "affine_file_where_we_use_string": "src",
+  "ask_for_js_file_string": "Je veux rien, capiche amigo ?",
+  "affine_file_where_we_use": "src/AllActions/DuplicateThing/pieces",
+  "row_name": "age",
+  "question_type": "A question whose answer is a number.",
+  "question_name": "GetTestAge",
+  "ask_for_js_file": "src/AllActions/DuplicateThing/pieces/PLOPActions/DuplicateBitch/DuplicateBitchActions.js",
+  "get_ai_service_language": "Javascript (ES syntax)",
+  "affine_questionnaire": "src/pages/TestPage",
+  "questionnaire_folder_path": "src/pages/TestPage/pieces/AddItemToTestPage/TestPageCreationList",
+  "questionnaire_file_name": "TestPageCreationList.js",
+  "repo_name": "AppStrings",
+  "description_string_name": "xWu6Gy7t",
+  "description_string_fr": "T'as quel age ?",
+  "description_string_eng": "How old are you?",
+  "error_string_name": "x5ypM04O",
+  "error_string_fr": "Oups... Cette valeur n'est pas valide.",
+  "error_string_eng": "Oops... This value is not valid.",
+  "question_page_name": "TestPage",
+  "question_default_answer": "currentItem?.age",
+  "question_default_textinput": "currentItem?.age",
+  "question_on_textinput_changed": "",
+  "question_validity_condition": "input != null && input > 0",
+  "question_DB_save_path": "src\\pages\\TestPage\\pieces\\AddItemToTestPage\\AddItemToDB.js",
+  "question_DB_edit_path": "src\\pages\\TestPage\\pieces\\EditItemInTestPage\\EditItemInTestPageDB.js",
+  "databaseinfo_path": "src\\reduxState\\TestPage\\DatabaseInfo.js",
+  "row_type": "INTEGER",
+  "row_default_value": "",
+  "get_ai_service_args": "originPath (string, the path of a file/folder), destPath (string, the path of the duplicated file/folder)",
+  "get_ai_service_description": "Duplicates the file/folder originPath, to destPath.",
+  "get_ai_service_return_value": "from originPath, a path to a file or a folder, create a identical file/folder located in destPath, the path of the duplicated file/folder.",
+  "AddCommandName": "duplicate-thing",
+  "AddCommandPrompts": "AffineOriginalPath, OriginalPath, DuplicatePath",
+  "AddCommandActions": "DuplicateBitch",
+  "TestPpt1": "g",
+  "TestPpt2": "t",
+  "GptQuestionName": "QNAS",
+  "AskQuestion": "How to make a successful shopify store ?",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Sans ligne return",
+  "delete_function_body_or_not": "Non",
+  "AffineDeletePath": "QNAS",
+  "DeletePath": "QNAS/Maslow.json",
+  "gold_caviar": null
+}

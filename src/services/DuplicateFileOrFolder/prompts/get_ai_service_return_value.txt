@@ -1,0 +1,1 @@
+from originPath, a path to a file or a folder, create a identical file/folder located in destPath, the path of the duplicated file/folder.

@@ -8,6 +8,22 @@ import { initAddCommandGenerator } from "../InitAddCommandGenerator/initAddComma
 import { AddCommandAsynchronousActions } from "../../AllActions/AddCommandActions/pieces/AddCommandAsynchronousActions/AddCommandAsynchronousActions.js";
 // PLOP_INJECT_GENERATOR_IMPORTS
 
+import { initDuplicateThingGenerator } from "../DuplicateThing/initDuplicateThingGenerator.js";
+import { SetDuplicateThingAsyncActions } from "../SetDuplicateThingAsyncActions/SetDuplicateThingAsyncActions.js";
+
+
+import { initDeleteThingGenerator } from "../DeleteThing/initDeleteThingGenerator.js";
+import { SetDeleteThingAsyncActions } from "../SetDeleteThingAsyncActions/SetDeleteThingAsyncActions.js";
+
+import { initAddCommandActionsGenerator } from "../AddCommandActions/initAddCommandActionsGenerator.js";
+import { SetAddCommandActionsAsyncActions } from "../SetAddCommandActionsAsyncActions/SetAddCommandActionsAsyncActions.js";
+
+import { initAddCommandPromptsGenerator } from "../AddCommandPrompts/initAddCommandPromptsGenerator.js";
+import { SetAddCommandPromptsAsyncActions } from "../SetAddCommandPromptsAsyncActions/SetAddCommandPromptsAsyncActions.js";
+
+import { initAskQuestionGenerator } from "../AskQuestion/initAskQuestionGenerator.js";
+import { SetAskQuestionAsyncActions } from "../SetAskQuestionAsyncActions/SetAskQuestionAsyncActions.js";
+
 function initAllGenerators(plop) {
   // le path Command line ou la commande maslow xxx à été exécuté
   const appRootPath = process.cwd();
@@ -59,7 +75,28 @@ ajoute les imports correspondants
     setAIFunctionActions(plop, appRootPath);
   }
   // PLOP_INJECT_GENERATOR_ELSE_IF
-  else if (generatorName == CommandNames.add_string) {
+  else if (generatorName == CommandNames.duplicate_thing) {
+    initDuplicateThingGenerator(plop, appRootPath);
+
+    SetDuplicateThingAsyncActions(plop, appRootPath);
+  }
+  else if (generatorName == CommandNames.delete_thing) {
+    initDeleteThingGenerator(plop, appRootPath);
+
+    SetDeleteThingAsyncActions(plop, appRootPath);
+  } else if (generatorName == CommandNames.add_command_actions) {
+    initAddCommandActionsGenerator(plop, appRootPath);
+
+    SetAddCommandActionsAsyncActions(plop, appRootPath);
+  } else if (generatorName == CommandNames.add_command_prompts) {
+    initAddCommandPromptsGenerator(plop, appRootPath);
+
+    SetAddCommandPromptsAsyncActions(plop, appRootPath);
+  } else if (generatorName == CommandNames.ask_question) {
+    initAskQuestionGenerator(plop, appRootPath);
+
+    SetAskQuestionAsyncActions(plop, appRootPath);
+  } else if (generatorName == CommandNames.add_string) {
     /**
      * permet d'ajouter un string international
      * dans un repo

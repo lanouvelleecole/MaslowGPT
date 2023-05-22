@@ -15,6 +15,17 @@ import i18n from "i18n-js";
 i18n.translations = {
   en: {
     /* PLOP_INJECT_ENG_STRING */
+    xWl6y3p9: `Write the path of the copied file/folder, starting from:`,
+    x9KJS4eg: `Choose the path of the file/folder you want to duplicate.`,
+    xdWkLeQ: `Give an approximate estimation of the folder/file that you wish to duplicate, starting from the folder:`,
+    xYOGfJDb: `Choose the path of the file/folder that you want to delete.`,
+    xaelffhs: `Give an approximation of the folder/file you wish to delete, starting from the folder:`,
+
+    xyP2WhM4: `In which folder do you want to create this question, starting from the following folder:`,
+
+    xpqAUrx: `Write the name of the command for which you want to add actions.`,
+    xgvy5tOc: `What is the command name for which you want to add prompts?`,
+    xa8PiCkJ: `My friend, Write your question.`,
     xolCVXrV: `Write the PLOP action(s) you wish to add. Like this: action_name_1, ..., action_name_n`,
     xy9q3K36: `Write the name or names of prompts to create for this command, like this: 
 name_1, name_2, name_n`,
@@ -150,6 +161,17 @@ maslow regen-ai-func <path/vers/dossier/fonction>
   },
   fr: {
     /* PLOP_INJECT_FR_STRING */
+    xWl6y3p9: `Ecris le path du fichier/dossier dupliqué, partant de:`,
+    x9KJS4eg: `Choisis le path du fichier/dossier que tu souhaites dupliquer.`,
+    xdWkLeQ: `Donne une approximation du dossier/fichier que tu souhaites dupliquer, partant du dossier:`,
+    xYOGfJDb: `Choisis le path du fichier/dossier que tu souhaites supprimer.`,
+    xaelffhs: `Donne une approximation du dossier/fichier que tu souhaites supprimer, partant du dossier:`,
+
+    xyP2WhM4: `Dans quel dossier souhaites tu créer cette question, partant du dossier suivant:`,
+
+    xpqAUrx: `Ecris le nom de la commande pour laquelle tu souhaites ajouter des actions.`,
+    xgvy5tOc: `Quel est le nom de la commande pour laquelle tu souhaites ajouter des prompts ?`,
+    xa8PiCkJ: `Mon ami, Ecris ta question.`,
     xolCVXrV: `Ecris la ou les actions PLOP que tu souhaites ajouter. Comme ceci:
 action_name_1, ..., action_name_n`,
     xy9q3K36: `Ecris le ou les noms de prompts à créer pour cette commande, comme ceci:

@@ -8,6 +8,12 @@ import { CommandNames } from "../AppConstants/CommandNames.js";
 import { AddCommandPrompts } from "../AllPrompts/AddCommandPrompts/AddCommandPrompts.js";
 
 // PLOP_ADD_PPTS_IMPORT_GIVN_GEN_NAME
+import { DuplicateThingPrompts } from '../AllPrompts/DuplicateThing/DuplicateThingPrompts.js';
+import { DeleteThingPrompts } from "../AllPrompts/DeleteThing/DeleteThingPrompts.js";
+
+import { AddCommandActionsPrompts } from "../AllPrompts/AddCommandActions/AddCommandActionsPrompts.js";
+import { AddCommandPromptsPrompts } from "../AllPrompts/AddCommandPrompts/AddCommandPromptsPrompts.js";
+import { AskQuestionPrompts } from "../AllPrompts/AskQuestion/AskQuestionPrompts.js";
 
 /**
  *
@@ -55,7 +61,18 @@ function getPromptsGivenGeneratorName() {
   // au dessous de ce commentaire.
   // Bien sur, ajoute l'import correspondant.
   // PLOP_ADD_PPTS_GIVN_GEN_NAME
-  else if (generatorName == CommandNames.add_command) {
+  else if (generatorName == CommandNames.duplicate_thing) {
+    return DuplicateThingPrompts(appRootPath);
+  }
+  else if (generatorName == CommandNames.delete_thing) {
+    return DeleteThingPrompts(appRootPath);
+  } else if (generatorName == CommandNames.add_command_actions) {
+    return AddCommandActionsPrompts(appRootPath);
+  } else if (generatorName == CommandNames.add_command_prompts) {
+    return AddCommandPromptsPrompts(appRootPath);
+  } else if (generatorName == CommandNames.ask_question) {
+    return AskQuestionPrompts(appRootPath);
+  } else if (generatorName == CommandNames.add_command) {
     return AddCommandPrompts(appRootPath);
   }
 

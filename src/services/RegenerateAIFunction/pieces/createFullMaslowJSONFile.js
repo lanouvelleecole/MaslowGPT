@@ -1,4 +1,4 @@
-import { CreateFileFromScratch } from '../../CreateFileFromScratch/CreateFileFromScratch.js';
+import { CreateFileFromScratch } from "../../CreateFileFromScratch/CreateFileFromScratch.js";
 import path from "path";
 
 function createFullMaslowJSONFile(appRootPath, answers) {
@@ -65,4 +65,5 @@ function createFullMaslowJSONFile(appRootPath, answers) {
     )
   );
 }
+
 export { createFullMaslowJSONFile };

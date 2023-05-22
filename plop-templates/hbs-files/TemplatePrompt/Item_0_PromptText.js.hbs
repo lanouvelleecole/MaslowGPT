@@ -1,6 +1,6 @@
 import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 
-const TestPpt1PromptText = (appRootPath) => {
+const AffineOriginalPathPromptText = (appRootPath) => {
   return {
     type: "input",
 
@@ -9,16 +9,16 @@ const TestPpt1PromptText = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "TestPpt1",
+    name: "AffineOriginalPath",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("TestPpt1");
+      return getDataFromNPMMaslowJSON("AffineOriginalPath");
     },
 
-    message: ``,
+    message: `Text me bby`,
   };
 };
 
-const TestPpt1PromptEditor = (appRootPath) => {
+const AffineOriginalPathPromptEditor = (appRootPath) => {
   return {
     type: "editor",
 
@@ -27,13 +27,13 @@ const TestPpt1PromptEditor = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "TestPpt1",
+    name: "AffineOriginalPath",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("TestPpt1");
+      return getDataFromNPMMaslowJSON("AffineOriginalPath");
     },
 
-    message: ``,
+    message: `Text me bby`,
   };
 };
 
-export { TestPpt1PromptText, TestPpt1PromptEditor };
+export { AffineOriginalPathPromptText, AffineOriginalPathPromptEditor };

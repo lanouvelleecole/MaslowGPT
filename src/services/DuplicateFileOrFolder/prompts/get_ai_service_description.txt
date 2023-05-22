@@ -1,0 +1,1 @@
+Duplicates the file/folder originPath, to destPath.

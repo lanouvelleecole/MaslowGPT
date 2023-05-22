@@ -1,0 +1,1 @@
+Sorts arr, by string length, in ascending order.

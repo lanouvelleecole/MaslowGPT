@@ -1,0 +1,1 @@
+Supprime le dossier/fichier filePath, si existant
