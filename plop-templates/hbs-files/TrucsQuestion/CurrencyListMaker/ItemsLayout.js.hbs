@@ -1,27 +1,27 @@
 import {
-  GetTestAgeChoices,
-  GetTestAgeChoicesActions,
-  GetTestAgeChoicesUI,
-} from "../GetTestAgeChoices/GetTestAgeChoices";
+  GetTestNameChoices,
+  GetTestNameChoicesActions,
+  GetTestNameChoicesUI,
+} from "../GetTestNameChoices/GetTestNameChoices";
 
 /**
  * Le design d'1 choix
  */
-export function GetTestAgeLayout({
+export function GetTestNameLayout({
   choice,
   answers,
   answer,
   answerIndex,
   currentItem,
 }) {
-  const thisGetTestAge = GetTestAgeChoices()[choice];
+  const thisGetTestName = GetTestNameChoices()[choice];
 
   return {
     // un descriptif de la unité de mesure
-    choiceDescription: GetTestAgeChoicesUI()[choice],
+    choiceDescription: GetTestNameChoicesUI()[choice],
 
     // la valeur de la unité de mesure
-    choiceValue: thisGetTestAge,
+    choiceValue: thisGetTestName,
 
     choiceImgUrl: "",
     choiceImgPath: "",
@@ -29,12 +29,12 @@ export function GetTestAgeLayout({
     // si la réponse en cours
     // correspond à ce choix en cours de création,
     // affiche le seal of approval
-    greenCheckmark: answer?.value == thisGetTestAge,
+    greenCheckmark: answer?.value == thisGetTestName,
 
     // si on clique sur ce choix...
     onChoiceClicked: () => {
-      GetTestAgeChoicesActions[choice]({
-        choice: thisGetTestAge,
+      GetTestNameChoicesActions[choice]({
+        choice: thisGetTestName,
         answers,
         answer,
         answerIndex,

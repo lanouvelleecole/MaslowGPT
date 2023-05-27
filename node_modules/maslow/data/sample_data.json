@@ -1,0 +1,70 @@
+[
+    {
+        "phrase": "Cannot breathe",
+        "need": "air"
+    },
+    {
+        "phrase": "Need to drink",
+        "need": "water"
+    },
+    {
+        "phrase": "Need to eat",
+        "need": "food"
+    },
+    {
+        "phrase": "Need somewhere to live",
+        "need": "shelter"
+    },
+    {
+        "phrase": "Need a rest",
+        "need": "sleep"
+    },
+    {
+        "phrase": "Do not feel safe",
+        "need": "personal-security"
+    },
+    {
+        "phrase": "Money issues",
+        "need": "financial-security"
+    },
+    {
+        "phrase": "Feel sick",
+        "need": "health"
+    },
+    {
+        "phrase": "Feel anxious",
+        "need": "well-being"
+    },
+    {
+        "phrase": "Feel lonely and want to be around people",
+        "need": "friendships"
+    },
+    {
+        "phrase": "Feel lonely and want to be intimate with someone",
+        "need": "intimacy"
+    },
+    {
+        "phrase": "Feel lonely and noone to talk to",
+        "need": "family"
+    },
+    {
+        "phrase": "Need to do something today",
+        "need": "short-term-gratification"
+    },
+    {
+        "phrase": "Feeling incapable",
+        "need": "self-esteem"
+    },
+    {
+        "phrase": "Feeling worthless",
+        "need": "self-respect"
+    },
+    {
+        "phrase": "Want to make big plans",
+        "need": "accomplishment"
+    },
+    {
+        "phrase": "Want to something I will always remember",
+        "need": "long-term-gratification"
+    }
+]

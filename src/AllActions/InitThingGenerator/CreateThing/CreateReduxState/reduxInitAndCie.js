@@ -17,7 +17,7 @@ function reduxInitAndCie(subfolder, actualJsFile, name) {
       path: `${process.cwd()}/${subfolder}/reduxStore.js`,
       // Pattern tells plop where in the file to inject the template
       pattern: `/* PLOP_INJECT_IMPORT */`,
-      template: `import ${name}Reducer from '../../../../../pieces/${name}/${name}Slice';`,
+      template: `import ${name}Reducer from './${name}/${name}Slice';`,
     },
     // ajoute dans reduxStore.js
     // le reducer tout juste crée

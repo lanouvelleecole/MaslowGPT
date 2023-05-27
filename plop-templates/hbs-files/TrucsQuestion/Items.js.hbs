@@ -1,10 +1,10 @@
 /* PLOP_INJECT_IMPORT */
 import { GetUniqueID } from "src/services/GetUniqueID/GetUniqueID";
 import i18n from "i18n-js";
-import { AllGetTestAge } from "./GetTestAgeListMaker/AllGetTestAge";
+import { AllGetTestName } from "./GetTestNameListMaker/AllGetTestName";
 
 // eslint-disable-next-line no-unused-vars
-import { GetTestAgeChoices } from "./GetTestAgeChoices/GetTestAgeChoices";
+import { GetTestNameChoices } from "./GetTestNameChoices/GetTestNameChoices";
 
 // eslint-disable-next-line no-unused-vars
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -17,9 +17,9 @@ import { SaveCurrentItem } from "./GettersSetters/SaveCurrentItem";
 
 /**
  *
- * La question nommée GetTestAge, qui ....
+ * La question nommée GetTestName, qui ....
  */
-const GetTestAge = () => {
+const GetTestName = () => {
   /* PLOP_INJECT_CODE */
 
   const route = useRoute();
@@ -30,20 +30,20 @@ const GetTestAge = () => {
     id: GetUniqueID(),
 
     // un nom, nous permettant de gérer les récup de réponses choisies/écrites
-    name: "GetTestAge",
+    name: "GetTestName",
 
     // le type de question souhaité
     // "text" ou "number" ou "choices" ou "custom"
-    type: "number",
+    type: "text",
 
     // la description de la question
     // en mode "text" ou "number" ou "choices"
     description: ({ answers, answer, answerIndex }) => {
-      return i18n.t("xWu6Gy7t");
+      return i18n.t("x5Kcio34");
     },
     // les choix dispos pour l'utilisateur, si "type" === "choices"
     choices: ({ answers, answer, answerIndex }) => {
-      return AllGetTestAge({
+      return AllGetTestName({
         answers,
         answer,
         answerIndex,
@@ -54,7 +54,7 @@ const GetTestAge = () => {
 
     // la valeur choisie/écrite par l'user
     // null (par défaut)
-    value: currentItem?.age,
+    value: currentItem?.name,
 
     // callback de text changé (en mode "text")
     onTextChanged: (newText) => {
@@ -64,7 +64,7 @@ const GetTestAge = () => {
     // la valeur par défaut a mettre dans le text input
     // (optionnel)
     defaultValue: ({ answers, answer, answerIndex }) =>
-      currentItem?.age,
+      currentItem?.name,
 
     // les flex du message ou de la zone d'input
     messageFlex: 1,
@@ -80,11 +80,11 @@ const GetTestAge = () => {
     // (optionnel)
     // true si valide false autrement
     checkInput: ({ input, answers, answer, answerIndex }) => {
-      return input != null && input > 0;
+      return input?.length != 2;
     },
     // un message d'erreur à afficher si les données ne sont pas valides
     errMsg: ({ answers, answer, answerIndex }) => {
-      return i18n.t("x5ypM04O");
+      return i18n.t("x4CIwkh");
     },
 
     // la callback de customization
@@ -101,4 +101,4 @@ const GetTestAge = () => {
   };
 };
 
-export { GetTestAge };
+export { GetTestName };

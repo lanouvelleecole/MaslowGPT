@@ -30,7 +30,7 @@ const subpage_import = (pageAndSubpageData, actualJsFile) => {
     pattern: `/* PLOP_INJECT_IMPORT */`,
     template: `import { 
   {{pascalCase name}} 
-} from '../../../../../pieces/{{pascalCase name}}/{{pascalCase name}}.js';`,
+} from './pieces/{{pascalCase name}}/{{pascalCase name}}.js';`,
     when: (data) => {
       return actualJsFile != null;
     },

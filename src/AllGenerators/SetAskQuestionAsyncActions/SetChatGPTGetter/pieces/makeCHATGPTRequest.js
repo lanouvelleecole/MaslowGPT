@@ -16,7 +16,9 @@ Veuillez patienter quelques instants....
     }
 
     const chat_gpt_output = await GetChatGPTOutput({
-      prompt,
+      prompt:
+        prompt +
+        `. In your output, break long lines (60+ characters) into smaller pieces.`,
       onSuccess: (chatGPTOutput) => {},
       onError: (error) => {},
       apiKey: OPENAI_API_KEY,

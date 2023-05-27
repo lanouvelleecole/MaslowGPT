@@ -7,9 +7,9 @@
  *
  **/
 
-import { GetTestAgeChoices } from "../GetTestAgeChoices/GetTestAgeChoices";
+import { GetTestNameChoices } from "../GetTestNameChoices/GetTestNameChoices";
 
-export const GetTestAgeChoicesCallbacks = {
+export const GetTestNameChoicesCallbacks = {
   /* PLOP_INJECT_CHOICE_CALLBACK */
 };
 
@@ -20,12 +20,12 @@ export const GetTestAgeChoicesCallbacks = {
  * @returns ...... , fournie via callback
  */
 
-export const GetTestAgeChoiceValue = (value) => {
+export const GetTestNameChoiceValue = (value) => {
   // le nom de key du choix effectué
-  const choiceKeyName = GetTestAgeChoiceKey(value);
+  const choiceKeyName = GetTestNameChoiceKey(value);
 
   // le style correspondant
-  const choiceCallbackValue = GetTestAgeChoicesCallbacks[choiceKeyName]();
+  const choiceCallbackValue = GetTestNameChoicesCallbacks[choiceKeyName]();
 
   return choiceCallbackValue;
 };
@@ -36,8 +36,8 @@ export const GetTestAgeChoiceValue = (value) => {
  *
  * retourne le nom du key selon valeur de choix
  */
-export const GetTestAgeChoiceKey = (choice) => {
-  var object = GetTestAgeChoices();
+export const GetTestNameChoiceKey = (choice) => {
+  var object = GetTestNameChoices();
 
   const keyName = Object.keys(object).find((key) => object[key] === choice);
 
