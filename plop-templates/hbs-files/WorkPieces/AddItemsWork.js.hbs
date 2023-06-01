@@ -12,7 +12,7 @@ import { Work } from "src/services/Work/Work";
  *
  * Ajoute un Work au WorkList
  */
-export const AddTestWork2Work = async ({ workList, initialWorkData }) => {
+export const AddTestJobWork = async ({ workList, initialWorkData }) => {
   // si ......... , alors on ajoute le Work au WorkList
   // sinon, on n'ajoute rien
   const condition = true;
@@ -22,8 +22,8 @@ export const AddTestWork2Work = async ({ workList, initialWorkData }) => {
     workList.works.push(
       Work({
         title: workList.title,
-        description: `TestWork2`,
-        workWith: "TestWork2",
+        description: `TestJob`,
+        workWith: "TestJob",
         workData: {
           data: "value",
         },

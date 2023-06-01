@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 /**
  *
- * permet d'obtenir les plus récents TestPage stockés dans Redux/Sqlite
+ * permet d'obtenir les plus récents WorkListsState stockés dans Redux/Sqlite
  *
  * Meme après que le state redux a changé ailleurs.
  * Cela permet d'afficher dans l'UI la toute dernère valeur du state Redux.
@@ -18,12 +18,12 @@ import { useSelector } from "react-redux";
  *
  * Cela signifie qu'il faut utiliser l'autre fonction nommée
  *
- * GetTestPage
+ * GetWorkListsState
  *
  * qui fonctionne en dehors de la zone d'influence du component,
  * mais ne rafraichira pas l'UI quand le state redux change.
  *
  */
-export const GetFreshestTestPage = () => {
-  return useSelector((state) => state.TestPage.allRows);
+export const GetFreshestWorkListsState = () => {
+  return useSelector((state) => state.WorkListsState.allRows);
 };

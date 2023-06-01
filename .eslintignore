@@ -1,0 +1,13 @@
+node_modules/
+assets/
+app.json
+babel.config.js
+eas.json
+jsconfig.json
+tsconfig.json
+package.json
+README.md
+yarn.lock
+package-lock.json
+plop-templates/
+

@@ -2,7 +2,7 @@ import { OPENAI_API_KEY } from "../../../../../index.js";
 import { GetChatGPTOutput } from "../../../../services/GetChatGPTOutput/GetChatGPTOutput.js";
 import { MakeLoadingSpinner } from "../../../../services/MakeLoadingSpinner/MakeLoadingSpinner.js";
 
-async function makeCHATGPTRequest(answers, printMsg = true) {
+async function makeCHATGPTRequest(answers, appRootPath, printMsg = true) {
   try {
     const prompt = answers.AskQuestion;
 

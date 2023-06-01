@@ -39,6 +39,8 @@ import { Spinner } from "src/components/Spinner/Spinner.js";
 import { Wait } from "./pieces/Wait/Wait.js";
 import { HideSnackbar } from "./pieces/NavHelpers/HideSnackbar.js";
 
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
+
 /**
  *
  * 
@@ -174,7 +176,7 @@ const Tutoriels = ({ route, navigation }) => {
 
       {/* permet d'afficher des messages à l'écran */}
       <Messager
-        clickSound={route.params.audioPlayers.playerGTA}
+        clickSound={PlayerGTAInstance.GetSound()}
         message={TutorielsState.snackbarText}
         onDismiss={() => {
           HideSnackbar();

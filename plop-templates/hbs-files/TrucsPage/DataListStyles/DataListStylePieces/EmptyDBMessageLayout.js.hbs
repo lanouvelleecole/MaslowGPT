@@ -3,6 +3,7 @@ import i18n from "i18n-js";
 
 import { Constants } from "src/constants/Constants.js";
 import { GoToAddItemToTestPage } from "../../pieces/NavHelpers/GoToAddItemToTestPage";
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
 
 /**
  *
@@ -14,7 +15,7 @@ export function EmptyDBMessageLayout() {
   const route = useRoute();
 
   return {
-    messageText: i18n.t("xPe31juj"),
+    messageText: i18n.t("xRnUhKCQ"),
 
     // la couleur/font/etc... du texte
     messageTextColor: Constants.defaultContentColor,
@@ -23,7 +24,7 @@ export function EmptyDBMessageLayout() {
     messageMarginLateral: 30,
 
     // le lecteur audio de clic
-    clickSound: route.params.audioPlayers.playerGTA,
+    clickSound: PlayerGTAInstance.GetSound(),
 
     // la couleur d'arrière plan
     backgroundColor: Constants.defaultBackgroundColor,
@@ -49,7 +50,7 @@ export function EmptyDBMessageLayout() {
     buttonLogoColor: Constants.defaultContentColor,
 
     // le texte a afficher dans le bouton
-    buttonText: i18n.t("x3KLiwwU"),
+    buttonText: i18n.t("x4HQzKi7"),
 
     // la couleur du texte du bouton
     buttonTextColor: Constants.defaultContentColor,

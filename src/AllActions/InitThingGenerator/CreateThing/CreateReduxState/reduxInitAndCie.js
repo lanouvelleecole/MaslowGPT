@@ -4,7 +4,7 @@ function reduxInitAndCie(subfolder, actualJsFile, name) {
     // ajoute le store redux
     {
       type: "add",
-      force: true,
+
       path: `${process.cwd()}/${subfolder}/reduxStore.js`,
       templateFile: "plop-templates/hbs-files/reduxStore.js.hbs",
       skipIfExists: true,
@@ -44,6 +44,11 @@ function reduxInitAndCie(subfolder, actualJsFile, name) {
 \tawait SqliteRedux${name}.Init${name}({
 \t\tdebugMode: true,
 \t});
+
+
+\t/*await SqliteRedux${name}.ResetState({
+\t\tdebugMode: true,
+\t});*/
 
 `,
     },

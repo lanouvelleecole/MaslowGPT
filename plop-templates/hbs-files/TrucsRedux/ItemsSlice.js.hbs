@@ -48,8 +48,8 @@ const initialState = {
  *
  * Ceci transforme plusieurs Reducers individuels en 1 méga réducer.
  */
-export const TestPageSlice = createSlice({
-  name: "TestPage",
+export const WorkListsStateSlice = createSlice({
+  name: "WorkListsState",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -70,4 +70,4 @@ export const TestPageSlice = createSlice({
   },
 });
 
-export default TestPageSlice.reducer;
+export default WorkListsStateSlice.reducer;

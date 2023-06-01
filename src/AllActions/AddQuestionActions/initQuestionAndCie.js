@@ -1,11 +1,11 @@
-import { addPageImportsToQuestion } from './AddPageImportsToQuestion/addPageImportsToQuestion.js';
-import { addPageLatestCurrentItem } from './AddPageLatestCurrentItem/addPageLatestCurrentItem.js';
-import { addPageCurrentItemArg } from './AddPageCurrentItemArg/addPageCurrentItemArg.js';
-import { addFrenchStrings } from './AddFrenchStrings/addFrenchStrings.js';
-import { addEnglishStrings } from './AddEnglishStrings/addEnglishStrings.js';
-import { addSqliteReduxDBData } from './AddSqliteReduxDBData/addSqliteReduxDBData.js';
-import { addQuestionChoices } from './AddQuestionChoices/addQuestionChoices.js';
-import { addQuestionToList } from './AddQuestionToList/addQuestionToList.js';
+import { addPageImportsToQuestion } from "./AddPageImportsToQuestion/addPageImportsToQuestion.js";
+import { addPageLatestCurrentItem } from "./AddPageLatestCurrentItem/addPageLatestCurrentItem.js";
+import { addPageCurrentItemArg } from "./AddPageCurrentItemArg/addPageCurrentItemArg.js";
+import { addFrenchStrings } from "./AddFrenchStrings/addFrenchStrings.js";
+import { addEnglishStrings } from "./AddEnglishStrings/addEnglishStrings.js";
+import { addSqliteReduxDBData } from "./AddSqliteReduxDBData/addSqliteReduxDBData.js";
+import { addQuestionChoices } from "./AddQuestionChoices/addQuestionChoices.js";
+import { addQuestionToList } from "./AddQuestionToList/addQuestionToList.js";
 
 function initQuestionAndCie({ questionFolderPath, promptData }) {
   let outputs = [];

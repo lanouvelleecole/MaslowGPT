@@ -1,4 +1,4 @@
-import { GetTestPage } from "./GetTestPage";
+import { GetWorkListsState } from "./GetWorkListsState";
 
 /**
  *
@@ -7,7 +7,7 @@ import { GetTestPage } from "./GetTestPage";
  * @returns l'item ayant le bon uniqueId, si existant, ou null.
  */
 export const GetItemByUniqueID = (uniqueID) => {
-  return GetTestPage().find((item) => {
+  return GetWorkListsState().find((item) => {
     return item.uniqueId == uniqueID;
   });
 };

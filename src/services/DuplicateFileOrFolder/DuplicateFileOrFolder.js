@@ -4,6 +4,8 @@
 
 import fs from "fs";
 import path from "path";
+import { CreateFolder } from "../CreateFolder/CreateFolder.js";
+import { CreateFileFromScratch } from "../CreateFileFromScratch/CreateFileFromScratch.js";
 
 const DuplicateFileOrFolder = (originPath, destPath) => {
   if (!fs.existsSync(originPath)) {
@@ -15,11 +17,12 @@ const DuplicateFileOrFolder = (originPath, destPath) => {
   }
 
   if (fs.lstatSync(originPath).isFile()) {
+    CreateFileFromScratch(destPath, "");
+
     // copy the file
     fs.copyFileSync(originPath, destPath);
   } else if (fs.lstatSync(originPath).isDirectory()) {
     // clone the content
-    fs.mkdirSync(destPath);
     fs.readdirSync(originPath).forEach((file) => {
       // copy the content of the folders
       DuplicateFileOrFolder(

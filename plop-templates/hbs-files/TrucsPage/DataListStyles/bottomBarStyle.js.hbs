@@ -8,6 +8,8 @@
 
 // multilingue
 
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
+
 // constantes globales
 import { useRoute } from "@react-navigation/native";
 import { Constants } from "src/constants/Constants.js";
@@ -22,7 +24,7 @@ export const getBottomBarStyle = () => {
   const route = useRoute();
   return {
     // le lecteur audio de clic
-    clickSound: route.params.audioPlayers.playerGTA,
+    clickSound: PlayerGTAInstance.GetSound(),
 
     // la barre en bas de l'écran est elle distincte du body (false)
     // ou mélangé l'un a l'autre (true)

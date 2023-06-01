@@ -7,6 +7,7 @@
 // truc important
 import { useRoute } from "@react-navigation/native";
 import { React } from "react";
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
 
 // briques de base
 
@@ -46,7 +47,7 @@ const getDataListStyle = () => {
     contentColor: Constants.defaultContentColor,
 
     // le lecteur audio de clic
-    clickSound: route.params.audioPlayers.playerGTA,
+    clickSound: PlayerGTAInstance.GetSound(),
 
     // les styles à appliquer au message de base de données vide.
     emptyDBMsgData: EmptyDBMessageLayout(),

@@ -1,16 +1,16 @@
 /* PLOP_INJECT_IMPORT */
 
 // Getters et Setters
-import { GetFreshestTestPage } from "./GettersSetters/GetFreshestTestPage";
-import { GetTestPage } from "./GettersSetters/GetTestPage";
-import { GetFreshestTestPageFromGroup } from "./GettersSetters/GetFreshestTestPageFromGroup";
-import { GetTestPageFromGroup } from "./GettersSetters/GetTestPageFromGroup";
-import { GetFreshestTestPageFirstRow } from "./GettersSetters/GetFreshestTestPageFirstRow";
-import { GetTestPageFirstRow } from "./GettersSetters/GetTestPageFirstRow";
+import { GetFreshestWorkListsState } from "./GettersSetters/GetFreshestWorkListsState";
+import { GetWorkListsState } from "./GettersSetters/GetWorkListsState";
+import { GetFreshestWorkListsStateFromGroup } from "./GettersSetters/GetFreshestWorkListsStateFromGroup";
+import { GetWorkListsStateFromGroup } from "./GettersSetters/GetWorkListsStateFromGroup";
+import { GetFreshestWorkListsStateFirstRow } from "./GettersSetters/GetFreshestWorkListsStateFirstRow";
+import { GetWorkListsStateFirstRow } from "./GettersSetters/GetWorkListsStateFirstRow";
 import { AddRowToDatabase } from "./GettersSetters/AddRowToDatabase";
 import { DeleteSpecificRowsFromDB } from "./GettersSetters/DeleteSpecificRowsFromDB";
 import { GetAllRowsFromDB } from "./GettersSetters/GetAllRowsFromDB";
-import { InitTestPage } from "./GettersSetters/InitTestPage";
+import { InitWorkListsState } from "./GettersSetters/InitWorkListsState";
 import { GetSpecificRowsFromDB } from "./GettersSetters/GetSpecificRowsFromDB";
 import { UpdateSpecificRowsFromDB } from "./GettersSetters/UpdateSpecificRowsFromDB";
 import { ResetState } from "./GettersSetters/ResetState";
@@ -24,7 +24,7 @@ import { GetFreshestItemByUniqueID } from "./GettersSetters/GetFreshestItemByUni
  *
  * (Via SQLITE et Redux)
  */
-export const SqliteReduxTestPage = {
+export const SqliteReduxWorkListsState = {
   // Getters.
   //
   // Récupèrent des données venant d'une base de données,
@@ -33,12 +33,12 @@ export const SqliteReduxTestPage = {
   // (Mention spéciale pour GetAllRowsFromDB et GetSpecificRowsFromDB,
   // qui, en plus de récupérer des données venant de la DB, sont chargés aussi
   // de répartir les données (rows) dans redux)
-  GetFreshestTestPage,
-  GetTestPage,
-  GetFreshestTestPageFromGroup,
-  GetTestPageFromGroup,
-  GetFreshestTestPageFirstRow,
-  GetTestPageFirstRow,
+  GetFreshestWorkListsState,
+  GetWorkListsState,
+  GetFreshestWorkListsStateFromGroup,
+  GetWorkListsStateFromGroup,
+  GetFreshestWorkListsStateFirstRow,
+  GetWorkListsStateFirstRow,
   GetItemByUniqueID,
   GetFreshestItemByUniqueID,
 
@@ -51,7 +51,7 @@ export const SqliteReduxTestPage = {
   // (Ajoute/Modifie/Supprime des données venant d'une base de données)
   AddRowToDatabase,
   DeleteSpecificRowsFromDB,
-  InitTestPage,
+  InitWorkListsState,
   UpdateSpecificRowsFromDB,
   ResetState,
 };

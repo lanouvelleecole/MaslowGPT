@@ -16,7 +16,7 @@ import { AddRowToDatabase } from "src/services/LocalDatabase/AddRowToDatabase";
  * selon la valeur de row.groupName, si existant.
  */
 export const addRowToDatabase = createAsyncThunk(
-  "TestPage/AddRowToDatabase",
+  "WorkListsState/AddRowToDatabase",
   async (requestData, thunkAPI) => {
     // ajoute ce row dans la liste de tous les rows sqlite
     AddRowToDatabase(requestData);

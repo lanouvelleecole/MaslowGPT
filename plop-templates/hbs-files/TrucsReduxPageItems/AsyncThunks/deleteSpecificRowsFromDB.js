@@ -18,7 +18,7 @@ export const deleteSpecificRowsFromDB = createAsyncThunk(
   "TutorielsState/DeleteSpecificRowsFromDB",
   async (requestData, thunkAPI) => {
     // combien de rows supprimés.
-    const qtyAffected = DeleteSpecificRowsFromDB(requestData);
+    const qtyAffected = await DeleteSpecificRowsFromDB(requestData);
 
     // transmet le nom et valeur du row déterminant les pommes pourries
     // au Reducer correspondant,

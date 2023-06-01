@@ -1,7 +1,7 @@
-import { GetChatGPTFunction } from '../../../../services/GetChatGPTFunction/GetChatGPTFunction.js';
-import { OPENAI_API_KEY } from '../../../../../index.js';
-import { Constants } from '../../../../AppConstants/Constants.js';
-import { MakeLoadingSpinner } from '../../../../services/MakeLoadingSpinner/MakeLoadingSpinner.js';
+import { GetChatGPTFunction } from '../../../../../../services/GetChatGPTFunction/GetChatGPTFunction.js';
+import { OPENAI_API_KEY } from '../../../../../../../index.js';
+import { Constants } from '../../../../../../AppConstants/Constants.js';
+import { MakeLoadingSpinner } from '../../../../../../services/MakeLoadingSpinner/MakeLoadingSpinner.js';
 
 async function makeCHATGPTFuncRequest(answers, printMsg = true) {
   try {

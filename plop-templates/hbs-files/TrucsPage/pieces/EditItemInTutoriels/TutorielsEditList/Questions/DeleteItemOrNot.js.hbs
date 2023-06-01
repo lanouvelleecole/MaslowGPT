@@ -6,6 +6,8 @@ import { GetUniqueID } from "src/services/GetUniqueID/GetUniqueID";
 // permet multilingue
 import i18n from "i18n-js";
 
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
+
 // permet choix conditionnel
 import { OuiOuNon } from "src/services/OuiOuNon/OuiOuNon";
 
@@ -93,7 +95,7 @@ const DeleteItemOrNot = () => {
  */
 const onSupprimeVraimentOuPas = (route) => {
   OuiOuNon({
-    clickSound: route.params.audioPlayers.playerGTA,
+    clickSound: PlayerGTAInstance.GetSound(),
     text: i18n.t("doWeDelete"),
     onYesPressed: () => {
       deleteItemAndGoBackToList();

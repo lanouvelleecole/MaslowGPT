@@ -3,6 +3,8 @@
 /* permet UI de création/modif d'item dans liste */
 import { GetUserInput } from "src/components/GetUserInput/GetUserInput";
 
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
+
 /* la liste de question nécessaire à la modif d'item via UI */
 import { TutorielsQuestionList } from "./TutorielsQuestionList/TutorielsQuestionList";
 
@@ -60,7 +62,7 @@ export const Tutoriels = () => {
         /* le texte de titre de appbar */
         appbarTitle={I18n.t("ZeAppbarTitleName")}
         /* un bruit de clic */
-        clickSound={route.params.audioPlayers.playerGTA}
+        clickSound={PlayerGTAInstance.GetSound()}
         /* couleur darrière plan de appbar */
         appbarBackgroundColor={Constants.defaultBackgroundColor}
         /* taille de texte du titre appbar */

@@ -1,7 +1,7 @@
 /* eslint-disable no-debugger */
 
 import { answers } from "../../../../../index.js";
-import { getDataFromNPMMaslowJSON } from "../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
+import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 import path from "path";
 import { getAllFoldersFromFolder } from "../../../../services/GetAllFoldersFromFolder/getAllFoldersFromFolder.js";
 import { getPathWithForwardSlashes } from "../../../../services/GetPathWithForwardSlashes/getPathWithForwardSlashes.js";

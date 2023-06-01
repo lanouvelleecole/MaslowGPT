@@ -7,7 +7,7 @@ import { UpdateSpecificRowsFromDB } from "src/services/LocalDatabase/UpdateSpeci
 /**
  * Cet AsyncThunk modifie/remplace
  * certains rows stockés dans la base de données SQLITE,
- * nommée TestPage.
+ * nommée WorkListsState.
  *
  * Une fois modifiés, on transmet ces données au Reducer correspondant.
  *
@@ -17,7 +17,7 @@ import { UpdateSpecificRowsFromDB } from "src/services/LocalDatabase/UpdateSpeci
  * selon la valeur de row.groupName, si existant.
  */
 export const updateSpecificRowsFromDB = createAsyncThunk(
-  "TestPage/UpdateSpecificRowsFromDB",
+  "WorkListsState/UpdateSpecificRowsFromDB",
   async (requestData, thunkAPI) => {
     // met à jour le(s) row(s) dans la DB
     UpdateSpecificRowsFromDB(requestData);

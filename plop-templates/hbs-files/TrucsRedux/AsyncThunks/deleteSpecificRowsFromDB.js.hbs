@@ -15,10 +15,10 @@ import { DeleteSpecificRowsFromDB } from "src/services/LocalDatabase/DeleteSpeci
  * et aussi dans le gros panier .allRows
  */
 export const deleteSpecificRowsFromDB = createAsyncThunk(
-  "TestPage/DeleteSpecificRowsFromDB",
+  "WorkListsState/DeleteSpecificRowsFromDB",
   async (requestData, thunkAPI) => {
     // combien de rows supprimés.
-    const qtyAffected = DeleteSpecificRowsFromDB(requestData);
+    const qtyAffected = await DeleteSpecificRowsFromDB(requestData);
 
     // transmet le nom et valeur du row déterminant les pommes pourries
     // au Reducer correspondant,

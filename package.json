@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "fix-lint-errors": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -30,7 +32,11 @@
     "plop-templates/**/*"
   ],
   "devDependencies": {
-    "eslint": "^8.38.0",
-    "eslint-plugin-react": "^7.32.2"
+    "eslint": "^8.41.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-native": "^4.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0"
   }
 }

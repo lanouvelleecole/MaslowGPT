@@ -18,19 +18,19 @@ import { useSelector } from "react-redux";
  *
  * Cela signifie qu'il faut utiliser l'autre fonction nommée
  *
- * GetTestPageFirstRow
+ * GetWorkListsStateFirstRow
  *
  * qui fonctionne en dehors de la zone d'influence du component,
  * mais ne rafraichira pas l'UI quand le state redux change.
  *
  */
 
-export function GetFreshestTestPageFirstRow() {
-  const allTestPage = useSelector((state) => state.TestPage.allRows);
+export function GetFreshestWorkListsStateFirstRow() {
+  const allWorkListsState = useSelector((state) => state.WorkListsState.allRows);
 
-  if (allTestPage != null && allTestPage.length > 0) {
-    return allTestPage[0];
+  if (allWorkListsState != null && allWorkListsState.length > 0) {
+    return allWorkListsState[0];
   } else {
-    return allTestPage;
+    return allWorkListsState;
   }
 }

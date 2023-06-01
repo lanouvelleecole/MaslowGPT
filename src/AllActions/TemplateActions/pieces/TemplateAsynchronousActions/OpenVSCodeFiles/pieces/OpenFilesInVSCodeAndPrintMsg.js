@@ -1,9 +1,9 @@
 import I18n from "i18n-js";
 
 import path from "path";
-import { openVSCode } from '../../../../services/OpenVSCode/openVSCode.js';
-import { getPathWithForwardSlashes } from '../../../../services/GetPathWithForwardSlashes/getPathWithForwardSlashes.js';
-import { Constants } from '../../../../AppConstants/Constants.js';
+import { openVSCode } from '../../../../../../services/OpenVSCode/openVSCode.js';
+import { getPathWithForwardSlashes } from '../../../../../../services/GetPathWithForwardSlashes/getPathWithForwardSlashes.js';
+import { Constants } from '../../../../../../AppConstants/Constants.js';
 
 function OpenFilesInVSCodeAndPrintMsg(answers, appRootPath) {
   // fileWhereWeUsePath est le path du fichier dans lequel on utilise

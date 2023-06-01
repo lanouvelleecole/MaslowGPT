@@ -1,4 +1,5 @@
 /* PLOP_INJECT_IMPORT */
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
 
 // permet callback onpress
 import { OnHardwareBackPressed } from "src/services/OnHardwareBackPressed/OnHardwareBackPressed.js";
@@ -28,7 +29,7 @@ export const OnDeviceBackPressed = () => {
   const route = useRoute();
 
   OnHardwareBackPressed({
-    sound: () => SoundPlayer({ sound: route.params.audioPlayers.playerGTA }),
+    sound: () => SoundPlayer({ sound: PlayerGTAInstance.GetSound() }),
     stateValue: TestPageState.chosenOne,
     condition: () => doWeRunCallback,
     action: () => {

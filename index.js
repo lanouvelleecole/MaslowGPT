@@ -38,6 +38,9 @@ let answers = getNPMMaslowJSON() ?? {};
 // la clé API OpenAI (stockée dans une variable d'environnement)
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
+// le maslow de maslow xxx
+const the_cmd_very_first_thing = process.argv[1];
+
 // le xxx de maslow xxx
 const generatorName = process.argv[2];
 
@@ -49,9 +52,15 @@ const second_cmd_arg = process.argv[3];
 // c'est ici que tout commence
 // l'alpha et l'oméga
 // le point d'entrée, ze singularity.
-(async function () {
-  await main();
-})();
+if (the_cmd_very_first_thing.endsWith("index.js")) {
+  (async function () {
+    console.log(`maslow-gpt is currenly used as a command line tool`);
+
+    await main();
+  })();
+} else {
+  console.log(`maslow-gpt is currenly used as an imported npm package`);
+}
 
 // j'exporte ici les variables/ constantes globales
 // qui servent un peu partout dans ce petit utilitaire humble

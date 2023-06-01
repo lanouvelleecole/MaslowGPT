@@ -8,7 +8,7 @@ export function OnWorkAlreadyGoingOn() {
 
   SqliteReduxWorkLists.DeleteSpecificRowsFromDB({
     rowName: "uniqueId",
-    rowValue: "TestWorkList",
+    rowValue: "TestJob",
     onSuccess: (data) => {
       console.log(`WorkList deleted successfully !`);
     },

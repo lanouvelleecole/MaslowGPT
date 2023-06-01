@@ -1,29 +1,30 @@
 /* PLOP_INJECT_IMPORT */
 
 // nécéssaire
-import React from "react";
+import React from 'react';
 
 // les fichiers de style de components.
-import { styles } from "./App.style.js";
+import {styles} from './App.style.js';
 
 // permet d'update l'écran quand tout est prêt
-import { useCallback } from "react";
+import {useCallback} from 'react';
 
 // permet d'afficher un écran de patientage
-import * as SplashScreen from "expo-splash-screen";
+import * as SplashScreen from 'expo-splash-screen';
 
 // un message avec bouton cliquable
-import { MessageAvecBouton } from "src/components/MessageAvecBouton/MessageAvecBouton";
+import {MessageAvecBouton} from 'src/components/MessageAvecBouton/MessageAvecBouton';
 
 // permet bon affichage IOS
-import { SafeAreaView } from "react-native-safe-area-context";
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 // permet d'accéder a des globales
-import { Constants } from "src/constants/Constants.js";
+import {Constants} from 'src/constants/Constants.js';
+import {PlayerGTAInstance} from 'src/constants/PlayerGTA/PlayerGTA.js';
 
 // cache le splash screen quand on en a plus besoin.
 // quand tout (fonts, icones, etc...) est chargé
-export const hideSplashScreenWhenLoaded = (appState) => {
+export const hideSplashScreenWhenLoaded = appState => {
   const onLayoutRootView = useCallback(async () => {
     if (appState.isEverythingLoaded) {
       // This tells the splash screen to hide immediately! If we call this after
@@ -48,28 +49,27 @@ export const hideSplashScreenWhenLoaded = (appState) => {
  *
  * @returns la page d'accueil, un ptit message avec bouton.
  */
-export const Home = ({ route, navigation }) => {
+export const Home = ({route, navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <MessageAvecBouton
-        messageText={"Le bouton ci dessous fait du bruit."}
+        messageText={'Le bouton ci dessous fait du bruit.'}
         messageTextColor={Constants.defaultContentColor}
         messageTextFont={Constants.defaultFontFamily}
-        backgroundColor={"yellow"}
+        backgroundColor={'yellow'}
         iconPath={route.params.images.app_icon}
         iconWidth={50}
         iconHeight={50}
-        buttonBackgroundColor={"orange"}
-        buttonLogoName={"emoticon-excited-outline"}
+        buttonBackgroundColor={'orange'}
+        buttonLogoName={'emoticon-excited-outline'}
         buttonLogoSize={20}
         buttonLogoColor={Constants.defaultContentColor}
         buttonText={"Black n' Yellow/Orange"}
         buttonTextColor={Constants.defaultContentColor}
-        buttonTextFont={"PriceDown"}
-        onButtonClicked={() =>
-          route.params.audioPlayers.playerGTA.replayAsync()
-        }
-      ></MessageAvecBouton>
+        buttonTextFont={'PriceDown'}
+        onButtonClicked={() => {
+          PlayerGTAInstance.GetSound().replayAsync();
+        }}></MessageAvecBouton>
     </SafeAreaView>
   );
 };

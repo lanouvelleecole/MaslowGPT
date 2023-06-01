@@ -3,7 +3,7 @@ import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMas
 
 const AffineOriginalPathPromptText = (appRootPath) => {
   return {
-    type: "input",
+    type: "editor",
 
     filter: function (answer) {
       // Use the trim() method to remove whitespace from both sides of the answer

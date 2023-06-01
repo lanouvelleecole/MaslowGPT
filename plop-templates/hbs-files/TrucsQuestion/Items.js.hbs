@@ -39,7 +39,7 @@ const GetTestName = () => {
     // la description de la question
     // en mode "text" ou "number" ou "choices"
     description: ({ answers, answer, answerIndex }) => {
-      return i18n.t("x5Kcio34");
+      return i18n.t("xOJ27832");
     },
     // les choix dispos pour l'utilisateur, si "type" === "choices"
     choices: ({ answers, answer, answerIndex }) => {
@@ -80,11 +80,11 @@ const GetTestName = () => {
     // (optionnel)
     // true si valide false autrement
     checkInput: ({ input, answers, answer, answerIndex }) => {
-      return input?.length != 2;
+      return input?.length > 0;
     },
     // un message d'erreur à afficher si les données ne sont pas valides
     errMsg: ({ answers, answer, answerIndex }) => {
-      return i18n.t("x4CIwkh");
+      return i18n.t("xIKzlTa0");
     },
 
     // la callback de customization

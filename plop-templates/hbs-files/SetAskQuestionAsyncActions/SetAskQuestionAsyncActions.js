@@ -3,6 +3,8 @@ import { openFilesInVSCode } from "./OpenVSCodeFiles/openVSCodeFiles.js";
 import { setChatGPTGetter } from "./SetChatGPTGetter/setChatGPTGetter.js";
 import { setCreateMaslowJSON } from "./SetCreateMaslowJSON/setCreateMaslowJSON.js";
 
+// PLOP_INJECT_ASYNC_ACTION_IMPORT
+
 /**
  *
  * @param {*} plop
@@ -11,10 +13,12 @@ import { setCreateMaslowJSON } from "./SetCreateMaslowJSON/setCreateMaslowJSON.j
  * Ceci initialise les actions asynchrones de récup de réponse ChatGPT
  */
 function SetAskQuestionAsyncActions(plop, appRootPath) {
+  // PLOP_INJECT_ASYNC_ACTION
+
   // set l'action asynchrone
   // qui fait une requete de demande de
   // réponse de question (?! drole de formulation ;-), via chat gpt
-  setChatGPTGetter(plop);
+  setChatGPTGetter(plop, appRootPath);
 
   // set l'action de suppression de données précedemment générées
   //deleteCaca(plop, appRootPath);

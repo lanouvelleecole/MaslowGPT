@@ -4,12 +4,12 @@
 /* PLOP_INJECT_CODE */
 
 /**
- * L'instance du singleton TestSingleton.
+ * L'instance du singleton PlayerGTA.
  */
 let instance;
 
 /**
- * le state actuel du TestSingleton.
+ * le state actuel du PlayerGTA.
  */
 let state = {
   //
@@ -17,9 +17,9 @@ let state = {
 };
 
 /**
- * Le all mighty TestSingleton, qui nous permet un accès CRUD du ghetto.
+ * Le all mighty PlayerGTA, qui nous permet un accès CRUD du ghetto.
  */
-class TestSingleton {
+class PlayerGTA {
   /**
    * Le constructeur
    * qui ne construira qu'un seul objet,
@@ -27,21 +27,21 @@ class TestSingleton {
    */
   constructor() {
     if (instance) {
-      throw new Error("New instance of TestSingleton cannot be created.");
+      throw new Error("New instance of PlayerGTA cannot be created.");
     }
 
     instance = this;
   }
 
   /**
-   * Ceci permet d'obtenir le TestSingleton
+   * Ceci permet d'obtenir le PlayerGTA
    */
   GetID() {
     return state.id;
   }
 
   /**
-   * Ceci permet de set des données dans le TestSingleton
+   * Ceci permet de set des données dans le PlayerGTA
    */
   SetID(newState) {
     state.id = newState;
@@ -62,6 +62,6 @@ class TestSingleton {
   }
 }
 
-let TestSingletonInstance = Object.freeze(new TestSingleton());
+let PlayerGTAInstance = Object.freeze(new PlayerGTA());
 
-export { TestSingletonInstance };
+export { PlayerGTAInstance };

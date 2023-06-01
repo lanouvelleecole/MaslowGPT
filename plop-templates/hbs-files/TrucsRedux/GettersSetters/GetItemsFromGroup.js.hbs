@@ -8,6 +8,6 @@ import { store } from "src/reduxState/reduxStore";
  *
  */
 
-export function GetTestPageFromGroup({ groupName }) {
-  return store.getState().TestPage.groups[groupName] ?? [];
+export function GetWorkListsStateFromGroup({ groupName }) {
+  return store.getState().WorkListsState.groups[groupName] ?? [];
 }

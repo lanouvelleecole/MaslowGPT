@@ -108,13 +108,12 @@ export const defaultValues = {
 
 ************************************************* */
 
-/* ***** POUR STATE DE COMPONENT *****
+/* ***** POUR STATE DE COMPONENT ***** */
 
 // les noms et types des valeurs stockées dans la DB
 // (il y a 3 types possibles: TEXT (string), INTEGER (nombre entier), et REAL (nombre decimal))
 export const rowNamesAndTypes = {
   // PLOP_INJECT_DB_ROW
-
 
   // affiche ou pas le snack
   currentState: "INTEGER",
@@ -146,4 +145,4 @@ export const defaultValues = {
   uniqueId: "TutorielsState",
 };
 
-******************************************* */
+/* ******************************************* */

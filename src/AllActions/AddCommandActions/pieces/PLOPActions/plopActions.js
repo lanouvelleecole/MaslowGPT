@@ -9,7 +9,7 @@ export const templateAppendPlopAction = {
 
 export const templateAddPlopAction = {
   type: "add",
-  force: true,
+
   path: `${process.cwd()}/....../.......js`,
   //templateFile: "plop-templates/hbs-files/<filename>.js.hbs",
   template: ``,

@@ -1,5 +1,7 @@
 /* PLOP_INJECT_IMPORT */
 
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
+
 /* permet UI de création/modif d'item dans liste */
 import { GetUserInput } from "src/components/GetUserInput/GetUserInput";
 
@@ -67,7 +69,7 @@ export const AddItemToTutoriels = () => {
         /* le texte de titre de appbar */
         appbarTitle={I18n.t("Add")}
         /* un bruit de clic */
-        clickSound={route.params.audioPlayers.playerGTA}
+        clickSound={PlayerGTAInstance.GetSound()}
         /* couleur darrière plan de appbar */
         appbarBackgroundColor={Constants.defaultBackgroundColor}
         /* taille de texte du titre appbar */

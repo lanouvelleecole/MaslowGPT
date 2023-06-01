@@ -8,6 +8,8 @@ import { Constants } from "src/constants/Constants.js";
 // la liste d'options de l'appbar
 import { AppbarOptionsMenuList } from "./AppbarStylePieces/AppbarOptionsMenuList";
 
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
+
 /**
  * les styles de la topbar
  */
@@ -22,7 +24,7 @@ export const getAppbarStyle = () => {
     appbarLayoutOverlaid: false,
 
     // le lecteur audio de clic
-    clickSound: route.params.audioPlayers.playerGTA,
+    clickSound: PlayerGTAInstance.GetSound(),
 
     // la taille des icones de l'appbar
     appbarIconSize: 35,

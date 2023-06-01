@@ -3,6 +3,7 @@ import i18n from "i18n-js";
 
 import { Constants } from "src/constants/Constants.js";
 import { GoToAddItemToTutoriels } from "../../pieces/NavHelpers/GoToAddItemToTutoriels";
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
 
 /**
  *
@@ -23,7 +24,7 @@ export function EmptyDBMessageLayout() {
     messageMarginLateral: 30,
 
     // le lecteur audio de clic
-    clickSound: route.params.audioPlayers.playerGTA,
+    clickSound: PlayerGTAInstance.GetSound(),
 
     // la couleur d'arrière plan
     backgroundColor: Constants.defaultBackgroundColor,

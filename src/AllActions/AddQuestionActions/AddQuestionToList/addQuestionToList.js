@@ -1,23 +1,36 @@
+import path from "path";
+import { getPathWithForwardSlashes } from "../../../services/GetPathWithForwardSlashes/getPathWithForwardSlashes.js";
+import { InjectStuffUnderPatterns } from "../../../services/InjectStuffUnderPatterns/InjectStuffUnderPatterns.js";
+import { Constants } from "../../../AppConstants/Constants.js";
+
 function addQuestionToList(promptData, questionFolderPath, outputs) {
   const questionnaire_folder_path = promptData["questionnaire_folder_path"];
   const questionnaire_file_name = promptData["questionnaire_file_name"];
+  const question_name = promptData["question_name"];
+
+  const questionnaire_list_path = getPathWithForwardSlashes(
+    path.join(process.cwd(), questionnaire_folder_path, questionnaire_file_name)
+  );
 
   const addimp = {
-    type: "append",
-    path: `${process.cwd()}/${questionnaire_folder_path}/${questionnaire_file_name}`,
+    deletePreviousStuff: true,
+    indent: true,
     pattern: `/* PLOP_INJECT_IMPORT */`,
-    template: `import {
-\t{{pascalCase question_name}}
-} from "${questionFolderPath}/{{pascalCase question_name}}";`,
+    stuffUnderPattern: `import { ${question_name} } from "${questionFolderPath}/${question_name}";`,
   };
 
   const addCall = {
-    type: "append",
-    path: `${process.cwd()}/${questionnaire_folder_path}/${questionnaire_file_name}`,
+    deletePreviousStuff: true,
+    indent: true,
     pattern: `/* PLOP_INJECT_CODE */`,
-    template: `\t\t{{pascalCase question_name}}(),`,
+    stuffUnderPattern: `${question_name}(),`,
   };
 
-  outputs.push(addimp, addCall);
+  const addAll = InjectStuffUnderPatterns(questionnaire_list_path, [
+    addimp,
+    addCall,
+  ]);
+
+  //outputs.push(addimp, addCall);
 }
 export { addQuestionToList };

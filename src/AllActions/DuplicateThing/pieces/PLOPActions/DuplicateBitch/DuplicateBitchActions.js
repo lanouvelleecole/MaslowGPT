@@ -14,7 +14,7 @@ export const DuplicateBitchAppendAction = (promptData, appRootPath) => {
 export const DuplicateBitchAddAction = (promptData, appRootPath) => {
   return {
     type: "add",
-    force: true,
+
     path: `${process.cwd()}/....../.......js`,
     //DuplicateBitchFile: "plop-DuplicateBitchs/hbs-files/<filename>.js.hbs",
     DuplicateBitch: ``,

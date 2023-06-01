@@ -1,4 +1,4 @@
-import { AddCodeUseExample } from '../../../services/RegenerateAIFunction/pieces/AddCodeUseExample.js';
+import { AddCodeUseExample } from "../../../../../services/RegenerateAIFunction/pieces/AddCodeUseExample.js";
 
 function setCodeUsageIfNeeded(plop, appRootPath) {
   /* PLOP_INJECT_CODE */

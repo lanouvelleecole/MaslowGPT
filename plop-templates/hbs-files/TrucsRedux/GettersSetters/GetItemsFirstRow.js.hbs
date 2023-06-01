@@ -8,12 +8,12 @@ import { store } from "src/reduxState/reduxStore";
  *
  */
 
-export function GetTestPageFirstRow() {
-  const allTestPage = store.getState().TestPage.allRows;
+export function GetWorkListsStateFirstRow() {
+  const allWorkListsState = store.getState().WorkListsState.allRows;
 
-  if (allTestPage != null && allTestPage.length > 0) {
-    return allTestPage[0];
+  if (allWorkListsState != null && allWorkListsState.length > 0) {
+    return allWorkListsState[0];
   } else {
-    return allTestPage;
+    return allWorkListsState;
   }
 }

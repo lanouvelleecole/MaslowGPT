@@ -4,12 +4,12 @@
 /* PLOP_INJECT_CODE */
 
 /**
- * L'instance du singleton TestWork2Singleton.
+ * L'instance du singleton TestJobSingleton.
  */
 let instance;
 
 /**
- * le state actuel du TestWork2Singleton.
+ * le state actuel du TestJobSingleton.
  */
 let state = {
   // les annuleurs de requêtes HTTP
@@ -17,9 +17,9 @@ let state = {
 };
 
 /**
- * Le all mighty TestWork2Singleton, qui nous permet un accès CRUD du ghetto.
+ * Le all mighty TestJobSingleton, qui nous permet un accès CRUD du ghetto.
  */
-class TestWork2Singleton {
+class TestJobSingleton {
   /**
    * Le constructeur
    * qui ne construira qu'un seul objet,
@@ -27,7 +27,7 @@ class TestWork2Singleton {
    */
   constructor() {
     if (instance) {
-      throw new Error("New instance of TestWork2Singleton cannot be created.");
+      throw new Error("New instance of TestJobSingleton cannot be created.");
     }
 
     instance = this;
@@ -42,13 +42,13 @@ class TestWork2Singleton {
 
   /**
    * Ceci permet de stocker des données de cancel
-   * dans le TestWork2Singleton
+   * dans le TestJobSingleton
    */
   AddCanceller(cancellerName, cancellerValue) {
     state.requestCancellers[cancellerName] = cancellerValue;
   }
 }
 
-let TestWork2SingletonInstance = Object.freeze(new TestWork2Singleton());
+let TestJobSingletonInstance = Object.freeze(new TestJobSingleton());
 
-export { TestWork2SingletonInstance };
+export { TestJobSingletonInstance };

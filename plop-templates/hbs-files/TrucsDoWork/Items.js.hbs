@@ -16,10 +16,10 @@ import { OnWorkError } from "./OnWorkError/OnWorkError";
  *
  * Lance le boulot de ...
  */
-export function TestWorkList({ initialWorkData }) {
+export function TestJob({ initialWorkData }) {
   /** le méchanisme de boulot (liste de jobs a faire l'un après l'autre) */
   DoWork({
-    id: "TestWorkList",
+    id: "TestJob",
     onBefore: () => {
       /** avant de commencer boulot */
       OnBeforeWork();

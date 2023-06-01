@@ -52,10 +52,10 @@ export const DeleteSpecificRowsFromDB = ({
        * cette callback, s'execute lorsque les
        * données ont été supprimées dans Sqlite/Redux
        */
-      .then((qtyDeleted) => {
-        resolve(qtyDeleted);
+      .then((rowData) => {
+        resolve(rowData.qtyAffected);
 
-        RunIfPossible({ func: onSuccess, args: qtyDeleted });
+        RunIfPossible({ func: onSuccess, args: rowData.qtyAffected });
       })
       /** si bobo durant ajouts/répartitions */
       .catch((e) => {

@@ -1,6 +1,6 @@
 import { defaultValues } from "../DatabaseInfo";
 import { AddRowToDatabase } from "./AddRowToDatabase";
-import { GetTestPage } from "./GetTestPage";
+import { GetWorkListsState } from "./GetWorkListsState";
 import { UpdateSpecificRowsFromDB } from "./UpdateSpecificRowsFromDB";
 
 /**
@@ -9,7 +9,7 @@ import { UpdateSpecificRowsFromDB } from "./UpdateSpecificRowsFromDB";
  * ajoute le state par défaut, si pas de state existant
  */
 export const ResetState = async () => {
-  const rows = GetTestPage();
+  const rows = GetWorkListsState();
 
   // si le state camera n'existe pas déja....
   if (rows.length == 0) {
@@ -24,9 +24,9 @@ export const ResetState = async () => {
     await UpdateSpecificRowsFromDB({
       row: defaultValues,
       rowName: "uniqueId",
-      rowValue: "TestPage",
+      rowValue: "WorkListsState",
       onSuccess: (data) => {
-        //console.log(`state de TestPage reset avec succès`);
+        //console.log(`state de WorkListsState reset avec succès`);
       },
     });
   }

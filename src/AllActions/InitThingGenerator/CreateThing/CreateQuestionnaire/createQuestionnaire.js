@@ -2,7 +2,7 @@ function createQuestionnaire(subfolder, actualJsFile) {
   return [
     {
       type: "add",
-      force: true,
+
       path: `${process.cwd()}/${subfolder}/{{pascalCase name}}/QuestionList.js`,
       templateFile: `plop-templates/hbs-files/QuestionList.js.hbs`,
     },
@@ -35,7 +35,8 @@ import { useNavigation, useRoute } from "@react-navigation/native";
       },
       template: `import {
   GetUserInput
-} from "src/components/GetUserInput/GetUserInput";`,
+} from "src/components/GetUserInput/GetUserInput";
+import {PlayerGTAInstance} from 'src/constants/PlayerGTA/PlayerGTA.js';`,
     },
     // ajoute de quoi utiliser le questionnaire
     // (component commenté)
@@ -57,7 +58,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
     scrollDirection={"horizontal_one_by_one"}
     showAppbar={true}
     appbarTitle={i18n.t("Options")}
-    clickSound={route.params.audioPlayers.playerGTA}
+    clickSound={PlayerGTAInstance.GetSound()}
     appbarBackgroundColor={Constants.defaultBackgroundColor}
     appbarContentColor={Constants.defaultContentColor}
     appbarFont={Constants.defaultFontFamily}

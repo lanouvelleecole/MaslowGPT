@@ -1,37 +1,37 @@
 /* PLOP_INJECT_IMPORT */
 
 // nécéssaire
-import React from "react";
+import React from 'react';
 
 // styles de base
-import { styles } from "./App.style.js";
+import {styles} from './App.style.js';
 
 // barre d'heure stylée
-import { StatusBar } from "react-native";
+import {StatusBar} from 'react-native';
 
 // provider redux
-import { Provider } from "react-redux";
+import {Provider} from 'react-redux';
 
 // provider react native paper
-import { Provider as PaperProvider } from "react-native-paper";
+import {Provider as PaperProvider} from 'react-native-paper';
 
 // permet nav entre écran
-import { NavigationContainer } from "@react-navigation/native";
+import {NavigationContainer} from '@react-navigation/native';
 
 // store redux
-import { store } from "src/reduxState/reduxStore";
+import {store} from 'src/reduxState/reduxStore';
 
 // écran par défaut
-import { Home } from "./AppInit";
+import {Home} from './AppInit';
 
 // pour bon affichage IOS
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 // constantes utiles
-import { Constants } from "src/constants/Constants.js";
+import {Constants} from 'src/constants/Constants.js';
 
 // permet de pouvoir naviguer entre écrans
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 /**
  * Ceci permet de pouvoir naviguer entre différents écrans
@@ -51,14 +51,14 @@ const Stack = createNativeStackNavigator();
  *
  * @returns L'alpha et L'oméga, l'appli entière.
  */
-export const AppMainComponent = ({ onLayoutRootView, appState }) => {
+export const AppMainComponent = ({onLayoutRootView, appState}) => {
   /* PLOP_INJECT_CODE */
 
   return (
     <SafeAreaProvider style={styles.container} onLayout={onLayoutRootView}>
       {/* Permet de donner de la couleur et du style, à la barre ou il y a l'heure sur ton phone */}
       <StatusBar
-        barStyle={"dark-content"}
+        barStyle={'dark-content'}
         animated={true}
         backgroundColor={Constants.defaultBackgroundColor}
       />
@@ -74,16 +74,14 @@ export const AppMainComponent = ({ onLayoutRootView, appState }) => {
               initialRouteName="Home"
               screenOptions=\{{
                 headerShown: false,
-              }}
-            >
+              }}>
               {/* PLOP_INJECT_PAGES_PARAMS */}
 
               {/* la page par défaut */}
               <Stack.Screen
                 name="Home"
                 component={Home}
-                initialParams={appState.initialState}
-              ></Stack.Screen>
+                initialParams={appState.initialState}></Stack.Screen>
             </Stack.Navigator>
           </NavigationContainer>
         </PaperProvider>

@@ -3,7 +3,7 @@ import { store } from "src/reduxState/reduxStore";
 // permet exécution optionnelle de callback
 import { RunIfPossible } from "src/services/RunIfPossible/RunIfPossible";
 
-// Le AsyncThunk de suppression/triage de données stockées dans TestPage.
+// Le AsyncThunk de suppression/triage de données stockées dans WorkListsState.
 import { deleteSpecificRowsFromDB } from "../AsyncThunks/deleteSpecificRowsFromDB";
 
 // Le nom de la DB Sqlite,
@@ -52,10 +52,10 @@ export const DeleteSpecificRowsFromDB = ({
        * cette callback, s'execute lorsque les
        * données ont été supprimées dans Sqlite/Redux
        */
-      .then((qtyDeleted) => {
-        resolve(qtyDeleted);
+      .then((rowData) => {
+        resolve(rowData.qtyAffected);
 
-        RunIfPossible({ func: onSuccess, args: qtyDeleted });
+        RunIfPossible({ func: onSuccess, args: rowData.qtyAffected });
       })
       /** si bobo durant ajouts/répartitions */
       .catch((e) => {

@@ -35,8 +35,6 @@ const AskQuestionPromptEditor = (appRootPath) => {
 
     name: "AskQuestion",
     default: (data) => {
-      debugger;
-
       const question_txt_path = getPathWithForwardSlashes(
         path.join(appRootPath, answers.GptQuestionName, "question.txt")
       );

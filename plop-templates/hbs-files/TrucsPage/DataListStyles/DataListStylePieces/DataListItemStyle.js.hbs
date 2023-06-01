@@ -3,6 +3,7 @@ import i18n from "i18n-js";
 import { Constants } from "src/constants/Constants.js";
 import { GoToEditItemInTestPage } from "../../pieces/NavHelpers/GoToEditItemInTestPage";
 import { useRoute } from "@react-navigation/native";
+import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
 
 /**
  *
@@ -49,7 +50,7 @@ export const DataListItemStyle = (item, index) => {
     itemName: `${item.name}`,
 
     // le lecteur audio de clic
-    clickSound: route.params.audioPlayers.playerGTA,
+    clickSound: PlayerGTAInstance.GetSound(),
 
     // 1 ou plusieurs informations a propos de l'item
     itemsInfos: [

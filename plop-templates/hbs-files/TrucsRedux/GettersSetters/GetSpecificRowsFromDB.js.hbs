@@ -3,7 +3,7 @@ import { store } from "src/reduxState/reduxStore";
 // permet exécution optionnelle de callback
 import { RunIfPossible } from "src/services/RunIfPossible/RunIfPossible";
 
-// Le AsyncThunk de récupération/triage de certaines données stockées dans TestPage.
+// Le AsyncThunk de récupération/triage de certaines données stockées dans WorkListsState.
 import { getSpecificRowsFromDB } from "../AsyncThunks/getSpecificRowsFromDB";
 
 // Le nom de la DB Sqlite,
@@ -17,7 +17,7 @@ import { rowNamesAndTypes, databaseName } from "../DatabaseInfo";
  * @param {*} onSuccess, callback si tout c bien pacé
  * @param {*} onError, callback si ca pue
  *
- * @returns la liste de tous les TestPage (rows {key: value})
+ * @returns la liste de tous les WorkListsState (rows {key: value})
  * ayant le bon rowName et rowValue.
  *
  * Aussi, on en profite pour répartir les rows en groupes,

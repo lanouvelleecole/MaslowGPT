@@ -1,7 +1,7 @@
-import { FetchReduxStates } from "./FetchReduxStates";
-import { FetchFonts } from "./FetchFonts";
-import { FetchImages } from "./FetchImages";
-import { FetchAudios } from "./FetchAudios";
+import {FetchReduxStates} from './FetchReduxStates';
+import {FetchFonts} from './FetchFonts';
+import {FetchImages} from './FetchImages';
+import {FetchAudios} from './FetchAudios';
 
 // lance le chargement de toutes les choses nécessaires.
 //

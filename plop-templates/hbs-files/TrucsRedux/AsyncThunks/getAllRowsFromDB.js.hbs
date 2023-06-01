@@ -6,7 +6,7 @@ import { GetAllRowsFromDB } from "src/services/LocalDatabase/GetAllRowsFromDB";
 
 /**
  * Cet AsyncThunk récupère tous les rows stockés dans la bas de données
- * nommée TestPage.
+ * nommée WorkListsState.
  *
  * Une fois récupérées, on transmet ces données au Reducer correspondant.
  *
@@ -16,7 +16,7 @@ import { GetAllRowsFromDB } from "src/services/LocalDatabase/GetAllRowsFromDB";
  * selon la valeur de row.groupName, si existant.
  */
 export const getAllRowsFromDB = createAsyncThunk(
-  "TestPage/GetAllRowsFromDB",
+  "WorkListsState/GetAllRowsFromDB",
   async (requestData, thunkAPI) => {
     // la liste de tous les rows.
     const allRows = await GetAllRowsFromDB(requestData);

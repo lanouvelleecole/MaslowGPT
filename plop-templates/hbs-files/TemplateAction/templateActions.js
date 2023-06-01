@@ -11,10 +11,16 @@ export const templateAppendAction = (promptData, appRootPath) => {
 export const templateAddAction = (promptData, appRootPath) => {
   return {
     type: "add",
-    force: true,
+
     path: `${process.cwd()}/....../.......js`,
     //templateFile: "plop-templates/hbs-files/<filename>.js.hbs",
     template: ``,
     skipIfExists: true,
+  };
+};
+
+export const templateAsyncAction = (promptData, appRootPath) => {
+  return {
+    type: "template",
   };
 };
