@@ -1,5 +1,8 @@
 import { AddQuotesAroundWord } from "../../../../services/AddQuotesAroundWord/AddQuotesAroundWord.js";
-import { CreateIndividualActionFolder } from "./pieces/CreateIndividualActionFolder/CreateIndividualActionFolder.js";
+import {
+  CreateIndividualActionFolder,
+  CreateIndividualActionFolderAsync,
+} from "./pieces/CreateIndividualActionFolder/CreateIndividualActionFolder.js";
 
 /**
  *
@@ -27,6 +30,7 @@ function createAddCommandFolder6(promptData) {
     allActionsFolders = [
       ...allActionsFolders,
       ...CreateIndividualActionFolder(promptData, cmd_action_name, index),
+      ...CreateIndividualActionFolderAsync(promptData, cmd_action_name, index),
     ];
 
     return;

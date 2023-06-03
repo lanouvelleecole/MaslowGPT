@@ -73,4 +73,62 @@ function CreateIndividualActionFolder(promptData, command_action_name, index) {
   );
 }
 
-export { CreateIndividualActionFolder };
+/**
+ *
+ * args: promptData
+ *
+ * return .....
+ *
+ * This function .......
+ */
+function CreateIndividualActionFolderAsync(
+  promptData,
+  command_action_name,
+  index
+) {
+  const templateFolderPathFromAppRoot = `plop-templates/hbs-files/TemplateActionAsync`;
+  const templateFolderPath = path.join(
+    getNPMFolderRoot(),
+    templateFolderPathFromAppRoot
+  );
+  const command_name = promptData["AddCommandName"];
+  const command_name_camel = toCamelCase(command_name);
+  const command_action_name_camel = toCamelCase(command_action_name);
+
+  const creationFolderFromAppRoot = `src/AllGenerators/Set${command_name_camel}AsyncActions/${command_action_name_camel}`;
+
+  const templateCreationParams = {
+    templateFolderPath: templateFolderPath,
+    templateFolderPathFromAppRoot: templateFolderPathFromAppRoot,
+    creationFolderFromAppRoot: creationFolderFromAppRoot,
+    wordsInFilePath: [
+      {
+        word: `TemplateActionAsync`,
+        replaceWordWith: `${command_action_name_camel}`,
+      },
+      {
+        word: `templateActionAsync`,
+        replaceWordWith: `${command_action_name_camel}`,
+      },
+    ],
+    wordsInFile: [
+      {
+        word: `TemplateActionAsync`,
+        replaceWordWith: `${command_action_name_camel}`,
+      },
+      {
+        word: `templateActionAsync`,
+        replaceWordWith: `${command_action_name_camel}`,
+      },
+    ],
+
+    wordsInHBSFileName: {
+      word: "TemplateActionAsync",
+      replaceWordWith: `Item_${index}_`,
+    },
+  };
+
+  return createTemplateFromFolder(templateCreationParams);
+}
+
+export { CreateIndividualActionFolder, CreateIndividualActionFolderAsync };

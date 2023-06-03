@@ -34,9 +34,9 @@
   "databaseinfo_path": "src\\reduxState\\TestPage\\DatabaseInfo.js",
   "row_type": "TEXT",
   "row_default_value": "",
-  "AddCommandName": "duplicate-thing",
-  "AddCommandPrompts": "AffineOriginalPath, OriginalPath, DuplicatePath",
-  "AddCommandActions": "DuplicateBitch",
+  "AddCommandName": "create-react-native-app",
+  "AddCommandPrompts": "AppName",
+  "AddCommandActions": "CloneTemplate, ReplaceWordsInFolder",
   "TestPpt1": "g",
   "TestPpt2": "t",
   "GptQuestionName": "UseDuringDev",
@@ -48,5 +48,6 @@
   "DuplicatePath": "AwesomeTemplate/src/components/GetUserInput",
   "delete_or_not": "Oui, supprime App.js et consorts.",
   "affine_file_where_we_use": "src",
-  "ask_for_js_file": "Je veux rien, capiche amigo ?"
+  "ask_for_js_file": "Je veux rien, capiche amigo ?",
+  "AppName": ""
 }

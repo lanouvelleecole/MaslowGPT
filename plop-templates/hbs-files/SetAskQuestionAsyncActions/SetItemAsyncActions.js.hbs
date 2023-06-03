@@ -3,6 +3,8 @@ import { openFilesInVSCode } from "./OpenVSCodeFiles/openVSCodeFiles.js";
 import { setChatGPTGetter } from "./SetChatGPTGetter/setChatGPTGetter.js";
 import { setCreateMaslowJSON } from "./SetCreateMaslowJSON/setCreateMaslowJSON.js";
 
+// PLOP_ASYNC_ACTION_IMPORT
+
 /**
  *
  * @param {*} plop
@@ -10,11 +12,13 @@ import { setCreateMaslowJSON } from "./SetCreateMaslowJSON/setCreateMaslowJSON.j
  *
  * Ceci initialise les actions asynchrones de récup de réponse ChatGPT
  */
-function SetDuplicateThingAsyncActions(plop, appRootPath) {
+function SetCreateReactNativeAppAsyncActions(plop, appRootPath) {
+  // PLOP_ASYNC_ACTION_USE
+
   // set l'action asynchrone
   // qui fait une requete de demande de
   // réponse de question (?! drole de formulation ;-), via chat gpt
-  setChatGPTGetter(plop);
+  setChatGPTGetter(plop, appRootPath);
 
   // set l'action de suppression de données précedemment générées
   //deleteCaca(plop, appRootPath);
@@ -34,4 +38,4 @@ function SetDuplicateThingAsyncActions(plop, appRootPath) {
   openFilesInVSCode(plop, appRootPath);
 }
 
-export { SetDuplicateThingAsyncActions };
+export { SetCreateReactNativeAppAsyncActions };

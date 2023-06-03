@@ -8,7 +8,8 @@ import { CommandNames } from "../AppConstants/CommandNames.js";
 import { AddCommandPrompts } from "../AllPrompts/AddCommandPrompts/AddCommandPrompts.js";
 
 // PLOP_ADD_PPTS_IMPORT_GIVN_GEN_NAME
-import { DuplicateThingPrompts } from '../AllPrompts/DuplicateThing/DuplicateThingPrompts.js';
+import { CreateReactNativeAppPrompts } from '../AllPrompts/CreateReactNativeApp/CreateReactNativeAppPrompts.js';
+import { DuplicateThingPrompts } from "../AllPrompts/DuplicateThing/DuplicateThingPrompts.js";
 import { DeleteThingPrompts } from "../AllPrompts/DeleteThing/DeleteThingPrompts.js";
 
 import { AddCommandActionsPrompts } from "../AllPrompts/AddCommandActions/AddCommandActionsPrompts.js";
@@ -61,10 +62,12 @@ function getPromptsGivenGeneratorName() {
   // au dessous de ce commentaire.
   // Bien sur, ajoute l'import correspondant.
   // PLOP_ADD_PPTS_GIVN_GEN_NAME
+  else if (generatorName == CommandNames.create_react_native_app) {
+    return CreateReactNativeAppPrompts(appRootPath);
+  }
   else if (generatorName == CommandNames.duplicate_thing) {
     return DuplicateThingPrompts(appRootPath);
-  }
-  else if (generatorName == CommandNames.delete_thing) {
+  } else if (generatorName == CommandNames.delete_thing) {
     return DeleteThingPrompts(appRootPath);
   } else if (generatorName == CommandNames.add_command_actions) {
     return AddCommandActionsPrompts(appRootPath);

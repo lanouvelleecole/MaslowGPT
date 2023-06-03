@@ -8,9 +8,12 @@ import { initAddCommandGenerator } from "../InitAddCommandGenerator/initAddComma
 import { AddCommandAsynchronousActions } from "../../AllActions/AddCommandActions/pieces/AddCommandAsynchronousActions/AddCommandAsynchronousActions.js";
 // PLOP_INJECT_GENERATOR_IMPORTS
 
+import { initCreateReactNativeAppGenerator } from "../CreateReactNativeApp/initCreateReactNativeAppGenerator.js";
+import { SetCreateReactNativeAppAsyncActions } from "../SetCreateReactNativeAppAsyncActions/SetCreateReactNativeAppAsyncActions.js";
+
+
 import { initDuplicateThingGenerator } from "../DuplicateThing/initDuplicateThingGenerator.js";
 import { SetDuplicateThingAsyncActions } from "../SetDuplicateThingAsyncActions/SetDuplicateThingAsyncActions.js";
-
 
 import { initDeleteThingGenerator } from "../DeleteThing/initDeleteThingGenerator.js";
 import { SetDeleteThingAsyncActions } from "../SetDeleteThingAsyncActions/SetDeleteThingAsyncActions.js";
@@ -75,12 +78,16 @@ ajoute les imports correspondants
     setAIFunctionActions(plop, appRootPath);
   }
   // PLOP_INJECT_GENERATOR_ELSE_IF
+  else if (generatorName == CommandNames.create_react_native_app) {
+    initCreateReactNativeAppGenerator(plop, appRootPath);
+
+    SetCreateReactNativeAppAsyncActions(plop, appRootPath);
+  }
   else if (generatorName == CommandNames.duplicate_thing) {
     initDuplicateThingGenerator(plop, appRootPath);
 
     SetDuplicateThingAsyncActions(plop, appRootPath);
-  }
-  else if (generatorName == CommandNames.delete_thing) {
+  } else if (generatorName == CommandNames.delete_thing) {
     initDeleteThingGenerator(plop, appRootPath);
 
     SetDeleteThingAsyncActions(plop, appRootPath);

@@ -5,8 +5,10 @@
  */
 export const CommandNames = {
   // ADD_CMD_NAME
-	duplicate_thing: "duplicate-thing",
-	delete_thing: "delete-thing",
+	create_react_native_app: "create-react-native-app",
+
+  duplicate_thing: "duplicate-thing",
+  delete_thing: "delete-thing",
 
   add_command_actions: "add-command-actions",
   add_command_prompts: "add-command-prompts",
