@@ -1,4 +1,32 @@
 {
+  "gptOutput": "\n\n// PLOP_CODE_START\n\nimport { clone } from 'git-clone';\n\nexport async function CloneGithubRepo(repoUrl, destPath) {\n  try {\n    await clone(repoUrl, destPath);\n    return destPath;\n  } catch (error) {\n    return null;\n  }\n}\n\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START\n\nconst CloneGithubRepoValue = await CloneGithubRepo('https://github.com/user/test', './localrepo');\n\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\n\nreturn CloneGithubRepoValue;\n\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\n\njs\n\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\n\nexport { CloneGithubRepo };\n\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\n\nimport { CloneGithubRepo } from 'src/services/CloneGithubRepo/CloneGithubRepo.js';\n\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\n\nimport { CloneGithubRepo } from '../../src/services/CloneGithubRepo/CloneGithubRepo.js';\n\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\n\nyarn add git-clone\n\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\n\"The most difficult thing is the decision to act, the rest is merely tenacity.\" - Amelia Earhart\n\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "import { clone } from 'git-clone';\n\nexport async function CloneGithubRepo(repoUrl, destPath) {\n  try {\n    await clone(repoUrl, destPath);\n    return destPath;\n  } catch (error) {\n    return null;\n  }\n}"
+  ],
+  "codeUsage": [
+    "const CloneGithubRepoValue = await CloneGithubRepo('https://github.com/user/test', './localrepo');"
+  ],
+  "codeExtension": [
+    "js"
+  ],
+  "inspiringMessage": [
+    "\"The most difficult thing is the decision to act, the rest is merely tenacity.\" - Amelia Earhart"
+  ],
+  "codeImport": [
+    "import { CloneGithubRepo } from 'src/services/CloneGithubRepo/CloneGithubRepo.js';"
+  ],
+  "codeExport": [
+    "export { CloneGithubRepo };"
+  ],
+  "codeImportRelative": [
+    "import { CloneGithubRepo } from '../../src/services/CloneGithubRepo/CloneGithubRepo.js';"
+  ],
+  "codeUsageReturn": [
+    "return CloneGithubRepoValue;"
+  ],
+  "codeInstall": [
+    "yarn add git-clone"
+  ],
   "what_we_wanna_do": "In a given programming language, create a function (with the help of Chat GPT, the magic A.I).",
   "name": "CloneGithubRepo",
   "affine_subfolder": "src/services",
@@ -49,9 +77,10 @@
   "delete_or_not": "Oui, supprime App.js et consorts.",
   "affine_file_where_we_use": "src",
   "ask_for_js_file": "Je veux rien, capiche amigo ?",
-  "AppName": "KaKa",
+  "AppName": "",
   "get_ai_service_language": "javascript (import/export)",
   "get_ai_service_args": "repoUrl (string, l'url du repo gh), destPath (string, le path du folder a créer loocalement)",
   "get_ai_service_description": "Clone le repo repoUrl, dans le dossier destPath. return destPath, si succès, ou null si erreur.",
-  "get_ai_service_return_value": "Clone le repo repoUrl, dans le dossier destPath. return destPath, si succès, ou null si erreur."
+  "get_ai_service_return_value": "Clone le repo repoUrl, dans le dossier destPath. return destPath, si succès, ou null si erreur.",
+  "gold_caviar": null
 }

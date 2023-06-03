@@ -1,0 +1,1 @@
+repoUrl (string, l'url du repo gh), destPath (string, le path du folder a créer loocalement)

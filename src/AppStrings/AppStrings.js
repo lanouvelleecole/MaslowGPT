@@ -15,6 +15,10 @@ import i18n from "i18n-js";
 i18n.translations = {
   en: {
     /* PLOP_INJECT_ENG_STRING */
+    xbx9kk0m: `Cloning GitHub repository in progress, amigo!`,
+    xaejKP3U: `GitHub repo cloning failed.... Retry soldier!`,
+    x0jpYimz: `Github repo cloning successful!`,
+    x1xZ8tRX: `What is the name of this app?`,
     xWl6y3p9: `Write the path of the copied file/folder, starting from:`,
     x9KJS4eg: `Choose the path of the file/folder you want to duplicate.`,
     xdWkLeQ: `Give an approximate estimation of the folder/file that you wish to duplicate, starting from the folder:`,
@@ -161,6 +165,10 @@ maslow regen-ai-func <path/vers/dossier/fonction>
   },
   fr: {
     /* PLOP_INJECT_FR_STRING */
+    xbx9kk0m: `clonage de repo Github en cours, amigo !`,
+    xaejKP3U: `Clonage de repo Github échoué.... Réessaie soldat !`,
+    x0jpYimz: `Clonage de repo Github réussi !`,
+    x1xZ8tRX: `Quel est le nom de cette application ?`,
     xWl6y3p9: `Ecris le path du fichier/dossier dupliqué, partant de:`,
     x9KJS4eg: `Choisis le path du fichier/dossier que tu souhaites dupliquer.`,
     xdWkLeQ: `Donne une approximation du dossier/fichier que tu souhaites dupliquer, partant du dossier:`,

@@ -1,3 +1,4 @@
+import I18n from "i18n-js";
 import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 
 const AppNamePromptText = (appRootPath) => {
@@ -14,7 +15,7 @@ const AppNamePromptText = (appRootPath) => {
       return getDataFromNPMMaslowJSON("AppName");
     },
 
-    message: `Text me bby`,
+    message: I18n.t('x1xZ8tRX'),
   };
 };
 
