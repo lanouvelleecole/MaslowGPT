@@ -7,38 +7,25 @@ import { InjectStuffUnderPatterns } from "../../services/InjectStuffUnderPattern
 
 export function AddIntlString(data, appRootPath) {
   const string_name = data["string_name"];
-  const string_fr = data["string_fr"];
-  const string_eng = data["string_eng"];
+  const string_src = data["string_src"];
   const ask_for_js_file_string = data["ask_for_js_file_string"];
 
   AddStringUseToFileIfNeeded(ask_for_js_file_string, appRootPath, string_name);
 
   SetCopiedText(`I18n.t('${string_name}')`);
 
-  AddStringToRepository(appRootPath, data, string_name, string_eng, string_fr);
+  AddStringToRepository(appRootPath, data, string_name, string_src);
 
   return [];
 }
 
-function AddStringToRepository(
-  appRootPath,
-  data,
-  string_name,
-  string_eng,
-  string_fr
-) {
+function AddStringToRepository(appRootPath, data, string_name, string_src) {
   InjectStuffUnderPatterns(
     `${appRootPath}/${data.string_repo_folder_path}/${data.string_repo_file_path}`,
     [
       {
-        pattern: `/* PLOP_INJECT_ENG_STRING */`,
-        stuffUnderPattern: `${string_name}: \`${string_eng}\`,`,
-        deletePreviousStuff: false,
-        indent: Constants.only_first,
-      },
-      {
-        pattern: `/* PLOP_INJECT_FR_STRING */`,
-        stuffUnderPattern: `${string_name}: \`${string_fr}\`,`,
+        pattern: `/* PLOP_INJECT_SRC_STRING */`,
+        stuffUnderPattern: `${string_name}: \`${string_src}\`,`,
         deletePreviousStuff: false,
         indent: Constants.only_first,
       },

@@ -3,10 +3,10 @@ import I18n from "i18n-js";
  *
  * *) Quel est le nom du repositoire contenant les strings multilingues ? (par défaut AppStrings)
  *
- * (error_string_fr)
+ * (error_string_src)
  *
  */
-const error_string_fr = {
+const error_string_src = {
   type: "input",
 
   filter: function (answer) {
@@ -15,7 +15,7 @@ const error_string_fr = {
   },
 
   // Variable name for this input
-  name: "error_string_fr",
+  name: "error_string_src",
 
   default: "Oups... Cette valeur n'est pas valide.",
 
@@ -23,4 +23,4 @@ const error_string_fr = {
   message: I18n.t("xovQnXlQ"),
 };
 
-export { error_string_fr };
+export { error_string_src };

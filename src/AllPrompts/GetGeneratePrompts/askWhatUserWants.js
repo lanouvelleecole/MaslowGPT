@@ -8,6 +8,9 @@ import { readFilesRecursively } from "../../services/GetAllFilesFromPath/getAllF
 import { Constants } from "../../AppConstants/Constants.js";
 import { getDataFromNPMMaslowJSON } from "../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 import { getPathWithForwardSlashes } from "../../services/GetPathWithForwardSlashes/getPathWithForwardSlashes.js";
+import { AppStrings } from "../../AppStrings/AppStrings.js";
+
+AppStrings();
 
 const userChoices = {
   createComponent: I18n.t("xcyv29p"),

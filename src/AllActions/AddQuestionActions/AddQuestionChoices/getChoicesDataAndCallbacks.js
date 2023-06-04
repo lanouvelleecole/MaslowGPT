@@ -1,4 +1,4 @@
-import { getChoicesArray } from '../AddFrenchStrings/getChoicesArray.js';
+import { getChoicesArray } from "../AddFrenchStrings/getChoicesArray.js";
 
 function getChoicesDataAndCallbacks(promptData) {
   // si l'user à ajouté au moins 1 choix
@@ -28,8 +28,6 @@ function getChoicesDataAndCallbacks(promptData) {
     choicesArray.forEach((choiceArray, index) => {
       const choice_name = choiceArray[0];
       const choice_string_name = choiceArray[1];
-      //const choice_string_fr = choiceArray[2];
-      //const choice_string_eng = choiceArray[3];
       const choice_value = choiceArray[4];
 
       strings.choices_imports += `\n`;

@@ -3,11 +3,9 @@ import { questionnaire_folder_path } from "./questionnaire_folder_path.js";
 import { questionnaire_file_name } from "./questionnaire_file_name.js";
 import { repo_name } from "./repo_name.js";
 import { description_string_name } from "./description_string_name.js";
-import { description_string_fr } from "./description_string_fr.js";
-import { description_string_eng } from "./description_string_eng.js";
+import { description_string_src } from "./description_string_src.js";
 import { error_string_name } from "./error_string_name.js";
-import { error_string_fr } from "./error_string_fr.js";
-import { error_string_eng } from "./error_string_eng.js";
+import { error_string_src } from "./error_string_src.js";
 import { question_choices } from "./question_choices.js";
 import { question_page_name } from "./question_page_name.js";
 import { question_default_answer } from "./question_default_answer.js";
@@ -41,15 +39,11 @@ function getAllQuestionPrompts(appRootPath) {
 
     description_string_name,
 
-    description_string_fr,
-
-    description_string_eng,
+    description_string_src,
 
     error_string_name,
 
-    error_string_fr,
-
-    error_string_eng,
+    error_string_src,
 
     ...question_choices_list,
 

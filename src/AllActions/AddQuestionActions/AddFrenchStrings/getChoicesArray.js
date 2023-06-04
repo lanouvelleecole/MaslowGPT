@@ -1,4 +1,4 @@
-import { Constants } from '../../../AppConstants/Constants.js';
+import { Constants } from "../../../AppConstants/Constants.js";
 
 function getChoicesArray(promptData) {
   let basket = [];
@@ -12,8 +12,8 @@ function getChoicesArray(promptData) {
         [
           promptData[`choice_${i}_name`],
           promptData[`choice_${i}_string_name`],
-          promptData[`choice_${i}_string_fr`],
-          promptData[`choice_${i}_string_eng`],
+          promptData[`choice_${i}_string_src`],
+          null,
           promptData[`choice_${i}_value`],
         ],
       ]);

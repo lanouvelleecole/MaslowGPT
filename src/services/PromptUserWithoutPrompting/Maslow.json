@@ -6,27 +6,19 @@
   "codeUsage": [
     "const PromptUserWithoutPromptingValue = PromptUserWithoutPrompting([\n\t{ name: 'name', message: 'What is your name?', default: 'NoName' },\n\t{\n\t\tname: 'letter',\n\t\tmessage: 'Choose one letter : (a, b or c)?',\n\t\tdefault: 'c'\n\t}\n]);"
   ],
-  "codeExtension": [
-    "js"
-  ],
+  "codeExtension": ["js"],
   "inspiringMessage": [
     "\"If you're going through hell, keep going.\" - Winston Churchill"
   ],
   "codeImport": [
     "import PromptUserWithoutPrompting from \"src/services/PromptUserWithoutPrompting/PromptUserWithoutPrompting.js\";"
   ],
-  "codeExport": [
-    "export default PromptUserWithoutPrompting;"
-  ],
+  "codeExport": ["export default PromptUserWithoutPrompting;"],
   "codeImportRelative": [
     "import PromptUserWithoutPrompting from \"../src/services/PromptUserWithoutPrompting/PromptUserWithoutPrompting.js\";"
   ],
-  "codeUsageReturn": [
-    "return PromptUserWithoutPromptingValue;"
-  ],
-  "codeInstall": [
-    "yarn add inquirer"
-  ],
+  "codeUsageReturn": ["return PromptUserWithoutPromptingValue;"],
+  "codeInstall": ["yarn add inquirer"],
   "what_we_wanna_do": "Crée une fonction dans un language de programmation spécifique (via Chat GPT, l'I.A. magique)",
   "name": "PromptUserWithoutPrompting",
   "affine_subfolder": "src",
@@ -37,8 +29,8 @@
   "string_repo_folder_path": "pieces/AppStrings",
   "string_repo_file_path": "AppStrings.js",
   "string_name": "xgjfI5tN",
-  "string_fr": "text",
-  "string_eng": "This is a text.",
+  "string_src": "text",
+  "string_dest": "This is a text.",
   "function_import_type": "Path relatif",
   "function_returns_or_not": "Sans ligne return",
   "delete_function_body_or_not": "Non",

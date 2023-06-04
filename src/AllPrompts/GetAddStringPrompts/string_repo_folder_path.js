@@ -38,7 +38,7 @@ const string_repo_folder_path = (appRootPath) => {
 
       const all_string_repo_folders = getAllFoldersWithPattern(
         full_approx_folder,
-        "PLOP_INJECT_ENG_STRING"
+        "PLOP_INJECT_DEST_STRING"
       ).map((folderPath) =>
         getPathWithForwardSlashes(path.join(approx_folder, folderPath))
       );

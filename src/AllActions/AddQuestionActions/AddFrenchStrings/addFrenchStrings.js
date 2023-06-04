@@ -3,10 +3,10 @@ import { getChoicesStrings } from "./getChoicesStrings.js";
 
 function addFrenchStrings(promptData, questionFolderPath, outputs) {
   const description_string_name = promptData["description_string_name"];
-  const description_string_fr = promptData["description_string_fr"];
+  const description_string_src = promptData["description_string_src"];
 
   const error_string_name = promptData["error_string_name"];
-  const error_string_fr = promptData["error_string_fr"];
+  const error_string_src = promptData["error_string_src"];
   const repo_name = promptData["repo_name"];
 
   const strings = getChoicesStrings(promptData);
@@ -23,10 +23,10 @@ function addFrenchStrings(promptData, questionFolderPath, outputs) {
     indent: true,
 
     // Pattern tells plop where in the file to inject the template
-    pattern: `/* PLOP_INJECT_FR_STRING */`,
+    pattern: `/* PLOP_INJECT_SRC_STRING */`,
     stuffUnderPattern: `
-${description_string_name}: "${description_string_fr}",
-${error_string_name}: "${error_string_fr}",
+${description_string_name}: "${description_string_src}",
+${error_string_name}: "${error_string_src}",
 ${strings.fr}`,
   };
 

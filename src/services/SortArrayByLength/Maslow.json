@@ -6,27 +6,19 @@
   "codeUsage": [
     "// Code use example\nconst SortArrayByLengthValue = SortArrayByLength(['Hello', 'supercalifragilisticexpialidocious', 'world']); // [ 'Hello', 'world', 'supercalifragilisticexpialidocious' ]"
   ],
-  "codeExtension": [
-    "js"
-  ],
+  "codeExtension": ["js"],
   "inspiringMessage": [
     "\"In order to succeed, we must first believe that we can.\" - Nikos Kazantzakis"
   ],
   "codeImport": [
     "import { SortArrayByLength } from 'src/services/SortArrayByLength/SortArrayByLength.js';"
   ],
-  "codeExport": [
-    "export { SortArrayByLength };"
-  ],
+  "codeExport": ["export { SortArrayByLength };"],
   "codeImportRelative": [
     "import { SortArrayByLength } from '../../../../services/SortArrayByLength/SortArrayByLength.js';"
   ],
-  "codeUsageReturn": [
-    "return SortArrayByLengthValue;"
-  ],
-  "codeInstall": [
-    "// yarn add lodash\n// yarn add lodash/sortBy"
-  ],
+  "codeUsageReturn": ["return SortArrayByLengthValue;"],
+  "codeInstall": ["// yarn add lodash\n// yarn add lodash/sortBy"],
   "what_we_wanna_do": "In a given programming language, create a function (with the help of Chat GPT, the magic A.I).",
   "name": "SortArrayByLength",
   "affine_subfolder": "src/services",
@@ -35,8 +27,8 @@
   "string_repo_folder_path": "src/AppStrings",
   "string_repo_file_path": "AppStrings.js",
   "string_name": "x2hwbuKC",
-  "string_fr": "leaveOnValid: true,",
-  "string_eng": "Hello friend",
+  "string_src": "leaveOnValid: true,",
+  "string_dest": "Hello friend",
   "affine_file_where_we_use_string": "src",
   "ask_for_js_file_string": "Je veux rien, capiche amigo ?",
   "affine_file_where_we_use": "src/AllPrompts/DeleteThing/prompts",
@@ -50,11 +42,11 @@
   "questionnaire_file_name": "TestPageCreationList.js",
   "repo_name": "AppStrings",
   "description_string_name": "xWu6Gy7t",
-  "description_string_fr": "T'as quel age ?",
-  "description_string_eng": "How old are you?",
+  "description_string_src": "T'as quel age ?",
+  "description_string_dest": "How old are you?",
   "error_string_name": "x5ypM04O",
-  "error_string_fr": "Oups... Cette valeur n'est pas valide.",
-  "error_string_eng": "Oops... This value is not valid.",
+  "error_string_src": "Oups... Cette valeur n'est pas valide.",
+  "error_string_dest": "Oops... This value is not valid.",
   "question_page_name": "TestPage",
   "question_default_answer": "currentItem?.age",
   "question_default_textinput": "currentItem?.age",

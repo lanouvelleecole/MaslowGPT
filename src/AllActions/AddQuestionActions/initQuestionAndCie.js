@@ -2,7 +2,6 @@ import { addPageImportsToQuestion } from "./AddPageImportsToQuestion/addPageImpo
 import { addPageLatestCurrentItem } from "./AddPageLatestCurrentItem/addPageLatestCurrentItem.js";
 import { addPageCurrentItemArg } from "./AddPageCurrentItemArg/addPageCurrentItemArg.js";
 import { addFrenchStrings } from "./AddFrenchStrings/addFrenchStrings.js";
-import { addEnglishStrings } from "./AddEnglishStrings/addEnglishStrings.js";
 import { addSqliteReduxDBData } from "./AddSqliteReduxDBData/addSqliteReduxDBData.js";
 import { addQuestionChoices } from "./AddQuestionChoices/addQuestionChoices.js";
 import { addQuestionToList } from "./AddQuestionToList/addQuestionToList.js";
@@ -17,9 +16,6 @@ function initQuestionAndCie({ questionFolderPath, promptData }) {
 
   // ajoute le french stuff
   addFrenchStrings(promptData, questionFolderPath, outputs);
-
-  // ajoute le engliche stuff
-  addEnglishStrings(promptData, questionFolderPath, outputs);
 
   // ajoute les données de choix si besoin
   addQuestionChoices(promptData, questionFolderPath, outputs);

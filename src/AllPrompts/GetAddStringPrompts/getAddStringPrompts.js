@@ -1,8 +1,7 @@
 import { ask_for_js_file_string } from "./ask_for_js_file_string.js";
 import {
   string_name,
-  string_fr,
-  string_eng,
+  string_src,
   string_repo_file_path,
 } from "./askForStringName.js";
 
@@ -18,7 +17,6 @@ export function getAddStringPrompts(appRootPath) {
     affine_file_where_we_use_string(appRootPath),
     ask_for_js_file_string(appRootPath),
     string_name,
-    string_fr,
-    string_eng,
+    string_src,
   ];
 }

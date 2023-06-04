@@ -1,8 +1,8 @@
 import I18n from "i18n-js";
 import { answers } from "../../../index.js";
-import { userChoices } from "../../../src/AllPrompts/GetGeneratePrompts/askWhatUserWants.js";
+import { userChoices } from "./askWhatUserWants.js";
 
-const get_appbar_title_fr = {
+const get_appbar_title_src = {
   type: "input",
 
   filter: function (answer) {
@@ -10,7 +10,7 @@ const get_appbar_title_fr = {
     return answer.trim();
   },
 
-  name: "get_appbar_title_fr",
+  name: "get_appbar_title_src",
   default: "Titre",
   message: I18n.t("xdffYAaj"),
   when: function (data) {
@@ -19,4 +19,4 @@ const get_appbar_title_fr = {
     );
   },
 };
-export { get_appbar_title_fr };
+export { get_appbar_title_src };

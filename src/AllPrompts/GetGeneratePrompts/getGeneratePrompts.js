@@ -6,15 +6,12 @@ import {
 } from "./askWhatUserWants.js";
 import { get_string_repo } from "./get_string_repo.js";
 import { get_appbar_title_name } from "./get_appbar_title_name.js";
-import { get_appbar_title_fr } from "./get_appbar_title_fr.js";
-import { get_appbar_title_eng } from "./get_appbar_title_eng.js";
+import { get_appbar_title_src } from "./get_appbar_title_src.js";
 import { get_page_name } from "./get_page_name.js";
 import { empty_db_msg_name } from "./empty_db_msg_name.js";
-import { empty_db_msg_fr } from "./empty_db_msg_fr.js";
-import { empty_db_msg_eng } from "./empty_db_msg_eng.js";
+import { empty_db_msg_src } from "./empty_db_msg_src.js";
 import { empty_db_btn_msg_name } from "./empty_db_btn_msg_name.js";
-import { empty_db_btn_msg_fr } from "./empty_db_btn_msg_fr.js";
-import { empty_db_btn_msg_eng } from "./empty_db_btn_msg_eng.js";
+import { empty_db_btn_msg_src } from "./empty_db_btn_msg_src.js";
 import { get_ai_service_language } from "./get_ai_service_language.js";
 import { get_ai_service_args } from "./get_ai_service_args.js";
 import { get_ai_service_description } from "./get_ai_service_description.js";
@@ -69,8 +66,7 @@ export function getGeneratePrompts(appRootPath) {
     //
     get_string_repo,
     get_appbar_title_name,
-    get_appbar_title_fr,
-    get_appbar_title_eng,
+    get_appbar_title_src,
 
     // récup d'infos spécifiques a la création de subpage seulement
     //
@@ -79,10 +75,9 @@ export function getGeneratePrompts(appRootPath) {
     // récup d'infos spécifiques a la création de page seulement
     //
     empty_db_msg_name,
-    empty_db_msg_fr,
-    empty_db_msg_eng,
+    empty_db_msg_src,
+
     empty_db_btn_msg_name,
-    empty_db_btn_msg_fr,
-    empty_db_btn_msg_eng,
+    empty_db_btn_msg_src,
   ];
 }

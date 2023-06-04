@@ -35,7 +35,7 @@
   "affine_file_where_we_use_string": "plop-templates/Thing",
   "ask_for_js_file_string": "plop-templates/Commands/ask_for_js_file_string.js",
   "string_name": "xkRatDXn",
-  "string_fr": "Dans quel fichier veux tu utiliser ce string multilingue ? Partant de ce dossier:",
-  "string_eng": "Choose the folder where the multilingual string repository is ? Starting from this folder:",
+  "string_src": "Dans quel fichier veux tu utiliser ce string multilingue ? Partant de ce dossier:",
+  "string_dest": "Choose the folder where the multilingual string repository is ? Starting from this folder:",
   "gold_caviar": null
 }

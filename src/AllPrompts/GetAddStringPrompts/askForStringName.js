@@ -46,7 +46,7 @@ const string_name = {
   message: I18n.t("xAq0rQ80"),
 };
 
-const string_fr = {
+const string_src = {
   type: "editor",
 
   filter: function (answer) {
@@ -71,35 +71,10 @@ const string_fr = {
   },
 
   // Variable name for this input
-  name: "string_fr",
+  name: "string_src",
 
   // Prompt to display on command line
   message: I18n.t("xA5VJgC"),
-};
-
-const string_eng = {
-  type: "editor",
-
-  default: (data) => {
-    return Promise.resolve(
-      TranslateText({
-        text: answers.string_fr,
-        language: "english",
-        apiKey: OPENAI_API_KEY,
-      })
-    );
-  },
-
-  filter: function (answer) {
-    // Use the trim() method to remove whitespace from both sides of the answer
-    return answer.trim();
-  },
-
-  // Variable name for this input
-  name: "string_eng",
-
-  // Prompt to display on command line
-  message: I18n.t("xxjqZAJa"),
 };
 
 const string_repo_file_path = (appRootPath) => {
@@ -131,7 +106,7 @@ const string_repo_file_path = (appRootPath) => {
 
       const string_repo_paths = getClosestJSFilesWithPattern(
         full_string_repo_folder_path,
-        "PLOP_INJECT_ENG_STRING",
+        "PLOP_INJECT_DEST_STRING",
         ``
       );
 
@@ -145,7 +120,6 @@ const string_repo_file_path = (appRootPath) => {
 };
 
 export { string_name };
-export { string_fr };
-export { string_eng };
+export { string_src };
 export { repo_name };
 export { string_repo_file_path };

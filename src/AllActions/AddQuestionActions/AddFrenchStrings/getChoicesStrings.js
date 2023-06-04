@@ -1,4 +1,4 @@
-import { getChoicesArray } from './getChoicesArray.js';
+import { getChoicesArray } from "./getChoicesArray.js";
 
 function getChoicesStrings(promptData) {
   // si l'user à ajouté au moins 1 choix
@@ -24,11 +24,9 @@ function getChoicesStrings(promptData) {
      */
     choicesArray.forEach((choiceArray, index) => {
       const choice_string_name = choiceArray[1];
-      const choice_string_fr = choiceArray[2];
-      const choice_string_eng = choiceArray[3];
+      const choice_string_src = choiceArray[2];
 
-      strings.eng += `\t\t${choice_string_name}: "${choice_string_eng}",\n`;
-      strings.fr += `\t\t${choice_string_name}: "${choice_string_fr}",\n`;
+      strings.src += `\t\t${choice_string_name}: "${choice_string_src}",\n`;
     });
   }
 

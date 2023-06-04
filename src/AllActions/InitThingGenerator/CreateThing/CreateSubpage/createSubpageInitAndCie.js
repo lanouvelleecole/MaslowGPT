@@ -1,4 +1,3 @@
-import { addEnglishStringsForSubpage } from "./addEnglishStringsForSubpage.js";
 import { addFrenchStringsForSubpage } from "./addFrenchStringsForSubpage.js";
 
 function createSubpageInitAndCie({
@@ -9,9 +8,6 @@ function createSubpageInitAndCie({
   return [
     // france
     addFrenchStringsForSubpage(pageAndSubpageData),
-
-    // engliche
-    addEnglishStringsForSubpage(pageAndSubpageData),
 
     // inject d'import de subpage dans page
     subpage_import(pageAndSubpageData, actualJsFile),

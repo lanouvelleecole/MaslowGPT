@@ -6,27 +6,19 @@
   "codeUsage": [
     "const CloneGithubRepoValue = await CloneGithubRepo('https://github.com/user/test', './localrepo');"
   ],
-  "codeExtension": [
-    "js"
-  ],
+  "codeExtension": ["js"],
   "inspiringMessage": [
     "\"The most difficult thing is the decision to act, the rest is merely tenacity.\" - Amelia Earhart"
   ],
   "codeImport": [
     "import { CloneGithubRepo } from 'src/services/CloneGithubRepo/CloneGithubRepo.js';"
   ],
-  "codeExport": [
-    "export { CloneGithubRepo };"
-  ],
+  "codeExport": ["export { CloneGithubRepo };"],
   "codeImportRelative": [
     "import { CloneGithubRepo } from '../../src/services/CloneGithubRepo/CloneGithubRepo.js';"
   ],
-  "codeUsageReturn": [
-    "return CloneGithubRepoValue;"
-  ],
-  "codeInstall": [
-    "yarn add git-clone"
-  ],
+  "codeUsageReturn": ["return CloneGithubRepoValue;"],
+  "codeInstall": ["yarn add git-clone"],
   "what_we_wanna_do": "In a given programming language, create a function (with the help of Chat GPT, the magic A.I).",
   "name": "CloneGithubRepo",
   "affine_subfolder": "src/services",
@@ -35,8 +27,8 @@
   "string_repo_folder_path": "src/AppStrings",
   "string_repo_file_path": "AppStrings.js",
   "string_name": "x2hwbuKC",
-  "string_fr": "leaveOnValid: true,",
-  "string_eng": "Hello friend",
+  "string_src": "leaveOnValid: true,",
+  "string_dest": "Hello friend",
   "affine_file_where_we_use_string": "src",
   "ask_for_js_file_string": "Je veux rien, capiche amigo ?",
   "row_name": "name",
@@ -47,11 +39,11 @@
   "questionnaire_file_name": "TestPageCreationList.js",
   "repo_name": "AppStrings",
   "description_string_name": "xOJ27832",
-  "description_string_fr": "Donne le nom de cette chose imaginaire ;-)",
-  "description_string_eng": "What is the name of this imaginary thing ;-)",
+  "description_string_src": "Donne le nom de cette chose imaginaire ;-)",
+  "description_string_dest": "What is the name of this imaginary thing ;-)",
   "error_string_name": "xIKzlTa0",
-  "error_string_fr": "Oups... Cette valeur n'est pas valide.",
-  "error_string_eng": "Oops... This value is not valid.",
+  "error_string_src": "Oups... Cette valeur n'est pas valide.",
+  "error_string_dest": "Oops... This value is not valid.",
   "question_page_name": "TestPage",
   "question_default_answer": "currentItem?.name",
   "question_default_textinput": "currentItem?.name",

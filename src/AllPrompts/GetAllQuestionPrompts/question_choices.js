@@ -1,7 +1,7 @@
 import I18n from "i18n-js";
-import { GetUniqueID } from '../../services/GetUniqueID/GetUniqueID.js';
-import { userChoices } from './question_type.js';
-import { answers } from '../../../index.js';
+import { GetUniqueID } from "../../services/GetUniqueID/GetUniqueID.js";
+import { userChoices } from "./question_type.js";
+import { answers } from "../../../index.js";
 
 function question_choices(howMany) {
   const basket = [];
@@ -52,7 +52,7 @@ function question_choices(howMany) {
         return answer.trim();
       },
 
-      name: `choice_${i}_string_fr`,
+      name: `choice_${i}_string_src`,
       message:
         "*********************\nEcris une description du choix, en Français.",
       when: (data) => {
@@ -61,23 +61,7 @@ function question_choices(howMany) {
         );
       },
     });
-    basket.push({
-      type: "input",
 
-      filter: function (answer) {
-        // Use the trim() method to remove whitespace from both sides of the answer
-        return answer.trim();
-      },
-
-      name: `choice_${i}_string_eng`,
-      message:
-        "*********************\nEcris une description du choix, en Anglais.",
-      when: (data) => {
-        return (
-          answers[`choice_${i}_name`] && answers[`choice_${i}_name`].length > 0
-        );
-      },
-    });
     basket.push({
       type: "input",
 

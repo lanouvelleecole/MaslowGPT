@@ -1,5 +1,4 @@
-import { addEnglishStrings } from './addEnglishStrings.js';
-import { addFrenchStrings } from './addFrenchStrings.js';
+import { addFrenchStrings } from "./addFrenchStrings.js";
 
 function createPageInitAndCie({ subfolder, pageAndSubpageData }) {
   return [
@@ -43,7 +42,7 @@ function createPageInitAndCie({ subfolder, pageAndSubpageData }) {
     addFrenchStrings(pageAndSubpageData),
 
     // engliche
-    addEnglishStrings(pageAndSubpageData),
+    //addEnglishStrings(pageAndSubpageData),
   ];
 }
 
