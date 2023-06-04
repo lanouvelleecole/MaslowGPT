@@ -2,6 +2,7 @@ import I18n from "i18n-js";
 import { answers } from "../../../index.js";
 import { userChoices } from "./askWhatUserWants.js";
 import { getDataFromMaslowJSONObj } from "../../services/GetDataFromMaslowJSONObj/getDataFromMaslowJSONObj.js";
+import { getDataFromNPMMaslowJSON } from "../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 
 const get_ai_service_return_value = (appRootPath) => {
   return {
@@ -19,7 +20,9 @@ const get_ai_service_return_value = (appRootPath) => {
           answers,
           "get_ai_service_return_value",
           appRootPath
-        ) ?? "Retourne un nombre, x et y additionnés ensemble"
+        ) ??
+        getDataFromNPMMaslowJSON("get_ai_service_description") ??
+        "Retourne un nombre, x et y additionnés ensemble"
       );
     },
     editable: true,

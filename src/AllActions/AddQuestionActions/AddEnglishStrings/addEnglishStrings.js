@@ -25,8 +25,8 @@ function addEnglishStrings(promptData, questionFolderPath, outputs) {
     // Pattern tells plop where in the file to inject the template
     pattern: `/* PLOP_INJECT_ENG_STRING */`,
     stuffUnderPattern: `
-\t\t${description_string_name}: "${description_string_eng}",
-\t\t${error_string_name}: "${error_string_eng}",
+${description_string_name}: "${description_string_eng}",
+${error_string_name}: "${error_string_eng}",
 ${strings.eng}`,
   };
 

@@ -1,10 +1,10 @@
 /* PLOP_INJECT_IMPORT */
 import { GetUniqueID } from "src/services/GetUniqueID/GetUniqueID";
 import i18n from "i18n-js";
-import { AllGetTestName } from "./GetTestNameListMaker/AllGetTestName";
+import { AllJynx } from "./JynxListMaker/AllJynx";
 
 // eslint-disable-next-line no-unused-vars
-import { GetTestNameChoices } from "./GetTestNameChoices/GetTestNameChoices";
+import { JynxChoices } from "./JynxChoices/JynxChoices";
 
 // eslint-disable-next-line no-unused-vars
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -17,9 +17,9 @@ import { SaveCurrentItem } from "./GettersSetters/SaveCurrentItem";
 
 /**
  *
- * La question nommée GetTestName, qui ....
+ * La question nommée Jynx, qui ....
  */
-const GetTestName = () => {
+const Jynx = () => {
   /* PLOP_INJECT_CODE */
 
   const route = useRoute();
@@ -30,7 +30,7 @@ const GetTestName = () => {
     id: GetUniqueID(),
 
     // un nom, nous permettant de gérer les récup de réponses choisies/écrites
-    name: "GetTestName",
+    name: "Jynx",
 
     // le type de question souhaité
     // "text" ou "number" ou "choices" ou "custom"
@@ -39,11 +39,11 @@ const GetTestName = () => {
     // la description de la question
     // en mode "text" ou "number" ou "choices"
     description: ({ answers, answer, answerIndex }) => {
-      return i18n.t("xOJ27832");
+      return i18n.t("xA7NXGbD");
     },
     // les choix dispos pour l'utilisateur, si "type" === "choices"
     choices: ({ answers, answer, answerIndex }) => {
-      return AllGetTestName({
+      return AllJynx({
         answers,
         answer,
         answerIndex,
@@ -84,7 +84,7 @@ const GetTestName = () => {
     },
     // un message d'erreur à afficher si les données ne sont pas valides
     errMsg: ({ answers, answer, answerIndex }) => {
-      return i18n.t("xIKzlTa0");
+      return i18n.t("xEf4EJjy");
     },
 
     // la callback de customization
@@ -101,4 +101,4 @@ const GetTestName = () => {
   };
 };
 
-export { GetTestName };
+export { Jynx };

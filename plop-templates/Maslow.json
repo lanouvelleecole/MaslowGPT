@@ -1,8 +1,8 @@
 {
-  "what_we_wanna_do": "In a given programming language, create a function (with the help of Chat GPT, the magic A.I).",
-  "name": "CloneGithubRepo",
-  "affine_subfolder": "src/services",
-  "ask_for_subfolder": "src/services",
+  "what_we_wanna_do": "Create a subpage.",
+  "name": "ZeAllMightySubpage",
+  "affine_subfolder": "src/pages/TestPage",
+  "ask_for_subfolder": "src/pages/TestPage/pieces",
   "affine_string_repo": "src",
   "string_repo_folder_path": "src/AppStrings",
   "string_repo_file_path": "AppStrings.js",
@@ -11,17 +11,17 @@
   "string_eng": "Hello friend",
   "affine_file_where_we_use_string": "src",
   "ask_for_js_file_string": "Je veux rien, capiche amigo ?",
-  "row_name": "name",
+  "row_name": "suki",
   "question_type": "A question whose answer is text.",
-  "question_name": "GetTestName",
+  "question_name": "Jynx",
   "affine_questionnaire": "src/pages/TestPage",
   "questionnaire_folder_path": "src/pages/TestPage/pieces/AddItemToTestPage/TestPageCreationList",
   "questionnaire_file_name": "TestPageCreationList.js",
   "repo_name": "AppStrings",
-  "description_string_name": "xOJ27832",
-  "description_string_fr": "Donne le nom de cette chose imaginaire ;-)",
-  "description_string_eng": "What is the name of this imaginary thing ;-)",
-  "error_string_name": "xIKzlTa0",
+  "description_string_name": "xA7NXGbD",
+  "description_string_fr": "Anus malodorant",
+  "description_string_eng": "Foul-smelling Anus",
+  "error_string_name": "xEf4EJjy",
   "error_string_fr": "Oups... Cette valeur n'est pas valide.",
   "error_string_eng": "Oops... This value is not valid.",
   "question_page_name": "TestPage",
@@ -43,15 +43,46 @@
   "AskQuestion": "Sometimes I feel like I'm cursed. Give me uplifting words of wisdom, friendo",
   "AffineDeletePath": "QNAS",
   "DeletePath": "QNAS/Maslow.json",
-  "AffineOriginalPath": "maslowschool_react_native/src/components/GetUserInput",
-  "OriginalPath": "maslowschool_react_native/src/components/GetUserInput",
-  "DuplicatePath": "AwesomeTemplate/src/components/GetUserInput",
+  "AffineOriginalPath": "src\\AppConstants\\pieces\\GenerateSuccessCallback\\GenerateSuccessCallback.js",
+  "OriginalPath": "src\\AppConstants\\pieces\\GenerateSuccessCallback\\GenerateSuccessCallback.js",
+  "DuplicatePath": "src\\AppConstants\\pieces\\CRNASuccessCallback\\CRNASuccessCallback.js",
   "delete_or_not": "Oui, supprime App.js et consorts.",
-  "affine_file_where_we_use": "src",
-  "ask_for_js_file": "Je veux rien, capiche amigo ?",
-  "AppName": "KaKa",
-  "get_ai_service_language": "javascript (import/export)",
-  "get_ai_service_args": "repoUrl (string, l'url du repo gh), destPath (string, le path du folder a créer loocalement)",
-  "get_ai_service_description": "Clone le repo repoUrl, dans le dossier destPath. return destPath, si succès, ou null si erreur.",
-  "get_ai_service_return_value": "Clone le repo repoUrl, dans le dossier destPath. return destPath, si succès, ou null si erreur."
+  "affine_file_where_we_use": "src/pages/TestPage",
+  "ask_for_js_file": "src/pages/TestPage/TestPage.js",
+  "AppName": "Artuchiasse",
+  "gold_caviar": {
+    "gptOutput": "\n\n// PLOP_CODE_START\nimport lodash from 'lodash';\n\nexport const TestFunc = (x, y) => {\n// Multiply x and y and add 42.\nreturn lodash.sum([x*y, 42]);\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START \nconst TestFuncValue = TestFunc(14, 21);\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\nreturn TestFuncValue;\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\nexport default TestFunc;\n// PLOP_CODE_EXPORT_END \n\n// PLOP_CODE_IMPORT_START\nimport TestFunc from \"src/services/TestFunc/TestFunc.js\";\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport TestFunc from \"../../src/services/TestFunc/TestFunc.js\";\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add lodash\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\"A journey of a thousand miles begins with a single step.\" - Lao Tzu\n// PLOP_INSPIRING_MESSAGE_END",
+    "mainCode": [
+      "import lodash from 'lodash';\n\nexport const TestFunc = (x, y) => {\n// Multiply x and y and add 42.\nreturn lodash.sum([x*y, 42]);"
+    ],
+    "codeUsage": [
+      "const TestFuncValue = TestFunc(14, 21);"
+    ],
+    "codeExtension": [
+      "js"
+    ],
+    "inspiringMessage": [
+      "\"A journey of a thousand miles begins with a single step.\" - Lao Tzu"
+    ],
+    "codeImport": [
+      "import TestFunc from \"src/services/TestFunc/TestFunc.js\";"
+    ],
+    "codeExport": [
+      "export default TestFunc;"
+    ],
+    "codeImportRelative": [
+      "import TestFunc from \"../../src/services/TestFunc/TestFunc.js\";"
+    ],
+    "codeUsageReturn": [
+      "return TestFuncValue;"
+    ],
+    "codeInstall": [
+      "yarn add lodash"
+    ]
+  },
+  "get_string_repo": "AppStrings",
+  "get_appbar_title_name": "xObqlucu",
+  "get_appbar_title_fr": "Titre",
+  "get_appbar_title_eng": "Title",
+  "get_page_name": "TestPage"
 }

@@ -6,7 +6,7 @@ import { GetUserInput } from "src/components/GetUserInput/GetUserInput";
 import { PlayerGTAInstance } from "src/constants/PlayerGTA/PlayerGTA.js";
 
 /* la liste de question nécessaire à la modif d'item via UI */
-import { TestSubpageQuestionList } from "./TestSubpageQuestionList/TestSubpageQuestionList";
+import { ZeAllMightySubpageQuestionList } from "./ZeAllMightySubpageQuestionList/ZeAllMightySubpageQuestionList";
 
 // some shyt
 import { React } from "react";
@@ -33,9 +33,9 @@ import I18n from "i18n-js";
  *
  *
  * @returns un component qui affiche conditionnellement
- * un GetUserInput de création d'item dans TestSubpage.
+ * un GetUserInput de création d'item dans ZeAllMightySubpage.
  */
-export const TestSubpage = () => {
+export const ZeAllMightySubpage = () => {
   /* PLOP_INJECT_CODE */
 
   // getter, contient le state actuel
@@ -43,14 +43,14 @@ export const TestSubpage = () => {
     SqliteReduxTestPageState.GetFreshestTestPageStateFirstRow();
 
   // la liste de questions
-  const questions = TestSubpageQuestionList();
+  const questions = ZeAllMightySubpageQuestionList();
 
   const route = useRoute();
 
   return (
     <Camouflage
       chosenOne={TestPageState.chosenOne}
-      name={"TestSubpage"}
+      name={"ZeAllMightySubpage"}
       refreshed={true}
     >
       {/* Une UI de récup/modif de données */}
@@ -60,7 +60,7 @@ export const TestSubpage = () => {
         /* montre appbar, ou pas ? */
         showAppbar={true}
         /* le texte de titre de appbar */
-        appbarTitle={I18n.t("xoNrsOnM")}
+        appbarTitle={I18n.t("xObqlucu")}
         /* un bruit de clic */
         clickSound={PlayerGTAInstance.GetSound()}
         /* couleur darrière plan de appbar */

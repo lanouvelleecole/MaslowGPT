@@ -1,5 +1,5 @@
-import { GetTestNameChoices } from "../GetTestNameChoices/GetTestNameChoices";
-import { GetTestNameLayout } from "./GetTestNameLayout";
+import { JynxChoices } from "../JynxChoices/JynxChoices";
+import { JynxLayout } from "./JynxLayout";
 
 /**
  *
@@ -7,16 +7,16 @@ import { GetTestNameLayout } from "./GetTestNameLayout";
  *
  * @returns une liste de choix
  */
-export function AllGetTestName({ answers, answer, answerIndex, currentItem }) {
+export function AllJynx({ answers, answer, answerIndex, currentItem }) {
   return (
-    Object.keys(GetTestNameChoices())
+    Object.keys(JynxChoices())
       // on récup. les keys (nom de unité de mesure)
       // dans une liste...
       .filter((v) => isNaN(Number(v)))
       // pour chaque item de cette liste...
       .map((choice) => {
         // crée un choix.
-        return GetTestNameLayout({
+        return JynxLayout({
           choice,
           answers,
           answer,

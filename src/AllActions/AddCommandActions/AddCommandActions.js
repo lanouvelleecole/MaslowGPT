@@ -4,7 +4,10 @@ import {
   AddElseIfForPromptIfNeeded,
 } from "./PLOPActions/AddElseIfForPromptIfNeeded/AddElseIfForPromptIfNeeded.js";
 import { toCamelCase } from "../../services/ToPascalCase/ToPascalCase.js";
-import { AppendCommandName } from "./PLOPActions/AppendCommandName/AppendCommandName.js";
+import {
+  AppendCommandDescriptions,
+  AppendCommandName,
+} from "./PLOPActions/AppendCommandName/AppendCommandName.js";
 import { createAddCommandFolder1 } from "./pieces/createAddCommandFolder1/createAddCommandFolder1.js";
 import { createAddCommandFolder2 } from "./pieces/createTemplateFolder2/createAddCommandFolder2.js";
 import { createAddCommandFolder3 } from "./pieces/createTemplateFolder3/createTemplateFolder3.js";
@@ -77,8 +80,10 @@ function AddCommandActions(promptData, appRootPath, plop) {
   });
 
   return [
-    // le nom de la commande
+    // le nom/description de la commande
     AppendCommandName(command_name),
+    AppendCommandDescriptions(command_name),
+
     // le dossier de prompts de cette commande, dans src/AllPrompts
     ...AddCommandFolder1,
     // 0 ou + de prompts inquirer.js, pour cette commande

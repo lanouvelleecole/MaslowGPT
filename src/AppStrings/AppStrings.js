@@ -15,6 +15,22 @@ import i18n from "i18n-js";
 i18n.translations = {
   en: {
     /* PLOP_INJECT_ENG_STRING */
+    x45NCPh6: `To install this app (on an Android device), connect a device via USB, then run these commands:`,
+    x1T3wXxm: `The mother of this subpage can be found here:`,
+    xvpTcr5u: `The starting point of this baby is located here:`,
+    xP5mwT3A: `Add a command to this utility`,
+    x7rvQ3Un: `Install useful things for Maslow's functioning`,
+    xguyBojF: `Add a multilingual string quickly`,
+    xQICPxpM: `Regenerate an AI function`,
+    x2lIVMKD: `Create a UI for retrieving/displaying data.`,
+    x8Euibr5: `Add a string to the multilingual string repository.`,
+    xKgNuCuW: `Add 1 or more prompts for a PLOP command`,
+    xyI8yFs: `Add 1 or more actions for a PLOP command`,
+    xCHXPAZR: `Allows you to delete a desired file/folder.`,
+    xk64YPg2: `Allows you to duplicate a desired file/folder.`,
+    xxAcspcF: `Create a React Native app, with lots of useful features to help you get started right away!`,
+    xJNqNHXm: `Generate computer code to help you in your mission, soldier!`,
+    xU7doKQc: `Ask a question to Mr CHAT GPT.`,
     xbx9kk0m: `Cloning GitHub repository in progress, amigo!`,
     xaejKP3U: `GitHub repo cloning failed.... Retry soldier!`,
     x0jpYimz: `Github repo cloning successful!`,
@@ -138,7 +154,7 @@ currentItem != null ? SaveCurrentItem({ ...currentItem, property: newText }) : 4
     xfxhHQMw: `The function is currently being re-generated... Please wait a few moments...`,
     xGwWwYrK: `Failed to get the translated text.`,
     xPoV9wFK: `Chat GPT is translating a nice text... Please wait a few moments....`,
-    x7MiVrtQ: `You must add a command after 'maslow'`,
+    x7MiVrtQ: `Here are the commands available for maslow:`,
     xBOoVhne: `N.B.: Chat GPT is an AI, so sometimes there may be errors.
 Just regenerate the code until the result is satisfactory. DON'T PANIC, BREATHE :-).
 I wish you all the best in achieving all your wildest dreams.`,
@@ -165,6 +181,22 @@ maslow regen-ai-func <path/vers/dossier/fonction>
   },
   fr: {
     /* PLOP_INJECT_FR_STRING */
+    x45NCPh6: `Pour installer cette appli (sur un appareil Android), branche un appareil via USB, puis exécute ces commandes:`,
+    x1T3wXxm: `La maman de cette sous page se trouve ici:`,
+    xvpTcr5u: `Le point de départ de ce bébé se situé ici:`,
+    xP5mwT3A: `Ajoute une commande dans cet utilitaire`,
+    x7rvQ3Un: `Installe des choses utiles au fonctionnement de maslow`,
+    xguyBojF: `Ajoute rapidement un string multilingue`,
+    xQICPxpM: `Régénère une fonction I.A.`,
+    x2lIVMKD: `Crée une UI de récupération/affichage de données.`,
+    x8Euibr5: `Ajoute un string dans le répositoire de string multilingues.`,
+    xKgNuCuW: `Ajoute 1 ou plusieurs prompts pour une commande PLOP`,
+    xyI8yFs: `Ajoute 1 ou plusieurs actions pour une commande PLOP`,
+    xCHXPAZR: `Permet de supprimer un fichier/dossier souhaité.`,
+    xk64YPg2: `Permet de dupliquer un fichier/dossier souhaité.`,
+    xxAcspcF: `Crée une appli React Native, avec plein de trucs utiles dedans pour t'aider à démarrer illico-presto !`,
+    xJNqNHXm: `Génère du code informatique pour t'aider dans ta mission, soldat !`,
+    xU7doKQc: `Pose une question à Mr CHAT GPT.`,
     xbx9kk0m: `clonage de repo Github en cours, amigo !`,
     xaejKP3U: `Clonage de repo Github échoué.... Réessaie soldat !`,
     x0jpYimz: `Clonage de repo Github réussi !`,
@@ -295,16 +327,16 @@ currentItem != null ? SaveCurrentItem({ ...currentItem, property: newText }) : 4
     xQ9kkXlv: `Il n'existe pas de fichier Maslow.json valide dans ce dossier:`,
     xMHKADJN: `Un problème est survenu durant la ré-génération de fonction.... Essaie à nouveau :-) !`,
     xsmBvxu: `Un problème est survenu durant la ré-génération de fonction.... Essaie à nouveau :-) !`,
-    xfxhHQMw: `La fonction est en cours de rÃ©-gÃ©nÃ©ration... Patientes quelques instants...`,
+    xfxhHQMw: `La fonction est en cours de régénération... Patientes quelques instants...`,
     xGwWwYrK: `Failed to get the translated text.`,
     xPoV9wFK: `Chat GPT est en train de traduire un joli texte...
 Veuillez patienter quelques instants....`,
-    x7MiVrtQ: `Il faut ajouter une commande après 'maslow'`,
+    x7MiVrtQ: `Voici les commandes disponibles pour maslow:`,
     xBOoVhne: `N.B.: Chat GPT est une IA, donc parfois il y a des erreurs.
 Il suffit de re-générer le code jusqu'a ce que le résultat soit satisfaisant. DON'T PANIC, RESPIRE :-) .
 Je te souhaite d'accomplir tous tes rêves les plus fous.`,
     xjBxze0p: `Avec les fichiers prompts/get_ai_service_xxx.txt, modifie la fonction,
-puis exécute la commande ci-dessous, pour re-gÃ©nÃ©rer la fonction rapidement:`,
+puis exécute la commande ci-dessous, pour re-générer la fonction rapidement:`,
     xGZ1dJ7M: `Le gâteau est prêt ! Installe ce qu'il faut, avec cette commande:`,
 
     xkRatDXn: `Choisis le path du fichier contenant le texte à traduire, partant de ce dossier:`,

@@ -2,11 +2,12 @@ import path from "path";
 import { getPathWithForwardSlashes } from "../../../services/GetPathWithForwardSlashes/getPathWithForwardSlashes.js";
 import { InjectStuffUnderPatterns } from "../../../services/InjectStuffUnderPatterns/InjectStuffUnderPatterns.js";
 import { Constants } from "../../../AppConstants/Constants.js";
+import { toPascalCase } from "../../../services/ToPascalCase/ToPascalCase.js";
 
 function addQuestionToList(promptData, questionFolderPath, outputs) {
   const questionnaire_folder_path = promptData["questionnaire_folder_path"];
   const questionnaire_file_name = promptData["questionnaire_file_name"];
-  const question_name = promptData["question_name"];
+  const question_name = toPascalCase(promptData["question_name"]);
 
   const questionnaire_list_path = getPathWithForwardSlashes(
     path.join(process.cwd(), questionnaire_folder_path, questionnaire_file_name)

@@ -19,6 +19,8 @@ import { AddStringQuick } from "../AllGenerators/AddStringQuick/AddStringQuick.j
 // le générateur qui installe des choses nécéssaires au fonctionnement de maslow, si besoin
 import { InstallEverythingNeeded } from "../AllGenerators/InstallEverythingNeeded/InstallEverythingNeeded.js";
 import { CommandNames } from "../AppConstants/CommandNames.js";
+import { CommandSuccessCallbacks } from "../AppConstants/CommandSuccessCallbacks.js";
+import { answers } from "../../index.js";
 
 // NO_PROMPT_IMPROMPTU_IMPORT
 
@@ -49,9 +51,10 @@ export async function main() {
     // la liste de prompts a afficher selon commande
     const prompts = getPromptsGivenGeneratorName();
 
+    const theresSomePrompts = prompts?.length > 0;
     // si les conditions sont réunies pour le prompting,
     // alors let's prompt
-    if (prompts?.length > 0) {
+    if (theresSomePrompts) {
       await PromptUserAndRunActions(prompts, generatorName);
     }
     // ADD_MASLOW_COMMAND_5
@@ -86,10 +89,23 @@ else if (generatorName == "<command name>") {
       await InstallEverythingNeeded();
     }
 
+    /*
+    if (theresSomePrompts) {
+      main();
+    }
+    */
+
+    // si il existe une callback de succès de cmd, run le
+    const success_callback = CommandSuccessCallbacks[generatorName];
+
+    if (success_callback) {
+      success_callback(answers);
+    }
+
     // TODO_MSG_SUCCESS
     console.log(I18n.t("xdRfRmMN") + `🌼🌳🌞`);
   } catch (e) {
     // TODO_MSG_FAIL
-    console.log(`\n${I18n.t("xPrJY8wG")} !\n\n${e}`);
+    console.log(`\n${I18n.t("xPrJY8wG")} !\n\n${e}\n🌼🌳🌞`);
   }
 }

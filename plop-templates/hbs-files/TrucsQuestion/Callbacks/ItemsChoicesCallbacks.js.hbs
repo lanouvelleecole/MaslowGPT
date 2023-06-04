@@ -7,9 +7,9 @@
  *
  **/
 
-import { GetTestNameChoices } from "../GetTestNameChoices/GetTestNameChoices";
+import { JynxChoices } from "../JynxChoices/JynxChoices";
 
-export const GetTestNameChoicesCallbacks = {
+export const JynxChoicesCallbacks = {
   /* PLOP_INJECT_CHOICE_CALLBACK */
 };
 
@@ -20,12 +20,12 @@ export const GetTestNameChoicesCallbacks = {
  * @returns ...... , fournie via callback
  */
 
-export const GetTestNameChoiceValue = (value) => {
+export const JynxChoiceValue = (value) => {
   // le nom de key du choix effectué
-  const choiceKeyName = GetTestNameChoiceKey(value);
+  const choiceKeyName = JynxChoiceKey(value);
 
   // le style correspondant
-  const choiceCallbackValue = GetTestNameChoicesCallbacks[choiceKeyName]();
+  const choiceCallbackValue = JynxChoicesCallbacks[choiceKeyName]();
 
   return choiceCallbackValue;
 };
@@ -36,8 +36,8 @@ export const GetTestNameChoiceValue = (value) => {
  *
  * retourne le nom du key selon valeur de choix
  */
-export const GetTestNameChoiceKey = (choice) => {
-  var object = GetTestNameChoices();
+export const JynxChoiceKey = (choice) => {
+  var object = JynxChoices();
 
   const keyName = Object.keys(object).find((key) => object[key] === choice);
 

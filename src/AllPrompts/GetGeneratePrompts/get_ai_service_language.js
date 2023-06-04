@@ -28,7 +28,7 @@ const get_ai_service_language = (appRootPath) => {
           answers,
           "get_ai_service_language",
           appRootPath
-        ) ?? "Javascript (Node.js)"
+        ) ?? "javascript (import/export)"
       );
     },
     editable: true,

@@ -10,7 +10,7 @@ import { GoToTestPageList } from "../NavHelpers/GoToTestPageList";
  * permet de modifier un item stocké dans sqlite + redux
  *
  */
-export const TestSubpageDB = ({ answers, route }) => {
+export const ZeAllMightySubpageDB = ({ answers, route }) => {
   /* PLOP_INJECT_ANSWER_VALUE */
 
   // getter, contient le state actuel
@@ -35,13 +35,13 @@ export const TestSubpageDB = ({ answers, route }) => {
     rowName: "uniqueId",
     rowValue: editedItem.uniqueId,
     onSuccess: (row) => {
-      console.log("item modifé avec succès dans TestSubpage.");
+      console.log("item modifé avec succès dans ZeAllMightySubpage.");
 
       GoToTestPageList();
     },
     onError: (e) => {
       console.log(
-        "Un problème est survenu durant la modif d'item dans TestSubpage."
+        "Un problème est survenu durant la modif d'item dans ZeAllMightySubpage."
       );
 
       GoToTestPageList();

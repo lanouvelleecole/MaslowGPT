@@ -8,13 +8,14 @@ import { CommandNames } from "../AppConstants/CommandNames.js";
 import { AddCommandPrompts } from "../AllPrompts/AddCommandPrompts/AddCommandPrompts.js";
 
 // PLOP_ADD_PPTS_IMPORT_GIVN_GEN_NAME
-import { CreateReactNativeAppPrompts } from '../AllPrompts/CreateReactNativeApp/CreateReactNativeAppPrompts.js';
+import { CreateReactNativeAppPrompts } from "../AllPrompts/CreateReactNativeApp/CreateReactNativeAppPrompts.js";
 import { DuplicateThingPrompts } from "../AllPrompts/DuplicateThing/DuplicateThingPrompts.js";
 import { DeleteThingPrompts } from "../AllPrompts/DeleteThing/DeleteThingPrompts.js";
 
 import { AddCommandActionsPrompts } from "../AllPrompts/AddCommandActions/AddCommandActionsPrompts.js";
 import { AddCommandPromptsPrompts } from "../AllPrompts/AddCommandPrompts/AddCommandPromptsPrompts.js";
 import { AskQuestionPrompts } from "../AllPrompts/AskQuestion/AskQuestionPrompts.js";
+import { CommandDescriptions } from "../AppConstants/CommandDescriptions.js";
 
 /**
  *
@@ -64,8 +65,7 @@ function getPromptsGivenGeneratorName() {
   // PLOP_ADD_PPTS_GIVN_GEN_NAME
   else if (generatorName == CommandNames.create_react_native_app) {
     return CreateReactNativeAppPrompts(appRootPath);
-  }
-  else if (generatorName == CommandNames.duplicate_thing) {
+  } else if (generatorName == CommandNames.duplicate_thing) {
     return DuplicateThingPrompts(appRootPath);
   } else if (generatorName == CommandNames.delete_thing) {
     return DeleteThingPrompts(appRootPath);
@@ -99,6 +99,8 @@ function getPromptsGivenGeneratorName() {
      * Tu as oublié le purpose, gourgandin
      */
     console.log(I18n.t("x7MiVrtQ"));
+    console.log(`\n`);
+    console.log(`${JSON.stringify(CommandDescriptions, null, 2)}`);
 
     return null;
   }

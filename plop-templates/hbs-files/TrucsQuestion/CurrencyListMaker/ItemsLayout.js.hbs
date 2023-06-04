@@ -1,27 +1,27 @@
 import {
-  GetTestNameChoices,
-  GetTestNameChoicesActions,
-  GetTestNameChoicesUI,
-} from "../GetTestNameChoices/GetTestNameChoices";
+  JynxChoices,
+  JynxChoicesActions,
+  JynxChoicesUI,
+} from "../JynxChoices/JynxChoices";
 
 /**
  * Le design d'1 choix
  */
-export function GetTestNameLayout({
+export function JynxLayout({
   choice,
   answers,
   answer,
   answerIndex,
   currentItem,
 }) {
-  const thisGetTestName = GetTestNameChoices()[choice];
+  const thisJynx = JynxChoices()[choice];
 
   return {
     // un descriptif de la unité de mesure
-    choiceDescription: GetTestNameChoicesUI()[choice],
+    choiceDescription: JynxChoicesUI()[choice],
 
     // la valeur de la unité de mesure
-    choiceValue: thisGetTestName,
+    choiceValue: thisJynx,
 
     choiceImgUrl: "",
     choiceImgPath: "",
@@ -29,12 +29,12 @@ export function GetTestNameLayout({
     // si la réponse en cours
     // correspond à ce choix en cours de création,
     // affiche le seal of approval
-    greenCheckmark: answer?.value == thisGetTestName,
+    greenCheckmark: answer?.value == thisJynx,
 
     // si on clique sur ce choix...
     onChoiceClicked: () => {
-      GetTestNameChoicesActions[choice]({
-        choice: thisGetTestName,
+      JynxChoicesActions[choice]({
+        choice: thisJynx,
         answers,
         answer,
         answerIndex,

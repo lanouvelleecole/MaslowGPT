@@ -25,8 +25,8 @@ function addFrenchStrings(promptData, questionFolderPath, outputs) {
     // Pattern tells plop where in the file to inject the template
     pattern: `/* PLOP_INJECT_FR_STRING */`,
     stuffUnderPattern: `
-\t\t${description_string_name}: "${description_string_fr}",
-\t\t${error_string_name}: "${error_string_fr}",
+${description_string_name}: "${description_string_fr}",
+${error_string_name}: "${error_string_fr}",
 ${strings.fr}`,
   };
 

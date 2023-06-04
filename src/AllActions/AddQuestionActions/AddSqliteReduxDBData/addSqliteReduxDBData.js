@@ -1,10 +1,11 @@
-import { addAnswerRowToEditFileIfNeeded } from './addAnswerRowToEditFileIfNeeded.js';
-import { addAnswerRowToSaveFileIfNeeded } from './addAnswerRowToSaveFileIfNeeded.js';
-import { addAnswerVarToEditFileIfNeeded } from './addAnswerVarToEditFileIfNeeded.js';
-import { addAnswerVarToSaveFileIfNeeded } from './addAnswerVarToSaveFileIfNeeded.js';
-import { addRowDefaultValueIfNeeded } from './addRowDefaultValueIfNeeded.js';
-import { addRowNameAndTypeIfNeeded } from './addRowNameAndTypeIfNeeded.js';
-import { Constants } from '../../../AppConstants/Constants.js';
+import { addAnswerRowToEditFileIfNeeded } from "./addAnswerRowToEditFileIfNeeded.js";
+import { addAnswerRowToSaveFileIfNeeded } from "./addAnswerRowToSaveFileIfNeeded.js";
+import { addAnswerVarToEditFileIfNeeded } from "./addAnswerVarToEditFileIfNeeded.js";
+import { addAnswerVarToSaveFileIfNeeded } from "./addAnswerVarToSaveFileIfNeeded.js";
+import { addRowDefaultValueIfNeeded } from "./addRowDefaultValueIfNeeded.js";
+import { addRowNameAndTypeIfNeeded } from "./addRowNameAndTypeIfNeeded.js";
+import { Constants } from "../../../AppConstants/Constants.js";
+import { toPascalCase } from "../../../services/ToPascalCase/ToPascalCase.js";
 
 /**
  *
@@ -51,7 +52,7 @@ function addSqliteReduxDBData(promptData, questionFolderPath, outputs) {
   const rowDefaultValueExists = rowDefaultValue?.length > 0;
 
   // le nom de la question
-  const question_name = promptData["question_name"];
+  const question_name = toPascalCase(promptData["question_name"]);
 
   // si un path de fichier de sauvegarde CRUD existe,
   // et que un rowName existe, alors stocke ce rowName parmi dans la section
