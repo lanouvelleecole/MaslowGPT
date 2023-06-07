@@ -5,6 +5,7 @@
  */
 export const CommandNames = {
   // ADD_CMD_NAME
+	translate_strings: "translate-strings",
 	create_react_native_app: "create-react-native-app",
 
   duplicate_thing: "duplicate-thing",

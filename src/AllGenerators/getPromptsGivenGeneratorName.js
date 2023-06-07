@@ -8,6 +8,7 @@ import { CommandNames } from "../AppConstants/CommandNames.js";
 import { AddCommandPrompts } from "../AllPrompts/AddCommandPrompts/AddCommandPrompts.js";
 
 // PLOP_ADD_PPTS_IMPORT_GIVN_GEN_NAME
+import { TranslateStringsPrompts } from '../AllPrompts/TranslateStrings/TranslateStringsPrompts.js';
 import { CreateReactNativeAppPrompts } from "../AllPrompts/CreateReactNativeApp/CreateReactNativeAppPrompts.js";
 import { DuplicateThingPrompts } from "../AllPrompts/DuplicateThing/DuplicateThingPrompts.js";
 import { DeleteThingPrompts } from "../AllPrompts/DeleteThing/DeleteThingPrompts.js";
@@ -63,6 +64,9 @@ function getPromptsGivenGeneratorName() {
   // au dessous de ce commentaire.
   // Bien sur, ajoute l'import correspondant.
   // PLOP_ADD_PPTS_GIVN_GEN_NAME
+  else if (generatorName == CommandNames.translate_strings) {
+    return TranslateStringsPrompts(appRootPath);
+  }
   else if (generatorName == CommandNames.create_react_native_app) {
     return CreateReactNativeAppPrompts(appRootPath);
   } else if (generatorName == CommandNames.duplicate_thing) {

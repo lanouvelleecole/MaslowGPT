@@ -1,6 +1,6 @@
 import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 
-const OriginalPathPromptText = (appRootPath) => {
+const ChooseAppStringsPromptText = (appRootPath) => {
   return {
     type: "input",
 
@@ -9,16 +9,16 @@ const OriginalPathPromptText = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "OriginalPath",
+    name: "ChooseAppStrings",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("OriginalPath");
+      return getDataFromNPMMaslowJSON("ChooseAppStrings");
     },
 
     message: `Text me bby`,
   };
 };
 
-const OriginalPathPromptEditor = (appRootPath) => {
+const ChooseAppStringsPromptEditor = (appRootPath) => {
   return {
     type: "editor",
 
@@ -27,13 +27,13 @@ const OriginalPathPromptEditor = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "OriginalPath",
+    name: "ChooseAppStrings",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("OriginalPath");
+      return getDataFromNPMMaslowJSON("ChooseAppStrings");
     },
 
     message: `Text me bby`,
   };
 };
 
-export { OriginalPathPromptText, OriginalPathPromptEditor };
+export { ChooseAppStringsPromptText, ChooseAppStringsPromptEditor };

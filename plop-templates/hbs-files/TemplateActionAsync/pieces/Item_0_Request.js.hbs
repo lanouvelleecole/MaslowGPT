@@ -1,7 +1,7 @@
 import { GetChatGPTOutput } from "../../../../services/GetChatGPTOutput/GetChatGPTOutput.js";
 import { MakeLoadingSpinner } from "../../../../services/MakeLoadingSpinner/MakeLoadingSpinner.js";
 
-async function ReplaceWordsInFolderRequest(
+async function TranslateSrcRequest(
   answers,
   appRootPath,
   printMsg = true
@@ -40,4 +40,4 @@ Veuillez patienter quelques instants....
     throw new Error(`Failed to get Chat GPT output: ${error}`);
   }
 }
-export { ReplaceWordsInFolderRequest };
+export { TranslateSrcRequest };

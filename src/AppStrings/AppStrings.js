@@ -15,6 +15,11 @@ import i18n from "i18n-js";
 i18n.translations = {
   src: {
     /* PLOP_INJECT_SRC_STRING */
+    x8H4nyVx: `Tentative n°`,
+    xlqZy0Sf: `Traduction de texte réussie !`,
+    xSQ5Oiki: `Dans quelle langue souhaites tu traduire tes strings ?`,
+    x6zDMY6l: `Choisis le fichier AppStrings.js que tu souhaites internationaliser`,
+    xLwA536O: `Ecris une approximation du path du fichier AppStrings.js, partant du dossier suivant:`,
     x45NCPh6: `Pour installer cette appli (sur un appareil Android), branche un appareil via USB, puis exécute ces commandes:`,
     x1T3wXxm: `La maman de cette sous page se trouve ici:`,
     xvpTcr5u: `Le point de départ de ce bébé se situé ici:`,
@@ -190,7 +195,9 @@ maslow regen-ai-func <path/vers/dossier/fonction>
 
     welcome: "Bonjour",
     country: "fr",
+    /* PLOP_INJECT_SRC_END */
   },
+  /* PLOP_INJECT_INTL_STRINGS */
 };
 
 /**
@@ -200,6 +207,11 @@ const AppStrings = () => {
   //  console.log("Cette function d'init de répertoire doit run 1 seule fois");
 
   let locale = Intl.DateTimeFormat().resolvedOptions().locale;
+
+  console.log(`
+Cette function d'init de répertoire doit run 1 seule fois.
+
+Device locale is: ${locale}`);
 
   // Set the locale once
   // at the beginning of your app.

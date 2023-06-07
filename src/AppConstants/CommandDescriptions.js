@@ -9,6 +9,7 @@ import I18n from "i18n-js";
  */
 export const CommandDescriptions = {
   // ADD_CMD_DESC
+	translate_strings: "Cette commande permet de ...",
   ask_question: I18n.t("xU7doKQc"),
   generate: I18n.t("xJNqNHXm"),
   create_react_native_app: I18n.t("xxAcspcF"),

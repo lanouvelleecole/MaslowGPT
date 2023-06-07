@@ -15,67 +15,67 @@ import { answers } from "../../../../../index.js";
 import { Constants } from "../../../../AppConstants/Constants.js";
 import { GetTaggedSubfiles } from "./GetTaggedSubfiles.js";
 
-export const OriginalPathChoices = {
-  OriginalPathChoice1: ``,
-  OriginalPathChoice2: ``,
-  OriginalPathChoice3: ``,
+export const ChooseAppStringsChoices = {
+  ChooseAppStringsChoice1: ``,
+  ChooseAppStringsChoice2: ``,
+  ChooseAppStringsChoice3: ``,
 };
 
-export const OriginalPathPromptChoices = (appRootPath) => {
+export const ChooseAppStringsPromptChoices = (appRootPath) => {
   return {
     type: "list",
-    name: "OriginalPath",
+    name: "ChooseAppStrings",
     message: ``,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("OriginalPath") ??
-        OriginalPathChoices.OriginalPathChoice1
+        getDataFromNPMMaslowJSON("ChooseAppStrings") ??
+        ChooseAppStringsChoices.ChooseAppStringsChoice1
       );
     },
 
     choices: [
       // AJOUTE_TEMPLATE //
-      OriginalPathChoices.OriginalPathChoice1,
-      OriginalPathChoices.OriginalPathChoice2,
-      OriginalPathChoices.OriginalPathChoice3,
+      ChooseAppStringsChoices.ChooseAppStringsChoice1,
+      ChooseAppStringsChoices.ChooseAppStringsChoice2,
+      ChooseAppStringsChoices.ChooseAppStringsChoice3,
     ],
   };
 };
 
-export const OriginalPathPromptChoicesFolders = (appRootPath) => {
+export const ChooseAppStringsPromptChoicesFolders = (appRootPath) => {
   return {
     type: "list",
-    name: "OriginalPath",
+    name: "ChooseAppStrings",
     message: `Folders bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("OriginalPath") ??
-        OriginalPathChoices.OriginalPathChoice1
+        getDataFromNPMMaslowJSON("ChooseAppStrings") ??
+        ChooseAppStringsChoices.ChooseAppStringsChoice1
       );
     },
 
     choices: (data) => {
       const subfolders = GetSubfolders(appRootPath);
 
-      subfolders?.unshift("<", answers.AffineOriginalPath);
+      subfolders?.unshift("<", answers.AffineChooseAppStrings);
 
       return subfolders ?? ["<"];
     },
   };
 };
 
-export const OriginalPathPromptChoicesFiles = (appRootPath) => {
+export const ChooseAppStringsPromptChoicesFiles = (appRootPath) => {
   return {
     type: "list",
-    name: "OriginalPath",
+    name: "ChooseAppStrings",
     message: `Files bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("OriginalPath") ??
-        OriginalPathChoices.OriginalPathChoice1
+        getDataFromNPMMaslowJSON("ChooseAppStrings") ??
+        ChooseAppStringsChoices.ChooseAppStringsChoice1
       );
     },
 
@@ -89,16 +89,16 @@ export const OriginalPathPromptChoicesFiles = (appRootPath) => {
   };
 };
 
-export const OriginalPathPromptChoicesAll = (appRootPath) => {
+export const ChooseAppStringsPromptChoicesAll = (appRootPath) => {
   return {
     type: "list",
-    name: "OriginalPath",
+    name: "ChooseAppStrings",
     message: `Files and folders bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("OriginalPath") ??
-        OriginalPathChoices.OriginalPathChoice1
+        getDataFromNPMMaslowJSON("ChooseAppStrings") ??
+        ChooseAppStringsChoices.ChooseAppStringsChoice1
       );
     },
 
@@ -111,7 +111,7 @@ export const OriginalPathPromptChoicesAll = (appRootPath) => {
       subfilesNSubfolders?.unshift(
         "<",
         Constants.noChoice,
-        answers.AffineOriginalPath
+        answers.AffineChooseAppStrings
       );
 
       return SortArrayByLength(RemoveDuplicatesFromArray(subfilesNSubfolders));
@@ -119,16 +119,16 @@ export const OriginalPathPromptChoicesAll = (appRootPath) => {
   };
 };
 
-export const OriginalPathPromptChoicesTaggedFiles = (appRootPath) => {
+export const ChooseAppStringsPromptChoicesTaggedFiles = (appRootPath) => {
   return {
     type: "list",
-    name: "OriginalPath",
+    name: "ChooseAppStrings",
     message: `Tagged Files bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("OriginalPath") ??
-        OriginalPathChoices.OriginalPathChoice1
+        getDataFromNPMMaslowJSON("ChooseAppStrings") ??
+        ChooseAppStringsChoices.ChooseAppStringsChoice1
       );
     },
 

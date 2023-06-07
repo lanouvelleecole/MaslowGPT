@@ -106,7 +106,7 @@ const string_repo_file_path = (appRootPath) => {
 
       const string_repo_paths = getClosestJSFilesWithPattern(
         full_string_repo_folder_path,
-        "PLOP_INJECT_DEST_STRING",
+        "PLOP_INJECT_SRC_STRING",
         ``
       );
 

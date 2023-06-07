@@ -15,67 +15,67 @@ import { answers } from "../../../../../index.js";
 import { Constants } from "../../../../AppConstants/Constants.js";
 import { GetTaggedSubfiles } from "./GetTaggedSubfiles.js";
 
-export const AppNameChoices = {
-  AppNameChoice1: ``,
-  AppNameChoice2: ``,
-  AppNameChoice3: ``,
+export const ChooseLanguageChoices = {
+  ChooseLanguageChoice1: ``,
+  ChooseLanguageChoice2: ``,
+  ChooseLanguageChoice3: ``,
 };
 
-export const AppNamePromptChoices = (appRootPath) => {
+export const ChooseLanguagePromptChoices = (appRootPath) => {
   return {
     type: "list",
-    name: "AppName",
+    name: "ChooseLanguage",
     message: ``,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("AppName") ??
-        AppNameChoices.AppNameChoice1
+        getDataFromNPMMaslowJSON("ChooseLanguage") ??
+        ChooseLanguageChoices.ChooseLanguageChoice1
       );
     },
 
     choices: [
       // AJOUTE_TEMPLATE //
-      AppNameChoices.AppNameChoice1,
-      AppNameChoices.AppNameChoice2,
-      AppNameChoices.AppNameChoice3,
+      ChooseLanguageChoices.ChooseLanguageChoice1,
+      ChooseLanguageChoices.ChooseLanguageChoice2,
+      ChooseLanguageChoices.ChooseLanguageChoice3,
     ],
   };
 };
 
-export const AppNamePromptChoicesFolders = (appRootPath) => {
+export const ChooseLanguagePromptChoicesFolders = (appRootPath) => {
   return {
     type: "list",
-    name: "AppName",
+    name: "ChooseLanguage",
     message: `Folders bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("AppName") ??
-        AppNameChoices.AppNameChoice1
+        getDataFromNPMMaslowJSON("ChooseLanguage") ??
+        ChooseLanguageChoices.ChooseLanguageChoice1
       );
     },
 
     choices: (data) => {
       const subfolders = GetSubfolders(appRootPath);
 
-      subfolders?.unshift("<", answers.AffineAppName);
+      subfolders?.unshift("<", answers.AffineChooseLanguage);
 
       return subfolders ?? ["<"];
     },
   };
 };
 
-export const AppNamePromptChoicesFiles = (appRootPath) => {
+export const ChooseLanguagePromptChoicesFiles = (appRootPath) => {
   return {
     type: "list",
-    name: "AppName",
+    name: "ChooseLanguage",
     message: `Files bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("AppName") ??
-        AppNameChoices.AppNameChoice1
+        getDataFromNPMMaslowJSON("ChooseLanguage") ??
+        ChooseLanguageChoices.ChooseLanguageChoice1
       );
     },
 
@@ -89,16 +89,16 @@ export const AppNamePromptChoicesFiles = (appRootPath) => {
   };
 };
 
-export const AppNamePromptChoicesAll = (appRootPath) => {
+export const ChooseLanguagePromptChoicesAll = (appRootPath) => {
   return {
     type: "list",
-    name: "AppName",
+    name: "ChooseLanguage",
     message: `Files and folders bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("AppName") ??
-        AppNameChoices.AppNameChoice1
+        getDataFromNPMMaslowJSON("ChooseLanguage") ??
+        ChooseLanguageChoices.ChooseLanguageChoice1
       );
     },
 
@@ -111,7 +111,7 @@ export const AppNamePromptChoicesAll = (appRootPath) => {
       subfilesNSubfolders?.unshift(
         "<",
         Constants.noChoice,
-        answers.AffineAppName
+        answers.AffineChooseLanguage
       );
 
       return SortArrayByLength(RemoveDuplicatesFromArray(subfilesNSubfolders));
@@ -119,16 +119,16 @@ export const AppNamePromptChoicesAll = (appRootPath) => {
   };
 };
 
-export const AppNamePromptChoicesTaggedFiles = (appRootPath) => {
+export const ChooseLanguagePromptChoicesTaggedFiles = (appRootPath) => {
   return {
     type: "list",
-    name: "AppName",
+    name: "ChooseLanguage",
     message: `Tagged Files bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("AppName") ??
-        AppNameChoices.AppNameChoice1
+        getDataFromNPMMaslowJSON("ChooseLanguage") ??
+        ChooseLanguageChoices.ChooseLanguageChoice1
       );
     },
 

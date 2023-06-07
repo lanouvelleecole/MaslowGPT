@@ -8,6 +8,10 @@ import { initAddCommandGenerator } from "../InitAddCommandGenerator/initAddComma
 import { AddCommandAsynchronousActions } from "../../AllActions/AddCommandActions/pieces/AddCommandAsynchronousActions/AddCommandAsynchronousActions.js";
 // PLOP_INJECT_GENERATOR_IMPORTS
 
+import { initTranslateStringsGenerator } from "../TranslateStrings/initTranslateStringsGenerator.js";
+import { SetTranslateStringsAsyncActions } from "../SetTranslateStringsAsyncActions/SetTranslateStringsAsyncActions.js";
+
+
 import { initCreateReactNativeAppGenerator } from "../CreateReactNativeApp/initCreateReactNativeAppGenerator.js";
 import { SetCreateReactNativeAppAsyncActions } from "../SetCreateReactNativeAppAsyncActions/SetCreateReactNativeAppAsyncActions.js";
 
@@ -78,6 +82,11 @@ ajoute les imports correspondants
     setAIFunctionActions(plop, appRootPath);
   }
   // PLOP_INJECT_GENERATOR_ELSE_IF
+  else if (generatorName == CommandNames.translate_strings) {
+    initTranslateStringsGenerator(plop, appRootPath);
+
+    SetTranslateStringsAsyncActions(plop, appRootPath);
+  }
   else if (generatorName == CommandNames.create_react_native_app) {
     initCreateReactNativeAppGenerator(plop, appRootPath);
 

@@ -1,0 +1,1 @@
+Return a JSON array containing ALL the languages that you can translate text to/from. Order them from most to least used worldwide. Please don't limit youself, I want a giant list with hundreds of languages names. Thx.

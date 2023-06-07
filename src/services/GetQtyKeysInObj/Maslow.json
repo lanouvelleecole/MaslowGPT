@@ -1,0 +1,92 @@
+{
+  "gptOutput": "\n\n// PLOP_CODE_START \n\n// This function returns the quantity of keys present in obj.\nconst GetQtyKeysInObj = (obj) => {\n  if (!obj) {\n    return null;\n  }\n  return Object.keys(obj).length;\n};\n\n// PLOP_CODE_END\n\n// PLOP_CODE_USE_START \nconst obj1 = {a: 'b', c: 'd'};\nconst GetQtyKeysInObjValue = GetQtyKeysInObj(obj1);\n// PLOP_CODE_USE_END\n\n// PLOP_CODE_USE_RETURN_START\nreturn GetQtyKeysInObjValue;\n// PLOP_CODE_USE_RETURN_END\n\n// PLOP_CODE_EXTENSION_START\njs\n// PLOP_CODE_EXTENSION_END\n\n// PLOP_CODE_EXPORT_START\nexport default GetQtyKeysInObj;\n// PLOP_CODE_EXPORT_END\n\n// PLOP_CODE_IMPORT_START\nimport GetQtyKeysInObj from 'src/services/GetQtyKeysInObj/GetQtyKeysInObj.js';\n// PLOP_CODE_IMPORT_END\n\n// PLOP_CODE_IMPORT_RELATIVE_START\nimport GetQtyKeysInObj from '../GetQtyKeysInObj/GetQtyKeysInObj.js';\n// PLOP_CODE_IMPORT_RELATIVE_END\n\n// PLOP_COMMAND_LINE_INSTALL_START\nyarn add src/services/GetQtyKeysInObj/GetQtyKeysInObj.js\n// PLOP_COMMAND_LINE_INSTALL_END\n\n// PLOP_INSPIRING_MESSAGE_START\n\"A journey of a thousand miles begins with a single step.\" - Lao Tzu\n// PLOP_INSPIRING_MESSAGE_END",
+  "mainCode": [
+    "// This function returns the quantity of keys present in obj.\nconst GetQtyKeysInObj = (obj) => {\n  if (!obj) {\n    return null;\n  }\n  return Object.keys(obj).length;\n};"
+  ],
+  "codeUsage": [
+    "const obj1 = {a: 'b', c: 'd'};\nconst GetQtyKeysInObjValue = GetQtyKeysInObj(obj1);"
+  ],
+  "codeExtension": [
+    "js"
+  ],
+  "inspiringMessage": [
+    "\"A journey of a thousand miles begins with a single step.\" - Lao Tzu"
+  ],
+  "codeImport": [
+    "import GetQtyKeysInObj from 'src/services/GetQtyKeysInObj/GetQtyKeysInObj.js';"
+  ],
+  "codeExport": [
+    "export default GetQtyKeysInObj;"
+  ],
+  "codeImportRelative": [
+    "import GetQtyKeysInObj from '../GetQtyKeysInObj/GetQtyKeysInObj.js';"
+  ],
+  "codeUsageReturn": [
+    "return GetQtyKeysInObjValue;"
+  ],
+  "codeInstall": [
+    "yarn add src/services/GetQtyKeysInObj/GetQtyKeysInObj.js"
+  ],
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation donné (via Chat GPT, l'I.A. magique)",
+  "name": "GetQtyKeysInObj",
+  "affine_subfolder": "src/services",
+  "ask_for_subfolder": "src/services",
+  "affine_string_repo": "src",
+  "string_repo_folder_path": "src/AppStrings",
+  "string_repo_file_path": "AppStrings.js",
+  "string_name": "x2hwbuKC",
+  "string_src": "leaveOnValid: true,",
+  "string_dest": "Hello friend",
+  "affine_file_where_we_use_string": "src",
+  "ask_for_js_file_string": "Je veux rien, capiche amigo ?",
+  "row_name": "suki",
+  "question_type": "Une question dont la réponse est du texte",
+  "question_name": "Jynx",
+  "affine_questionnaire": "src/pages/TestPage",
+  "questionnaire_folder_path": "src/pages/TestPage/pieces/AddItemToTestPage/TestPageCreationList",
+  "questionnaire_file_name": "TestPageCreationList.js",
+  "repo_name": "AppStrings",
+  "description_string_name": "xA7NXGbD",
+  "description_string_src": "Anus malodorant",
+  "description_string_dest": "Foul-smelling Anus",
+  "error_string_name": "xEf4EJjy",
+  "error_string_src": "Oups... Cette valeur n'est pas valide.",
+  "error_string_dest": "Oops... This value is not valid.",
+  "question_page_name": "TestPage",
+  "question_default_answer": "currentItem?.name",
+  "question_default_textinput": "currentItem?.name",
+  "question_on_textinput_changed": "",
+  "question_validity_condition": "input?.length > 0",
+  "question_DB_save_path": "src\\pages\\TestPage\\pieces\\AddItemToTestPage\\AddItemToDB.js",
+  "question_DB_edit_path": "src\\pages\\TestPage\\pieces\\EditItemInTestPage\\EditItemInTestPageDB.js",
+  "databaseinfo_path": "src\\reduxState\\TestPage\\DatabaseInfo.js",
+  "row_type": "TEXT",
+  "row_default_value": "",
+  "AddCommandName": "translate-strings",
+  "AddCommandPrompts": "ChooseLanguage",
+  "AddCommandActions": "ExtractSrcObject, TranslateSrc",
+  "TestPpt1": "g",
+  "TestPpt2": "t",
+  "GptQuestionName": "AllLanguages",
+  "AskQuestion": "from this list of languages:\r\n\r\n[  \r\n   \"English\",\r\n   \"Mandarin (Chinese)\",\r\n   \"Hindi\",\r\n   \"Spanish\",\r\n   \"Bengali\",\r\n   \"Portuguese\",\r\n   \"Russian\",\r\n   \"Japanese\",\r\n   \"German\",\r\n   \"Korean\",\r\n   \"French\",\r\n   \"Vietnamese\",\r\n   \"Italian\",\r\n   \"Tamil\",\r\n   \"Telugu\",\r\n   \"Hindi\",\r\n   \"Javanese\",\r\n   \"Marathi\",\r\n   \"Malayalam\",\r\n   \"Arabic\",\r\n   \"Urdu\",\r\n   \"Thai\",\r\n   \"Polish\",\r\n   \"Persian (Farsi)\",\r\n   \"Turkish\",\r\n   \"Gujarati\",\r\n   \"Ukrainian\",\r\n   \"Burmese\",\r\n   \"Czech\",\r\n   \"Indonesian\",\r\n   \"Romanian\",\r\n   \"Finnish\",\r\n   \"Hebrew\",\r\n   \"Hungarian\",\r\n   \"Dutch\",\r\n   \"Kannada\",\r\n   \"Khmer (Cambodian)\",\r\n   \"Lao\",\r\n   \"Belarusian\",\r\n   \"Latin\",\r\n   \"Yiddish\",\r\n   \"Kazakh\",\r\n   \"Pashto\",\r\n   \"Sundanese\",\r\n   \"Swedish\",\r\n   \"Uzbek\",\r\n   \"Serbian\",\r\n   \"Greek\",\r\n   \"Bulgarian\",\r\n   \"Amharic\",\r\n   \"Nepali\",\r\n   \"Dari\",\r\n   \"Lithuanian\",\r\n   \"Hausa\",\r\n   \"Mirpuri (Punjabi)\",\r\n   \"Bosnian\",\r\n   \"Azerbaijani\",\r\n   \"Chuvash\",\r\n   \"Slovak\",\r\n   \"Tagalog (Filipino)\",\r\n   \"Kyrgyz\",\r\n   \"Sinhalese\",\r\n   \"Danish\",\r\n   \"Albanian\",\r\n   \"Uighur\",\r\n   \"Macedonian\",\r\n   \"Luxembourgish\",\r\n   \"Luba-Katanga\",\r\n   \"Tajik\",\r\n   \"Irish (Gaelic)\",\r\n   \"Laothian\",\r\n   \"Oriya\",\r\n   \"Esperanto\",\r\n   \"Korean (North)\",\r\n   \"Tigrigna\",\r\n   \"Tatar\",\r\n   \"Duwuits\",\r\n   \"Cherokee\",\r\n   \"Slovenian\",\r\n   \"Hawaiian\",\r\n   \"Hmong\",\r\n   \"Samoan\",\r\n   \"Kinyarwanda\",\r\n   \"Swahili\",\r\n   \"Chichewa\",\r\n   \"Igbo\",\r\n   \"Haitian Creole\",\r\n   \"Bashkir\",\r\n   \"Tibetan\",\r\n   \"Ewe\",\r\n   \"Maori\",\r\n   \"Yoruba\",\r\n   \"Palauan\",\r\n   \"Inuktitut (Eskimo)\",\r\n   \"Faroese\",\r\n   \"Gilbertese\",\r\n   \"Breton\",\r\n   \"Chamorro\",\r\n   \"Frisian\",\r\n   \"Sindhi\",\r\n   \"Scots Gaelic\",\r\n   \"Wolof\",\r\n   \"Tonga (Tonga Islands)\",\r\n   \"Moldovan\",\r\n   \"Kirghiz\",\r\n   \"Somali\",\r\n   \"Cheyenne\",\r\n   \"Neapolitan\",\r\n   \"Khakas\",\r\n   \"Tokelau\",\r\n   \"Tahitian\",\r\n   \"Limburgish\",\r\n   \"Karachay-Balkar\",\r\n   \"Yupik\",\r\n   \"Komi\",\r\n   \"Adyghe\",\r\n   \"Udi\",\r\n   \"Ossetian (Ossetic)\",\r\n   \"Gagauz\",\r\n   \"Greenlandic (Kalaallisut)\",\r\n   \"Punjabi (Eastern)\",\r\n   \"Avaric\",\r\n   \"Nauru\",\r\n   \"Kabyle\",\r\n   \"Torres Strait Creole\",\r\n   \"Karelian\",\r\n   \"Sakha (Yakut)\",\r\n   \"Tuvan\",\r\n   \"Northern Sami\",\r\n   \"Aymara\",\r\n   \"Masai\",\r\n   \"Romani\",\r\n   \"Guaraní\",\r\n   \"Lingala\",\r\n   \"Venda\",\r\n   \"Buryat (Russia)\",\r\n   \"Jumprum\",\r\n   \"Romansh\",\r\n   \"Konkani\",\r\n   \"Min Nan (Taiwanese)\",\r\n   \"Kikuyu\",\r\n   \"Bemba\",\r\n   \"Luganda\",\r\n   \"Maltese\",\r\n   \"Kirundi\",\r\n   \"Sardinian\",\r\n   \"Panjabi (Western)\",\r\n   \"Twi\",\r\n   \"Mapudungun (Mapuche)\",\r\n   \"Bihari\",\r\n   \"Tswana\",\r\n   \"Hiligaynon\",\r\n   \"Karaim\",\r\n   \"Shona\",\r\n   \"Bislama\",\r\n   \"Ndebele (North)\",\r\n   \"Dimli (Kirdki)\",\r\n   \"Akan\",\r\n   \"Khasi\",\r\n   \"Estonian\",\r\n   \"Sesotho\",\r\n   \"Kalmyk\",\r\n   \"Cheyenne\",\r\n   \"Ganda\",\r\n   \"Aceh (Acehnese)\",\r\n   \"Luba-Lulua\",\r\n   \"Moksha\",\r\n   \"Interlingua (International)\",\r\n   \"Yoruba (Benin, Togo)\",\r\n   \"Croatian\",\r\n   \"Yezidi\",\r\n   \"Kashubian\",\r\n   \"Zazaki\",\r\n   \"Vai\",\r\n   \"Buriat (Russia)\",\r\n   \"Zulu\",\r\n   \"Sumerian\",\r\n   \"Veps\",\r\n   \"Sotho (Southern)\",\r\n   \"Kabardian\",\r\n   \"Mingrelian (Megrelian)\",\r\n   \"Ndonga\",\r\n   \"Uyghur (Wighor)\",\r\n   \"Abkhaz\",\r\n   \"Tulu\",\r\n   \"Fijian\",\r\n   \"Kuy\",\r\n   \"Baga Kaloum\",\r\n   \"Bats (Svan)\",\r\n   \"Rarotongan (Cook Islands Maori)\",\r\n   \"Erzya\",\r\n   \"Zhuang\",\r\n   \"Mansi\",\r\n   \"Quiché (K'iche')\",\r\n   \"Komi-Permyak\",\r\n   \"Rhunic\",\r\n   \"Ojibwe (Chippewa, Ojibwa)\",\r\n   \"Venetian\",\r\n   \"Saurashtra\",\r\n   \"Chipewyan\",\r\n   \"Inupiat (Inupiaq)\",\r\n   \"Inuktitut (Greenlandic)\",\r\n   \"Manx Gaelic\",\r\n   \"Bakhtiari\",\r\n   \"Cornish\"\r\n]\r\n\r\nreturn an objet where each key is one of the languages in the list I gave u, and each key's value is the language's BCP 47 language tag for this language",
+  "AffineDeletePath": "QNAS",
+  "DeletePath": "QNAS/Maslow.json",
+  "AffineOriginalPath": "AllLanguages",
+  "OriginalPath": "AllLanguages",
+  "DuplicatePath": "src\\AppConstants\\AllLanguages",
+  "delete_or_not": "Oui, supprime App.js et consorts.",
+  "AppName": "Artuchiasse",
+  "gold_caviar": null,
+  "get_appbar_title_dest": "Title",
+  "AffineAppStrings": "src/AppStrings",
+  "ChooseAppStrings": "src/AppStrings/AppStrings.js",
+  "affine_file_where_we_use": "src/services/TranslateText",
+  "ask_for_js_file": "src/services/TranslateText/TranslateText.js",
+  "function_import_type": "Path relatif",
+  "function_returns_or_not": "Sans ligne return",
+  "delete_function_body_or_not": "Non",
+  "get_ai_service_language": "javascript (import/export)",
+  "get_ai_service_args": "obj (un objet)",
+  "get_ai_service_description": "Retourne le nombre de keys prÃ©sent dans obj",
+  "get_ai_service_return_value": "Retourne le nombre de keys prÃ©sent dans obj, ou null si erreur"
+}
