@@ -1,9 +1,9 @@
-import { GetChatGPTOutput } from '../GetChatGPTOutput/GetChatGPTOutput.js';
-import { GetCodeFromChatGPTOutput } from './GetCodeFromChatGPTOutput.js';
+import { GetChatGPTOutput } from "../GetChatGPTOutput/GetChatGPTOutput.js";
+import { GetCodeFromChatGPTOutput } from "./GetCodeFromChatGPTOutput.js";
 import path from "path";
-import { GetRelativePath } from '../GetRelativePath/GetRelativePath.js';
-import { printChatGPTFunctionData } from './printChatGPTFunctionData.js';
-import { getChatGPTFunctionPrompt } from './getChatGPTFunctionPrompt.js';
+import { GetRelativePath } from "../GetRelativePath/GetRelativePath.js";
+import { printChatGPTFunctionData } from "./printChatGPTFunctionData.js";
+import { getChatGPTFunctionPrompt } from "./getChatGPTFunctionPrompt.js";
 
 function GetChatGPTFunction({
   functionName,

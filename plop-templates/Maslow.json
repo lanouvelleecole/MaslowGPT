@@ -1,6 +1,6 @@
 {
-  "what_we_wanna_do": "Crée une fonction React Native/un component React Native.",
-  "name": "Delay",
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation donné (via Chat GPT, l'I.A. magique)",
+  "name": "TestFunc",
   "affine_subfolder": "src/services",
   "ask_for_subfolder": "src/services",
   "affine_string_repo": "src",
@@ -81,5 +81,11 @@
   "get_appbar_title_dest": "Title",
   "AffineAppStrings": "src/stringRepos",
   "ChooseAppStrings": "src/stringRepos/AppStrings/AppStrings.js",
-  "ChooseLanguage": "Portuguese"
+  "ChooseLanguage": "Portuguese",
+  "affine_file_where_we_use": "src",
+  "ask_for_js_file": "Je veux rien, capiche amigo ?",
+  "get_ai_service_language": "javascript (import/export)",
+  "get_ai_service_args": "filePath (un string)",
+  "get_ai_service_description": "Retourne le code source de filePath",
+  "get_ai_service_return_value": "Retourne le codesource de filePath, ou null si erreur"
 }

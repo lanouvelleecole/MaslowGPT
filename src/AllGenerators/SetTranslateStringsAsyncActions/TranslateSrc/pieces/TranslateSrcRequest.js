@@ -16,7 +16,7 @@ import { ReadJSONFile } from "../../../../services/ReadJSONFile/ReadJSONFile.js"
 
 async function TranslateSrcRequest(answers, appRootPath, printMsg = true) {
   try {
-    //debugger;
+    //
 
     const allLanguagesCodesPath = GetAllLanguagesCodesPath();
     const AppStringsFullPath = path.join(appRootPath, answers.ChooseAppStrings);

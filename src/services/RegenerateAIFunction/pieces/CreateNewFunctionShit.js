@@ -13,9 +13,7 @@ function CreateNewFunctionShit(answers, appRootPath) {
 /* PLOP_INJECT_GLOBAL_CODE */
 
 ${answers.gold_caviar.mainCode[0]}
-
-${answers.gold_caviar.codeExport[0]}
-    `;
+`;
   CreateFileFromScratch(filePathFromC, fileContent);
 
   CreateFolder(piecesFolderFromC);
