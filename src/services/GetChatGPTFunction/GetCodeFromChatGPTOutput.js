@@ -1,5 +1,7 @@
+import { FormatObjectToJSON } from "../FormatObjectToJSON/FormatObjectToJSON.js";
+
 function GetCodeFromChatGPTOutput(gptOutputStr) {
-  const gptOutput = JSON.parse(gptOutputStr);
+  const gptOutput = FormatObjectToJSON(gptOutputStr);
 
   const codeInfo = {
     mainCode: [gptOutput["mainCode"]],

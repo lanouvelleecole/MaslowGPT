@@ -1,5 +1,6 @@
 import { OPENAI_API_KEY } from "../../../../../index.js";
 import { GetChatGPTOutput } from "../../../../services/GetChatGPTOutput/GetChatGPTOutput.js";
+import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 import { MakeLoadingSpinner } from "../../../../services/MakeLoadingSpinner/MakeLoadingSpinner.js";
 
 async function makeCHATGPTRequest(answers, printMsg = true) {
@@ -16,6 +17,8 @@ Veuillez patienter quelques instants....
     }
 
     const chat_gpt_output = await GetChatGPTOutput({
+      model_chosen:
+        getDataFromNPMMaslowJSON("ChooseAIModel") ?? "text-davinci-003",
       prompt:
         prompt +
         `. In your output, break long lines (60+ characters) into smaller pieces.`,

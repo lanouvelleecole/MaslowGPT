@@ -1,0 +1,1 @@
+I need a Scheme function PrintHello that prints hello in Portuguese. P.S.: I intend to directly write your output to a .scm file, so please, give me an output that can be written into a scm file, then executed without errors. Add your descriptions and such , as scheme comments.

@@ -1,6 +1,9 @@
 export function FormatObjectToJSON(jsonString) {
-  // Remove backslashes and escape single quotes in the string
-  //jsonString = jsonString.replace(/\\/g, "").replace(/'/g, "\\'");
+  // enleve les blancs de début en fin de string
+  jsonString = jsonString.trim();
+
+  // escape les single quotes
+  jsonString = jsonString.replace(/'/g, "\\'");
 
   // Add double quotes to property values
   jsonString = jsonString.replace(/(\b[a-zA-Z0-9_]+\b)(\s*):/g, '"$1":');

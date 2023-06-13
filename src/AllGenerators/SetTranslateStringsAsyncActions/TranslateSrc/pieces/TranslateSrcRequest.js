@@ -27,7 +27,7 @@ async function TranslateSrcRequest(answers, appRootPath, printMsg = true) {
       language: chosenLanguage,
       apiKey: OPENAI_API_KEY,
       doPrint: true,
-      retries: 30,
+      retries: 15,
     });
 
     const language_tag_obj = ReadJSONFile(allLanguagesCodesPath);

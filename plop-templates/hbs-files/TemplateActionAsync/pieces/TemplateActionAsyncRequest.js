@@ -20,6 +20,8 @@ Veuillez patienter quelques instants....
     }
 
     const chat_gpt_output = await GetChatGPTOutput({
+      model_chosen:
+        getDataFromNPMMaslowJSON("ChooseAIModel") ?? "text-davinci-003",
       prompt,
       onSuccess: (chatGPTOutput) => {},
       onError: (error) => {},

@@ -6,6 +6,7 @@ import GetQtyKeysInObj from "../GetQtyKeysInObj/GetQtyKeysInObj.js";
 
 import { GetChatGPTOutput } from "../GetChatGPTOutput/GetChatGPTOutput.js";
 import { Delay } from "../Delay/Delay.js";
+import { getDataFromNPMMaslowJSON } from "../GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 /* PLOP_INJECT_IMPORT */
 
 /* PLOP_INJECT_GLOBAL_CODE */
@@ -20,12 +21,14 @@ async function TranslateText({ text, language, apiKey }) {
 
     //console.log(`input: ${jsonStringWithText}`);
 
-    /*const outputJSONString = await GetChatGPTOutput({
+    /*const outputJSONString = await GetChatGPTOutput({ model_chosen: getDataFromNPMMaslowJSON("ChooseAIModel") ?? "text-davinci-003",
       prompt: `Translate to ${language} all the string properties of the following JSON object: ${jsonStringWithText}, and give me the translated object.`, //` . Format it like this: <txt_1><translation><txt_1> . `,
       apiKey,
     });*/
 
     const outputText = await GetChatGPTOutput({
+      model_chosen:
+        getDataFromNPMMaslowJSON("ChooseAIModel") ?? "text-davinci-003",
       prompt: `Return this text, in ${language}: ${text}`, //` . Format it like this: <txt_1><translation><txt_1> . `,
       apiKey,
     });

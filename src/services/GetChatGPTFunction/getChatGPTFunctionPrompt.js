@@ -43,7 +43,7 @@ Return this JSON object: {
   "codeImport": "<an import line for ${functionName}. The function's file path is: "${functionFilePathFromAppRoot}", as is. Use forward slashes>",
   "codeExport": "<an export line for ${functionName}>",
   "codeImportRelative": "<an import line for ${functionName}. The function's file path is: "${relativePath}", as is. Use forward slashes>",
-  "codeInstall": "<command line installation instructions for the libraries used in ${functionName}'s source code. Empty string if there's no libs used>",
+  "codeInstall": "<command line installation instructions for the libraries used in ${functionName}'s source code. Empty string if there's no libs used>"
 }
 
 P.S.: This output is destined to be JSON.parse() so give me a parse-able JSON string. Thx bby.

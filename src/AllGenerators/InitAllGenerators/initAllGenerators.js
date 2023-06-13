@@ -8,6 +8,10 @@ import { initAddCommandGenerator } from "../InitAddCommandGenerator/initAddComma
 import { AddCommandAsynchronousActions } from "../../AllActions/AddCommandActions/pieces/AddCommandAsynchronousActions/AddCommandAsynchronousActions.js";
 // PLOP_INJECT_GENERATOR_IMPORTS
 
+import { initSetAiModelGenerator } from "../SetAiModel/initSetAiModelGenerator.js";
+import { SetSetAiModelAsyncActions } from "../SetSetAiModelAsyncActions/SetSetAiModelAsyncActions.js";
+
+
 import { initTranslateStringsGenerator } from "../TranslateStrings/initTranslateStringsGenerator.js";
 import { SetTranslateStringsAsyncActions } from "../SetTranslateStringsAsyncActions/SetTranslateStringsAsyncActions.js";
 
@@ -82,6 +86,11 @@ ajoute les imports correspondants
     setAIFunctionActions(plop, appRootPath);
   }
   // PLOP_INJECT_GENERATOR_ELSE_IF
+  else if (generatorName == CommandNames.set_ai_model) {
+    initSetAiModelGenerator(plop, appRootPath);
+
+    SetSetAiModelAsyncActions(plop, appRootPath);
+  }
   else if (generatorName == CommandNames.translate_strings) {
     initTranslateStringsGenerator(plop, appRootPath);
 

@@ -1,0 +1,91 @@
+{
+  "mainCode": [
+    "import gpt3Encoder from 'gpt-3-encoder';\n\nexport const GetPromptTokensLength = prompt => {\n  const encodedPrompt = gpt3Encoder.textToTokens(prompt);\n  return encodedPrompt.length;\n};"
+  ],
+  "codeUsage": [
+    "const userPrompt = \"Hello world\";\nconst tokensLength = GetPromptTokensLength(userPrompt);\n\nconsole.log(tokensLength); // 2"
+  ],
+  "codeExtension": [
+    "js"
+  ],
+  "inspiringMessage": [
+    "\"The possibilities are endless when you believe in yourself!\" 💕"
+  ],
+  "codeImport": [
+    "import { GetPromptTokensLength } from \"src/services/GetPromptTokensLength/GetPromptTokensLength\";"
+  ],
+  "codeExport": [
+    "export { GetPromptTokensLength };"
+  ],
+  "codeImportRelative": [
+    "import { GetPromptTokensLength } from \"../../src/services/GetPromptTokensLength/GetPromptTokensLength\";"
+  ],
+  "codeUsageReturn": [
+    "const userPrompt = \"Hello world\";\nconst tokensLength = GetPromptTokensLength(userPrompt);\n\nconsole.log(tokensLength); // 2"
+  ],
+  "codeInstall": [
+    "npm install gpt-3-encoder"
+  ],
+  "what_we_wanna_do": "Crée une fonction dans un language de programmation donné (via Chat GPT, l'I.A. magique)",
+  "name": "GetPromptTokensLength",
+  "affine_subfolder": "src/services",
+  "ask_for_subfolder": "src/services",
+  "affine_string_repo": "src",
+  "string_repo_folder_path": "src/AppStrings",
+  "string_repo_file_path": "AppStrings.js",
+  "string_name": "x2hwbuKC",
+  "string_src": "leaveOnValid: true,",
+  "string_dest": "Hello friend",
+  "affine_file_where_we_use_string": "src",
+  "ask_for_js_file_string": "Je veux rien, capiche amigo ?",
+  "row_name": "suki",
+  "question_type": "Une question dont la réponse est du texte",
+  "question_name": "Jynx",
+  "affine_questionnaire": "src/pages/TestPage",
+  "questionnaire_folder_path": "src/pages/TestPage/pieces/AddItemToTestPage/TestPageCreationList",
+  "questionnaire_file_name": "TestPageCreationList.js",
+  "repo_name": "AppStrings",
+  "description_string_name": "xA7NXGbD",
+  "description_string_src": "Anus malodorant",
+  "description_string_dest": "Foul-smelling Anus",
+  "error_string_name": "xEf4EJjy",
+  "error_string_src": "Oups... Cette valeur n'est pas valide.",
+  "error_string_dest": "Oops... This value is not valid.",
+  "question_page_name": "TestPage",
+  "question_default_answer": "currentItem?.name",
+  "question_default_textinput": "currentItem?.name",
+  "question_on_textinput_changed": "",
+  "question_validity_condition": "input?.length > 0",
+  "question_DB_save_path": "src\\pages\\TestPage\\pieces\\AddItemToTestPage\\AddItemToDB.js",
+  "question_DB_edit_path": "src\\pages\\TestPage\\pieces\\EditItemInTestPage\\EditItemInTestPageDB.js",
+  "databaseinfo_path": "src\\reduxState\\TestPage\\DatabaseInfo.js",
+  "row_type": "TEXT",
+  "row_default_value": "",
+  "AddCommandName": "set-ai-model",
+  "AddCommandPrompts": "ChooseAIModel",
+  "AddCommandActions": "SetNewAIModel",
+  "TestPpt1": "g",
+  "TestPpt2": "t",
+  "GptQuestionName": "QNA",
+  "AskQuestion": "How to install WSL, and how to install nano on Windows 10 using wsl",
+  "AffineDeletePath": "QNAS",
+  "DeletePath": "QNAS/Maslow.json",
+  "AffineOriginalPath": "src\\services\\DeletePreviousLookalikeLine\\DeletePreviousLookalikeLine.js",
+  "OriginalPath": "src\\services\\DeletePreviousLookalikeLine\\DeletePreviousLookalikeLine.js",
+  "DuplicatePath": "src\\services\\GrabSteakInSandwich",
+  "delete_or_not": "Oui, supprime App.js et consorts.",
+  "AppName": "Artuchiasse",
+  "gold_caviar": null,
+  "get_appbar_title_dest": "Title",
+  "AffineAppStrings": "src/stringRepos",
+  "ChooseAppStrings": "src/stringRepos/AppStrings/AppStrings.js",
+  "ChooseLanguage": "Portuguese",
+  "affine_file_where_we_use": "src/services/GetChatGPTOutput",
+  "ask_for_js_file": "Je veux rien, capiche amigo ?",
+  "get_ai_service_language": "javascript (with import/export syntax)",
+  "get_ai_service_args": "prompt (string, le texte a comptabiliser)",
+  "get_ai_service_description": "Retourne le nombre de tokens que contient prompt. Utilise gpt-3-encoder (npm)",
+  "get_ai_service_return_value": "Retourne le nombre de tokens que contient prompt. Utilise gpt-3-encoder (npm), and the encode function.",
+  "ChooseAIModel": "text-davinci-003",
+  "fixes": ""
+}

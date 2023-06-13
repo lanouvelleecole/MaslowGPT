@@ -1,0 +1,11 @@
+; This is a simple Scheme function called PrintHello that prints
+; "Hello" in Portuguese, which is "Olá". Just add this function in
+; your .scm file, then call (PrintHello) to execute it.
+
+(define (PrintHello)
+  (display "Olá")
+  (newline))
+
+; To use this function, simply call (PrintHello) in your Scheme code.
+; Example:
+; (PrintHello)

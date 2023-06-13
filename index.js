@@ -54,12 +54,12 @@ const second_cmd_arg = process.argv[3];
 // le point d'entrée, ze singularity.
 if (the_cmd_very_first_thing.endsWith("index.js")) {
   (async function () {
-    console.log(`maslow-gpt is currenly used as a command line tool`);
+    //console.log(`maslow-gpt is currenly used as a command line tool`);
 
     await main();
   })();
 } else {
-  console.log(`maslow-gpt is currenly used as an imported npm package`);
+  //console.log(`maslow-gpt is currenly used as an imported npm package`);
 }
 
 // j'exporte ici les variables/ constantes globales

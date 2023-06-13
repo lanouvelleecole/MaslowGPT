@@ -13,6 +13,7 @@
   "dependencies": {
     "clipboardy": "^3.0.0",
     "git-clone": "^0.2.0",
+    "gpt-3-encoder": "^1.1.4",
     "i18n-js": "3.9.2",
     "inquirer": "^9.1.5",
     "nanoid": "^4.0.2",

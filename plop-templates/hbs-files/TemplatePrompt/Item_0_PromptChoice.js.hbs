@@ -15,67 +15,67 @@ import { answers } from "../../../../../index.js";
 import { Constants } from "../../../../AppConstants/Constants.js";
 import { GetTaggedSubfiles } from "./GetTaggedSubfiles.js";
 
-export const ChooseLanguageChoices = {
-  ChooseLanguageChoice1: ``,
-  ChooseLanguageChoice2: ``,
-  ChooseLanguageChoice3: ``,
+export const ChooseAIModelChoices = {
+  ChooseAIModelChoice1: ``,
+  ChooseAIModelChoice2: ``,
+  ChooseAIModelChoice3: ``,
 };
 
-export const ChooseLanguagePromptChoices = (appRootPath) => {
+export const ChooseAIModelPromptChoices = (appRootPath) => {
   return {
     type: "list",
-    name: "ChooseLanguage",
+    name: "ChooseAIModel",
     message: ``,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("ChooseLanguage") ??
-        ChooseLanguageChoices.ChooseLanguageChoice1
+        getDataFromNPMMaslowJSON("ChooseAIModel") ??
+        ChooseAIModelChoices.ChooseAIModelChoice1
       );
     },
 
     choices: [
       // AJOUTE_TEMPLATE //
-      ChooseLanguageChoices.ChooseLanguageChoice1,
-      ChooseLanguageChoices.ChooseLanguageChoice2,
-      ChooseLanguageChoices.ChooseLanguageChoice3,
+      ChooseAIModelChoices.ChooseAIModelChoice1,
+      ChooseAIModelChoices.ChooseAIModelChoice2,
+      ChooseAIModelChoices.ChooseAIModelChoice3,
     ],
   };
 };
 
-export const ChooseLanguagePromptChoicesFolders = (appRootPath) => {
+export const ChooseAIModelPromptChoicesFolders = (appRootPath) => {
   return {
     type: "list",
-    name: "ChooseLanguage",
+    name: "ChooseAIModel",
     message: `Folders bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("ChooseLanguage") ??
-        ChooseLanguageChoices.ChooseLanguageChoice1
+        getDataFromNPMMaslowJSON("ChooseAIModel") ??
+        ChooseAIModelChoices.ChooseAIModelChoice1
       );
     },
 
     choices: (data) => {
       const subfolders = GetSubfolders(appRootPath);
 
-      subfolders?.unshift("<", answers.AffineChooseLanguage);
+      subfolders?.unshift("<", answers.AffineChooseAIModel);
 
       return subfolders ?? ["<"];
     },
   };
 };
 
-export const ChooseLanguagePromptChoicesFiles = (appRootPath) => {
+export const ChooseAIModelPromptChoicesFiles = (appRootPath) => {
   return {
     type: "list",
-    name: "ChooseLanguage",
+    name: "ChooseAIModel",
     message: `Files bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("ChooseLanguage") ??
-        ChooseLanguageChoices.ChooseLanguageChoice1
+        getDataFromNPMMaslowJSON("ChooseAIModel") ??
+        ChooseAIModelChoices.ChooseAIModelChoice1
       );
     },
 
@@ -89,16 +89,16 @@ export const ChooseLanguagePromptChoicesFiles = (appRootPath) => {
   };
 };
 
-export const ChooseLanguagePromptChoicesAll = (appRootPath) => {
+export const ChooseAIModelPromptChoicesAll = (appRootPath) => {
   return {
     type: "list",
-    name: "ChooseLanguage",
+    name: "ChooseAIModel",
     message: `Files and folders bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("ChooseLanguage") ??
-        ChooseLanguageChoices.ChooseLanguageChoice1
+        getDataFromNPMMaslowJSON("ChooseAIModel") ??
+        ChooseAIModelChoices.ChooseAIModelChoice1
       );
     },
 
@@ -111,7 +111,7 @@ export const ChooseLanguagePromptChoicesAll = (appRootPath) => {
       subfilesNSubfolders?.unshift(
         "<",
         Constants.noChoice,
-        answers.AffineChooseLanguage
+        answers.AffineChooseAIModel
       );
 
       return SortArrayByLength(RemoveDuplicatesFromArray(subfilesNSubfolders));
@@ -119,16 +119,16 @@ export const ChooseLanguagePromptChoicesAll = (appRootPath) => {
   };
 };
 
-export const ChooseLanguagePromptChoicesTaggedFiles = (appRootPath) => {
+export const ChooseAIModelPromptChoicesTaggedFiles = (appRootPath) => {
   return {
     type: "list",
-    name: "ChooseLanguage",
+    name: "ChooseAIModel",
     message: `Tagged Files bby`,
 
     default: (data) => {
       return (
-        getDataFromNPMMaslowJSON("ChooseLanguage") ??
-        ChooseLanguageChoices.ChooseLanguageChoice1
+        getDataFromNPMMaslowJSON("ChooseAIModel") ??
+        ChooseAIModelChoices.ChooseAIModelChoice1
       );
     },
 

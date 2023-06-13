@@ -7,6 +7,7 @@
 // eslint-disable-next-line no-unused-vars
 import { OPENAI_API_KEY } from "../../../index.js";
 import { GetChatGPTOutput } from "../GetChatGPTOutput/GetChatGPTOutput.js";
+import { getDataFromNPMMaslowJSON } from "../GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 import { TranslateObject } from "../TranslateText/TranslateText.js";
 
 /**
@@ -28,6 +29,8 @@ const TranslateObjectIntl = async ({ obj, languages, apiKey }) => {
       //notabene: `The obj.country property must be the "ETF BCP 47 language tag" for ${language}`,
     });
     const language_tag = await GetChatGPTOutput({
+      model_chosen:
+        getDataFromNPMMaslowJSON("ChooseAIModel") ?? "text-davinci-003",
       prompt: `Return the BCP 47 language tag for this language: ${language}`,
       onSuccess: (chatGPTOutput) => {},
       onError: (error) => {},

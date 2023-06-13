@@ -12,13 +12,10 @@ import ora from "ora";
 const MakeLoadingSpinner = (msg) => {
   /* PLOP_INJECT_CODE */
 
-  const spinner = ora({
-    text: `\n${msg}\n`,
-    color: "yellow",
-  }).start();
+  console.log(msg);
 
   return () => {
-    spinner.stop();
+    console.log(`🎉`);
   };
 };
 

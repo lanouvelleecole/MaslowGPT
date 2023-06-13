@@ -1,0 +1,1 @@
+Retourne le nombre de tokens que contient prompt. Utilise gpt-3-encoder (npm)

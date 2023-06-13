@@ -15,6 +15,10 @@ import i18n from "i18n-js";
 i18n.translations = {
   src: {
     /* PLOP_INJECT_SRC_STRING */
+    xJLDlRfb: `Quantité de tokens disponibles pour la réponse de monsieur GPT:`,
+    xIMTCGp: `Compte à rebours, tentative n°`,
+    xnPkyJUf: `Je vais t'aider mon chou ! Je vais te donner mon nom:`,
+    xaCIid0a: `Choisis le modèle d'I.A. que tu souhaites utiliser. Plus d'informations sur les modèles ici: // https://platform.openai.com/docs/models/overview`,
     x8H4nyVx: `Tentative n°`,
     xlqZy0Sf: `Traduction de texte réussie !`,
     xSQ5Oiki: `Dans quelle langue souhaites tu traduire tes strings ?`,
@@ -208,10 +212,10 @@ const AppStrings = () => {
 
   let locale = Intl.DateTimeFormat().resolvedOptions().locale;
 
-  console.log(`
+  /*console.log(`
 Cette function d'init de répertoire doit run 1 seule fois.
 
-Device locale is: ${locale}`);
+Device locale is: ${locale}`);*/
 
   // Set the locale once
   // at the beginning of your app.

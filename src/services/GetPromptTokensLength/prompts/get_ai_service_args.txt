@@ -1,0 +1,1 @@
+prompt (string, le texte a comptabiliser)

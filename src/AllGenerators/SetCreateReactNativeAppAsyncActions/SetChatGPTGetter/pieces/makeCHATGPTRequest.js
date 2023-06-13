@@ -1,5 +1,6 @@
 import { OPENAI_API_KEY } from "../../../../../index.js";
 import { GetChatGPTOutput } from "../../../../services/GetChatGPTOutput/GetChatGPTOutput.js";
+import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 import { MakeLoadingSpinner } from "../../../../services/MakeLoadingSpinner/MakeLoadingSpinner.js";
 
 async function makeCHATGPTRequest(answers, appRootPath, printMsg = true) {
@@ -9,13 +10,14 @@ async function makeCHATGPTRequest(answers, appRootPath, printMsg = true) {
     // print un message de pose ton culo et attend
     let remoteSpinnerStopper;
     if (printMsg) {
-      remoteSpinnerStopper = MakeLoadingSpinner(` 
-Chat GPT est en train de préparer un délicieux gâteau.... 🥮
-Veuillez patienter quelques instants....
-`);
+      remoteSpinnerStopper = MakeLoadingSpinner(
+        `Chat GPT est en train de préparer un délicieux gâteau ! Veuillez patienter quelques instants ;-)`
+      );
     }
 
     const chat_gpt_output = await GetChatGPTOutput({
+      model_chosen:
+        getDataFromNPMMaslowJSON("ChooseAIModel") ?? "text-davinci-003",
       prompt,
       onSuccess: (chatGPTOutput) => {},
       onError: (error) => {},

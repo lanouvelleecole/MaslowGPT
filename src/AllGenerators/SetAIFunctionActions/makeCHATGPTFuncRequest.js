@@ -16,10 +16,12 @@ async function makeCHATGPTFuncRequest(answers, printMsg = true) {
     // print un message de pose ton culo et attend
     let remoteSpinnerStopper;
     if (printMsg) {
-      remoteSpinnerStopper = MakeLoadingSpinner(` 
+      remoteSpinnerStopper = MakeLoadingSpinner(
+        ` 
 Chat GPT est en train de préparer un délicieux gâteau.... 🥮
 Veuillez patienter quelques instants....
-`);
+`
+      );
     }
 
     const gold_caviar = await GetChatGPTFunction({
