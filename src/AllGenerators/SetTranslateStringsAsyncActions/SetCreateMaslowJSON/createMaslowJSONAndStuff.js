@@ -14,7 +14,7 @@ export function createMaslowJSONAndStuff(appRootPath, answers) {
 
   const answer_txt_path = path.join(
     appRootPath,
-    `${answers.GptQuestionName}/answer.txt`
+    `${answers.GptQuestionName}/${answers.AnswerFileName.trim()}`
   );
 
   CreateFileFromScratch(answer_txt_path, answers.chat_gpt_output);

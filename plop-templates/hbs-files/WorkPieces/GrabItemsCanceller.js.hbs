@@ -1,6 +1,6 @@
 /* PLOP_INJECT_IMPORT */
 
-import { TestJobSingletonInstance } from "./TestJobSingleton";
+import { TestReqSingletonInstance } from "./TestReqSingleton";
 
 /**
  *
@@ -9,13 +9,13 @@ import { TestJobSingletonInstance } from "./TestJobSingleton";
  *
  * Permet de stocker des données d'annulation de Work
  */
-export const GrabTestJobCanceller = (cancelData) => {
+export const GrabTestReqCanceller = (cancelData) => {
   /*console.log(
-    `Let's grab the cancel data for TestJob`
+    `Let's grab the cancel data for TestReq`
   );*/
 
-  TestJobSingletonInstance.AddCanceller({
-    cancellerName: "TestJob",
+  TestReqSingletonInstance.AddCanceller({
+    cancellerName: "TestReq",
     cancellerValue: cancelData,
   });
 };

@@ -1,1 +1,5 @@
-I need a Scheme function PrintHello that prints hello in Portuguese. P.S.: I intend to directly write your output to a .scm file, so please, give me an output that can be written into a scm file, then executed without errors. Add your descriptions and such , as scheme comments.
+I have a npm package (command line tool) with inquirer.js prompts and plop.js actions
+
+for some reason, the tool doesn't stop after the plop.js actions are done.
+
+hoow to forcefully stop the currently running program so the terminal is released

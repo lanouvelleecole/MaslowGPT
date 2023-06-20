@@ -8,6 +8,10 @@ import { initAddCommandGenerator } from "../InitAddCommandGenerator/initAddComma
 import { AddCommandAsynchronousActions } from "../../AllActions/AddCommandActions/pieces/AddCommandAsynchronousActions/AddCommandAsynchronousActions.js";
 // PLOP_INJECT_GENERATOR_IMPORTS
 
+import { initCreateNpmPackageGenerator } from "../CreateNpmPackage/initCreateNpmPackageGenerator.js";
+import { SetCreateNpmPackageAsyncActions } from "../SetCreateNpmPackageAsyncActions/SetCreateNpmPackageAsyncActions.js";
+
+
 import { initSetAiModelGenerator } from "../SetAiModel/initSetAiModelGenerator.js";
 import { SetSetAiModelAsyncActions } from "../SetSetAiModelAsyncActions/SetSetAiModelAsyncActions.js";
 
@@ -86,6 +90,11 @@ ajoute les imports correspondants
     setAIFunctionActions(plop, appRootPath);
   }
   // PLOP_INJECT_GENERATOR_ELSE_IF
+  else if (generatorName == CommandNames.create_npm_package) {
+    initCreateNpmPackageGenerator(plop, appRootPath);
+
+    SetCreateNpmPackageAsyncActions(plop, appRootPath);
+  }
   else if (generatorName == CommandNames.set_ai_model) {
     initSetAiModelGenerator(plop, appRootPath);
 

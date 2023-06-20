@@ -104,6 +104,8 @@ else if (generatorName == "<command name>") {
 
     // TODO_MSG_SUCCESS
     console.log(I18n.t("xdRfRmMN") + `🌼🌳🌞`);
+
+    return true;
   } catch (e) {
     // TODO_MSG_FAIL
     console.log(`\n${I18n.t("xPrJY8wG")} !\n\n${e}\n🌼🌳🌞`);

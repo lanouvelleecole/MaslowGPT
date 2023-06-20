@@ -1,6 +1,6 @@
 import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 
-const ChooseAIModelPromptText = (appRootPath) => {
+const PkgNamePromptText = (appRootPath) => {
   return {
     type: "input",
 
@@ -9,16 +9,16 @@ const ChooseAIModelPromptText = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "ChooseAIModel",
+    name: "PkgName",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("ChooseAIModel");
+      return getDataFromNPMMaslowJSON("PkgName");
     },
 
     message: `Text me bby`,
   };
 };
 
-const ChooseAIModelPromptEditor = (appRootPath) => {
+const PkgNamePromptEditor = (appRootPath) => {
   return {
     type: "editor",
 
@@ -27,13 +27,13 @@ const ChooseAIModelPromptEditor = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "ChooseAIModel",
+    name: "PkgName",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("ChooseAIModel");
+      return getDataFromNPMMaslowJSON("PkgName");
     },
 
     message: `Text me bby`,
   };
 };
 
-export { ChooseAIModelPromptText, ChooseAIModelPromptEditor };
+export { PkgNamePromptText, PkgNamePromptEditor };

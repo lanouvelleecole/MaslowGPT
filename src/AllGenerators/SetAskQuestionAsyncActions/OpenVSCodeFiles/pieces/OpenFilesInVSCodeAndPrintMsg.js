@@ -16,7 +16,7 @@ function OpenFilesInVSCodeAndPrintMsg(answers, appRootPath) {
 
   const answer_txt_path = path.join(
     appRootPath,
-    `${answers.GptQuestionName}/answer.txt`
+    `${answers.GptQuestionName}/${answers.AnswerFileName.trim()}`
   );
 
   // ouvre le folder souhaité avec les fichiers souhaités

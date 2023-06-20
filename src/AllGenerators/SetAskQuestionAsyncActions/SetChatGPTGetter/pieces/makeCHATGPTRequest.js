@@ -34,6 +34,8 @@ Veuillez patienter quelques instants....
     //console.log(`GPT successfully grabbed: ${JSON.stringify("")}`);
     if (chat_gpt_output) {
       answers.chat_gpt_output = chat_gpt_output;
+
+      return;
     } else {
       throw new Error("Failed to get Chat GPT output.");
     }

@@ -5,6 +5,7 @@
  */
 export const CommandNames = {
   // ADD_CMD_NAME
+	create_npm_package: "create-npm-package",
 	set_ai_model: "set-ai-model",
 	translate_strings: "translate-strings",
 	create_react_native_app: "create-react-native-app",

@@ -9,6 +9,7 @@ import I18n from "i18n-js";
  */
 export const CommandDescriptions = {
   // ADD_CMD_DESC
+	create_npm_package: "Cette commande permet de ...",
 	set_ai_model: "Cette commande permet de ...",
 	translate_strings: "Cette commande permet de ...",
   ask_question: I18n.t("xU7doKQc"),

@@ -1,14 +1,14 @@
 /* PLOP_INJECT_IMPORT */
 
-import { TestJobSingletonInstance } from "./TestJobSingleton";
+import { TestReqSingletonInstance } from "./TestReqSingleton";
 
 /**
- * Ceci permet de cancel ce Work (nommé TestJob)
+ * Ceci permet de cancel ce Work (nommé TestReq)
  */
-export const CancelTestJob = () => {
-  const controller = TestJobSingletonInstance.GetCanceller("TestJob");
+export const CancelTestReq = () => {
+  const controller = TestReqSingletonInstance.GetCanceller("TestReq");
 
   controller?.abort();
 
-  //console.log(`Annulation de TestJob effectuée avec succès !`);
+  //console.log(`Annulation de TestReq effectuée avec succès !`);
 };

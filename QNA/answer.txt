@@ -1,11 +1,51 @@
-; This is a simple Scheme function called PrintHello that prints
-; "Hello" in Portuguese, which is "Olá". Just add this function in
-; your .scm file, then call (PrintHello) to execute it.
+There are a few methods you can use to stop a Node.js program:
 
-(define (PrintHello)
-  (display "Olá")
-  (newline))
+1. Using the process.exit() method: This method terminates the Node.js process immediately and returns the given exit code. You can call this method after the plop.js actions are done to forcefully stop the program and release the terminal. For example:
 
-; To use this function, simply call (PrintHello) in your Scheme code.
-; Example:
-; (PrintHello)
+```javascript
+// Import the process module
+const process = require('process');
+
+// Call process.exit() after plop.js actions are done
+plop.getGenerator('myGenerator').runActions({ data })
+ .then(() => {
+   console.log('Done!');
+   process.exit(0);
+ })
+ .catch((err) => {
+   console.error(err);
+   process.exit(1);
+ });
+```
+
+2. Using a signal event listener: Another approach is to listen for a specific signal event, such as SIGINT or SIGTERM, and call the process.exit() method when that event is received. This allows the program to be stopped gracefully when the user presses Ctrl+C or the process is terminated externally. For example:
+
+```javascript
+// Listen for a SIGINT signal event
+process.on('SIGINT', () => {
+ console.log('Received SIGINT signal. Stopping the program.');
+ process.exit(0);
+});
+
+// Call process.exit() after plop.js actions are done
+plop.getGenerator('myGenerator').runActions({ data })
+ .then(() => {
+   console.log('Done!');
+ })
+ .catch((err) => {
+   console.error(err);
+ });
+```
+
+3. Using a try...catch block: You can wrap the entire program logic in a try...catch block and call process.exit() in the catch block when an error occurs. This ensures that the program is stopped when an unexpected error occurs. For example:
+
+```javascript
+try {
+ // Your program logic here, including plop.js actions
+} catch (err) {
+ console.error(err);
+ process.exit(1);
+}
+```
+
+Choose the method that fits your use case best and integrate it into your code to forcefully stop the program and release the terminal.
