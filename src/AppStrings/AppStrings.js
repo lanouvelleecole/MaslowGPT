@@ -15,6 +15,7 @@ import i18n from "i18n-js";
 i18n.translations = {
   src: {
     /* PLOP_INJECT_SRC_STRING */
+    xFAbSgwG: `Quel est le nom de cet endpoint d'API ?`,
     xHTGSmLj: `Quel est le nom de ce package npm ?`,
     xCsHHNE: `Quel est le nom (avec extension !) du fichier contenant la réponse ?`,
     xJLDlRfb: `Quantité de tokens disponibles pour la réponse de monsieur GPT:`,

@@ -8,6 +8,10 @@ import { initAddCommandGenerator } from "../InitAddCommandGenerator/initAddComma
 import { AddCommandAsynchronousActions } from "../../AllActions/AddCommandActions/pieces/AddCommandAsynchronousActions/AddCommandAsynchronousActions.js";
 // PLOP_INJECT_GENERATOR_IMPORTS
 
+import { initAddApiEndpointGenerator } from "../AddApiEndpoint/initAddApiEndpointGenerator.js";
+import { SetAddApiEndpointAsyncActions } from "../SetAddApiEndpointAsyncActions/SetAddApiEndpointAsyncActions.js";
+
+
 import { initCreateNpmPackageGenerator } from "../CreateNpmPackage/initCreateNpmPackageGenerator.js";
 import { SetCreateNpmPackageAsyncActions } from "../SetCreateNpmPackageAsyncActions/SetCreateNpmPackageAsyncActions.js";
 
@@ -90,6 +94,11 @@ ajoute les imports correspondants
     setAIFunctionActions(plop, appRootPath);
   }
   // PLOP_INJECT_GENERATOR_ELSE_IF
+  else if (generatorName == CommandNames.add_api_endpoint) {
+    initAddApiEndpointGenerator(plop, appRootPath);
+
+    SetAddApiEndpointAsyncActions(plop, appRootPath);
+  }
   else if (generatorName == CommandNames.create_npm_package) {
     initCreateNpmPackageGenerator(plop, appRootPath);
 

@@ -34,9 +34,9 @@
   "databaseinfo_path": "src\\reduxState\\TestPage\\DatabaseInfo.js",
   "row_type": "TEXT",
   "row_default_value": "",
-  "AddCommandName": "create-npm-package",
-  "AddCommandPrompts": "PkgName",
-  "AddCommandActions": "CloneTemplate, ReplaceWordsInFolder",
+  "AddCommandName": "add-api-endpoint",
+  "AddCommandPrompts": "EndpointName",
+  "AddCommandActions": "AddImportAndEndpointInit",
   "TestPpt1": "g",
   "TestPpt2": "t",
   "GptQuestionName": "QNA",
@@ -84,5 +84,6 @@
   "ChooseLanguage": "Portuguese",
   "ChooseAIModel": "gpt-3.5-turbo",
   "AnswerFileName": "answer.txt",
-  "PkgName": "test-stupid-pkg"
+  "PkgName": "test-pkg",
+  "EndpointName": "wick"
 }

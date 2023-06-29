@@ -8,6 +8,7 @@ import { CommandNames } from "../AppConstants/CommandNames.js";
 import { AddCommandPrompts } from "../AllPrompts/AddCommandPrompts/AddCommandPrompts.js";
 
 // PLOP_ADD_PPTS_IMPORT_GIVN_GEN_NAME
+import { AddApiEndpointPrompts } from '../AllPrompts/AddApiEndpoint/AddApiEndpointPrompts.js';
 import { CreateNpmPackagePrompts } from '../AllPrompts/CreateNpmPackage/CreateNpmPackagePrompts.js';
 import { SetAiModelPrompts } from '../AllPrompts/SetAiModel/SetAiModelPrompts.js';
 import { TranslateStringsPrompts } from '../AllPrompts/TranslateStrings/TranslateStringsPrompts.js';
@@ -66,6 +67,9 @@ function getPromptsGivenGeneratorName() {
   // au dessous de ce commentaire.
   // Bien sur, ajoute l'import correspondant.
   // PLOP_ADD_PPTS_GIVN_GEN_NAME
+  else if (generatorName == CommandNames.add_api_endpoint) {
+    return AddApiEndpointPrompts(appRootPath);
+  }
   else if (generatorName == CommandNames.create_npm_package) {
     return CreateNpmPackagePrompts(appRootPath);
   }

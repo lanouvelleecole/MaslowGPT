@@ -1,6 +1,6 @@
 import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 
-const PkgNamePromptText = (appRootPath) => {
+const EndpointNamePromptText = (appRootPath) => {
   return {
     type: "input",
 
@@ -9,16 +9,16 @@ const PkgNamePromptText = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "PkgName",
+    name: "EndpointName",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("PkgName");
+      return getDataFromNPMMaslowJSON("EndpointName");
     },
 
     message: `Text me bby`,
   };
 };
 
-const PkgNamePromptEditor = (appRootPath) => {
+const EndpointNamePromptEditor = (appRootPath) => {
   return {
     type: "editor",
 
@@ -27,13 +27,13 @@ const PkgNamePromptEditor = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "PkgName",
+    name: "EndpointName",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("PkgName");
+      return getDataFromNPMMaslowJSON("EndpointName");
     },
 
     message: `Text me bby`,
   };
 };
 
-export { PkgNamePromptText, PkgNamePromptEditor };
+export { EndpointNamePromptText, EndpointNamePromptEditor };

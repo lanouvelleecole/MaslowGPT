@@ -1,28 +1,28 @@
 import path from "path";
-import { initCreateNpmPackageAndCie } from "./initCreateNpmPackageAndCie.js";
+import { initAddApiEndpointAndCie } from "./initAddApiEndpointAndCie.js";
 import { getNPMFolderRoot } from "../../../../../getNPMFolderRoot.js";
 import { createTemplateFromFolder } from "../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
 
 /**
  *
  *
- * Ici, crée ton dossier CreateNpmPackage, en détail.
+ * Ici, crée ton dossier AddApiEndpoint, en détail.
  *
  * Remplace les trucs <comme ceci> par ce qu'il faut, selon description.
  */
-function createCreateNpmPackageFolder1(promptData) {
+function createAddApiEndpointFolder1(promptData) {
   // eslint-disable-next-line no-unused-vars
   const prompt_value = promptData["<prompt_value>"];
-  const CreateNpmPackageFolderPathFromAppRoot = `plop-CreateNpmPackages/hbs-files/<CreateNpmPackageFolderName>`;
-  const CreateNpmPackageFolderPath = path.join(
+  const AddApiEndpointFolderPathFromAppRoot = `plop-AddApiEndpoints/hbs-files/<AddApiEndpointFolderName>`;
+  const AddApiEndpointFolderPath = path.join(
     getNPMFolderRoot(),
-    CreateNpmPackageFolderPathFromAppRoot
+    AddApiEndpointFolderPathFromAppRoot
   );
   const creationFolderFromAppRoot = `<some/path/to/a/folder/starting/from/approot>`;
 
-  const CreateNpmPackageCreationParams = {
-    CreateNpmPackageFolderPath: CreateNpmPackageFolderPath,
-    CreateNpmPackageFolderPathFromAppRoot: CreateNpmPackageFolderPathFromAppRoot,
+  const AddApiEndpointCreationParams = {
+    AddApiEndpointFolderPath: AddApiEndpointFolderPath,
+    AddApiEndpointFolderPathFromAppRoot: AddApiEndpointFolderPathFromAppRoot,
     creationFolderFromAppRoot: creationFolderFromAppRoot,
     wordsInFilePath: [
       {
@@ -32,23 +32,23 @@ function createCreateNpmPackageFolder1(promptData) {
     ],
     wordsInFile: [
       {
-        word: `<some keyword_in_the_CreateNpmPackage_folder>`,
+        word: `<some keyword_in_the_AddApiEndpoint_folder>`,
         replaceWordWith: `<some replacement value>`,
       },
     ],
 
     wordsInHBSFileName: {
-      word: "<some keyword to replace in the filenames of files in the CreateNpmPackage folder>",
+      word: "<some keyword to replace in the filenames of files in the AddApiEndpoint folder>",
       replaceWordWith: `<the replacement value>`,
     },
   };
 
-  return createTemplateFromFolder(CreateNpmPackageCreationParams).concat(
-    initCreateNpmPackageAndCie({
+  return createTemplateFromFolder(AddApiEndpointCreationParams).concat(
+    initAddApiEndpointAndCie({
       creationFolderFromAppRoot: creationFolderFromAppRoot,
       promptData,
     })
   );
 }
 
-export { createCreateNpmPackageFolder1 };
+export { createAddApiEndpointFolder1 };
