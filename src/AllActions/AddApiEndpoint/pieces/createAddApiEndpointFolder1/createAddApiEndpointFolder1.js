@@ -29,19 +29,19 @@ function createAddApiEndpointFolder1(promptData) {
     creationFolderFromAppRoot: creationFolderFromAppRoot,
     wordsInFilePath: [
       {
-        word: "myAPI",
+        word: "edit_gpt_art",
         replaceWordWith: EndpointName,
       },
     ],
     wordsInFile: [
       {
-        word: "myAPI",
+        word: "edit_gpt_art",
         replaceWordWith: EndpointName,
       },
     ],
 
     wordsInHBSFileName: {
-      word: "myAPI",
+      word: "edit_gpt_art",
       replaceWordWith: EndpointName,
     },
   };

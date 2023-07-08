@@ -5,6 +5,7 @@
  */
 export const CommandNames = {
   // ADD_CMD_NAME
+	add_sdk_method: "add-sdk-method",
 	add_api_endpoint: "add-api-endpoint",
 	create_npm_package: "create-npm-package",
 	set_ai_model: "set-ai-model",

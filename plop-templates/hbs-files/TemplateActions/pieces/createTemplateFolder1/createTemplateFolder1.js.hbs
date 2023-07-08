@@ -1,28 +1,28 @@
 import path from "path";
-import { initAddApiEndpointAndCie } from "./initAddApiEndpointAndCie.js";
+import { initAddSdkMethodAndCie } from "./initAddSdkMethodAndCie.js";
 import { getNPMFolderRoot } from "../../../../../getNPMFolderRoot.js";
 import { createTemplateFromFolder } from "../../../../services/CreateTemplateFromFolder/createTemplateFromFolder.js";
 
 /**
  *
  *
- * Ici, crée ton dossier AddApiEndpoint, en détail.
+ * Ici, crée ton dossier AddSdkMethod, en détail.
  *
  * Remplace les trucs <comme ceci> par ce qu'il faut, selon description.
  */
-function createAddApiEndpointFolder1(promptData) {
+function createAddSdkMethodFolder1(promptData) {
   // eslint-disable-next-line no-unused-vars
   const prompt_value = promptData["<prompt_value>"];
-  const AddApiEndpointFolderPathFromAppRoot = `plop-AddApiEndpoints/hbs-files/<AddApiEndpointFolderName>`;
-  const AddApiEndpointFolderPath = path.join(
+  const AddSdkMethodFolderPathFromAppRoot = `plop-AddSdkMethods/hbs-files/<AddSdkMethodFolderName>`;
+  const AddSdkMethodFolderPath = path.join(
     getNPMFolderRoot(),
-    AddApiEndpointFolderPathFromAppRoot
+    AddSdkMethodFolderPathFromAppRoot
   );
   const creationFolderFromAppRoot = `<some/path/to/a/folder/starting/from/approot>`;
 
-  const AddApiEndpointCreationParams = {
-    AddApiEndpointFolderPath: AddApiEndpointFolderPath,
-    AddApiEndpointFolderPathFromAppRoot: AddApiEndpointFolderPathFromAppRoot,
+  const AddSdkMethodCreationParams = {
+    AddSdkMethodFolderPath: AddSdkMethodFolderPath,
+    AddSdkMethodFolderPathFromAppRoot: AddSdkMethodFolderPathFromAppRoot,
     creationFolderFromAppRoot: creationFolderFromAppRoot,
     wordsInFilePath: [
       {
@@ -32,23 +32,23 @@ function createAddApiEndpointFolder1(promptData) {
     ],
     wordsInFile: [
       {
-        word: `<some keyword_in_the_AddApiEndpoint_folder>`,
+        word: `<some keyword_in_the_AddSdkMethod_folder>`,
         replaceWordWith: `<some replacement value>`,
       },
     ],
 
     wordsInHBSFileName: {
-      word: "<some keyword to replace in the filenames of files in the AddApiEndpoint folder>",
+      word: "<some keyword to replace in the filenames of files in the AddSdkMethod folder>",
       replaceWordWith: `<the replacement value>`,
     },
   };
 
-  return createTemplateFromFolder(AddApiEndpointCreationParams).concat(
-    initAddApiEndpointAndCie({
+  return createTemplateFromFolder(AddSdkMethodCreationParams).concat(
+    initAddSdkMethodAndCie({
       creationFolderFromAppRoot: creationFolderFromAppRoot,
       promptData,
     })
   );
 }
 
-export { createAddApiEndpointFolder1 };
+export { createAddSdkMethodFolder1 };

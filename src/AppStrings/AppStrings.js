@@ -1,6 +1,6 @@
 /* PLOP_INJECT_IMPORT */
 
-import i18n from "i18n-js";
+import I18n from "i18n-js";
 
 /**
  * AppStrings
@@ -12,9 +12,10 @@ import i18n from "i18n-js";
  */
 
 // les strings selon pays
-i18n.translations = {
+I18n.translations = {
   src: {
     /* PLOP_INJECT_SRC_STRING */
+    xPsmlKYc: `Quel est le nom de cette fonction de SDK ?`,
     xFAbSgwG: `Quel est le nom de cet endpoint d'API ?`,
     xHTGSmLj: `Quel est le nom de ce package npm ?`,
     xCsHHNE: `Quel est le nom (avec extension !) du fichier contenant la réponse ?`,
@@ -215,19 +216,19 @@ const AppStrings = () => {
 
   let locale = Intl.DateTimeFormat().resolvedOptions().locale;
 
-  /*console.log(`
+  console.log(`
 Cette function d'init de répertoire doit run 1 seule fois.
 
-Device locale is: ${locale}`);*/
+Device locale is: ${locale}`);
 
   // Set the locale once
   // at the beginning of your app.
-  i18n.locale = locale;
-  i18n.defaultLocale = "src";
+  I18n.locale = locale;
+  I18n.defaultLocale = "src";
 
   // When a value is missing from a language,
   // it'll fallback to another language with the key present.
-  i18n.fallbacks = true;
+  I18n.fallbacks = true;
 
   //console.log(`text: ${i18n.t("welcome")}`);
 };

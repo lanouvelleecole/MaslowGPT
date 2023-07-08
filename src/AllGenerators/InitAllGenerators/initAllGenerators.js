@@ -8,6 +8,10 @@ import { initAddCommandGenerator } from "../InitAddCommandGenerator/initAddComma
 import { AddCommandAsynchronousActions } from "../../AllActions/AddCommandActions/pieces/AddCommandAsynchronousActions/AddCommandAsynchronousActions.js";
 // PLOP_INJECT_GENERATOR_IMPORTS
 
+import { initAddSdkMethodGenerator } from "../AddSdkMethod/initAddSdkMethodGenerator.js";
+import { SetAddSdkMethodAsyncActions } from "../SetAddSdkMethodAsyncActions/SetAddSdkMethodAsyncActions.js";
+
+
 import { initAddApiEndpointGenerator } from "../AddApiEndpoint/initAddApiEndpointGenerator.js";
 import { SetAddApiEndpointAsyncActions } from "../SetAddApiEndpointAsyncActions/SetAddApiEndpointAsyncActions.js";
 
@@ -94,6 +98,11 @@ ajoute les imports correspondants
     setAIFunctionActions(plop, appRootPath);
   }
   // PLOP_INJECT_GENERATOR_ELSE_IF
+  else if (generatorName == CommandNames.add_sdk_method) {
+    initAddSdkMethodGenerator(plop, appRootPath);
+
+    SetAddSdkMethodAsyncActions(plop, appRootPath);
+  }
   else if (generatorName == CommandNames.add_api_endpoint) {
     initAddApiEndpointGenerator(plop, appRootPath);
 

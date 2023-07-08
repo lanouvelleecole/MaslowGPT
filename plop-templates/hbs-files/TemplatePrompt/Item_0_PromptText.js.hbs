@@ -1,6 +1,6 @@
 import { getDataFromNPMMaslowJSON } from "../../../../services/GetDataFromNPMMaslowJSONObj/getDataFromNPMMaslowJSONObj.js";
 
-const EndpointNamePromptText = (appRootPath) => {
+const SDKMethodNamePromptText = (appRootPath) => {
   return {
     type: "input",
 
@@ -9,16 +9,16 @@ const EndpointNamePromptText = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "EndpointName",
+    name: "SDKMethodName",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("EndpointName");
+      return getDataFromNPMMaslowJSON("SDKMethodName");
     },
 
     message: `Text me bby`,
   };
 };
 
-const EndpointNamePromptEditor = (appRootPath) => {
+const SDKMethodNamePromptEditor = (appRootPath) => {
   return {
     type: "editor",
 
@@ -27,13 +27,13 @@ const EndpointNamePromptEditor = (appRootPath) => {
       return answer.trim();
     },
 
-    name: "EndpointName",
+    name: "SDKMethodName",
     default: (data) => {
-      return getDataFromNPMMaslowJSON("EndpointName");
+      return getDataFromNPMMaslowJSON("SDKMethodName");
     },
 
     message: `Text me bby`,
   };
 };
 
-export { EndpointNamePromptText, EndpointNamePromptEditor };
+export { SDKMethodNamePromptText, SDKMethodNamePromptEditor };

@@ -3,7 +3,7 @@ import { hashAPIKey } from "../../../../services/GenerateAPIKey/GenerateAPIKey.j
 import { DoTheAPIWork } from "../DoTheAPIWork/DoTheAPIWork.js";
 import { UpdateAPIUsage } from "../UpdateAPIUsage/UpdateAPIUsage.js";
 
-export async function _wickEndpoint(req, res, stripe) {
+export async function _upload_file_cloudEndpoint(req, res, stripe) {
   // la clé API présente dans l'URL de requête
   const { apiKey } = req.query;
 
@@ -80,7 +80,9 @@ export async function _wickEndpoint(req, res, stripe) {
     // le caviar kush, ze précieux,
     // pour le client.
     // accompagnées des données d'utilisation d'API
-    res.send({ data: outputData, usage: record });
+    res
+      .status(outputData.status)
+      .send({ answer: outputData.data, usage: record });
 
     return;
   }
